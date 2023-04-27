@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
-
+from datetime import timedelta
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -50,10 +50,33 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'backend.urls'
-LOCAL_APPS =[]
-THIRD_APPS=[
-    'rest_framework'
+LOCAL_APPS =[
+    'apps.user',
+    'apps.postulants'
 ]
+THIRD_APPS=[
+    'corsheaders',
+    'rest_framework',
+    'simple_history',
+    'rest_framework_simplejwt',  
+    'rest_framework_simplejwt.token_blacklist',  
+    'drf_yasg'
+]
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'api_key': {
+            'type': 'apiKey',
+            'in': 'header',
+            'name': 'Authorization'
+        }
+    },
+}
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+     
+}
 INSTALLED_APPS = BASED_APPS +LOCAL_APPS+THIRD_APPS
 TEMPLATES = [
     {
@@ -79,10 +102,16 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'JobBrainProfile',
+        'USER': 'root',
+        'PASSWORD': 'Destructor#12',
+        'HOST': 'localhost',
+        'PORT': '3306',
+       
     }
 }
+
 
 
 # Password validation
@@ -120,7 +149,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-
+AUTH_USER_MODEL = 'user.User'
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:4200",
+    "http://localhost:3000",
+    
+]
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+    'ROTATE_REFRESH_TOKENS': True,
+    'BLACKLIST_AFTER_ROTATION': True
+}
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
