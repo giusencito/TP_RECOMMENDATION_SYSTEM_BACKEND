@@ -39,6 +39,7 @@ class User(AbstractBaseUser,PermissionsMixin):
     is_active = models.BooleanField(default = True)
     historical = HistoricalRecords()
     role = models.PositiveSmallIntegerField(choices=ROLE_CHOICES, blank=True, null=True, default=3)
+    token_password = models.CharField(null=True, blank=True,max_length = 50,unique = True)
     objects = UserManager()
     class Meta:
         verbose_name = 'Usuario'

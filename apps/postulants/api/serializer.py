@@ -25,3 +25,16 @@ class UpdatePostulantSerializer(serializers.ModelSerializer):
     class Meta:
          model = Postulant
          fields = ('username', 'email', 'name', 'last_name')
+         
+         
+         
+class UpdatePostulantNameSerializer(serializers.ModelSerializer):
+      class Meta:
+         model = Postulant
+         fields = ['name']
+         
+         
+class UpdatePostulantLastnameSerializer(serializers.ModelSerializer):
+      class Meta:
+         model = Postulant
+         fields = ['last_name']

@@ -32,6 +32,7 @@ class UserListSerializer(serializers.ModelSerializer):
 class PasswordSerializer(serializers.Serializer):
     password = serializers.CharField(max_length=128, min_length=6, write_only=True)
     password2 = serializers.CharField(max_length=128, min_length=6, write_only=True)
+    token = serializers.CharField(min_length=6, write_only=True)
     def validate(self, data):
         if data['password'] != data['password2']:
             raise serializers.ValidationError(
@@ -49,3 +50,16 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
         token['roles'] = user.role
 
         return token
+    
+class ResetPasswordSerializer(serializers.Serializer):
+    email = serializers.EmailField()
+    def validate_email(self, value):
+        try: 
+           
+            user =  User.objects.filter(is_active=True).get(email=value)
+            print(user)
+        except User.DoesNotExist:
+            raise serializers.ValidationError( {'message':'correo no existe'}  )  
+        print(type(user))  
+        return user
+        
