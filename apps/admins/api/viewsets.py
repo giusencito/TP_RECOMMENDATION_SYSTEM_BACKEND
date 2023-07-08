@@ -2,56 +2,53 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import action
 from rest_framework import viewsets
-from drf_yasg import openapi
-from rest_framework.decorators import api_view
+from apps.admins.models import Admin
 from django.shortcuts import get_object_or_404
-from apps.postulants.models import Postulant
-from apps.postulants.api.serializer import (PostulantSerializer,PostulantListSerializer,UpdatePostulantSerializer,UpdatePostulantNameSerializer,UpdatePostulantLastnameSerializer)
-from drf_yasg.utils import swagger_auto_schema
-import coreapi
-
-
+from django.core.mail import send_mail
+from apps.admins.api.serializer import (AdminSerializer,UpdateAdminSerializer,UpdateAdminNameSerializer,UpdateAdminLastnameSerializer,AdminListSerializer)
 
 class ChangeNameViewSet(viewsets.GenericViewSet):
-      serializer_class = UpdatePostulantNameSerializer
-      model =Postulant
+      serializer_class = UpdateAdminNameSerializer
+      model =Admin
       def get_object(self, pk):
           return get_object_or_404(self.model, pk=pk)
       def update(self,request, pk=None):
           user = self.get_object(pk)
-          user_serializer = UpdatePostulantNameSerializer(user, data=request.data)
+          user_serializer = UpdateAdminNameSerializer(user, data=request.data)
           if user_serializer.is_valid():
             user_serializer.save()
             return Response({
-                'message': 'Postulant update'
-            }, status=status.HTTP_200_OK)
-          return Response({
-            'message': 'An error has occured during the update',
-            'errors': user_serializer.errors
-        }, status=status.HTTP_400_BAD_REQUEST)
-class ChangeLastNameViewSet(viewsets.GenericViewSet):
-      serializer_class = UpdatePostulantLastnameSerializer
-      model =Postulant
-      def get_object(self, pk):
-          return get_object_or_404(self.model, pk=pk)
-      def update(self,request, pk=None):
-          user = self.get_object(pk)
-          user_serializer = UpdatePostulantLastnameSerializer(user, data=request.data)
-          if user_serializer.is_valid():
-            user_serializer.save()
-            return Response({
-                'message': 'Postulant update'
+                'message': 'Admin update'
             }, status=status.HTTP_200_OK)
           return Response({
             'message': 'An error has occured during the update',
             'errors': user_serializer.errors
         }, status=status.HTTP_400_BAD_REQUEST)
 
-class PostulantViewSet(viewsets.GenericViewSet):
-      model = Postulant
-      serializer_class = PostulantSerializer
+class ChangeLastNameViewSet(viewsets.GenericViewSet):
+      serializer_class = UpdateAdminLastnameSerializer
+      model =Admin
+      def get_object(self, pk):
+          return get_object_or_404(self.model, pk=pk)
+      def update(self,request, pk=None):
+          user = self.get_object(pk)
+          user_serializer = UpdateAdminLastnameSerializer(user, data=request.data)
+          if user_serializer.is_valid():
+            user_serializer.save()
+            return Response({
+                'message': 'Admin update'
+            }, status=status.HTTP_200_OK)
+          return Response({
+            'message': 'An error has occured during the update',
+            'errors': user_serializer.errors
+        }, status=status.HTTP_400_BAD_REQUEST)
+          
+          
+class AdminViewSet(viewsets.GenericViewSet):
+      model = Admin
+      serializer_class = AdminSerializer
       
-      list_serializer_class = PostulantListSerializer
+      list_serializer_class = AdminListSerializer
       queryset = None
       def get_object(self, pk):
         return get_object_or_404(self.model, pk=pk)
@@ -75,31 +72,33 @@ class PostulantViewSet(viewsets.GenericViewSet):
         postulant = self.get_queryset()
         assitans_serializer = self.serializer_class(postulant, many=True)
         return Response(assitans_serializer.data, status=status.HTTP_200_OK)
-      @action(detail=True, methods=['put'])
-      def change_name(self, request, pk=None, name=None):
-        self.queryset = self.serializer_class().Meta.model.objects.filter(is_active=True).filter(id=pk).get()
-        self.queryset.name=name
-        self.queryset.save()
-        # Aquí puede usar los parámetros `pk` y `name` como lo desee en su vista
-        return Response({'message': f'El nombre del objeto con ID {pk} ha sido cambiado a {name}.'})
-      @action(detail=True, methods=['get'])
-      def change_lastname(self, request, pk=None, last_name=None):
-        self.queryset = self.serializer_class().Meta.model.objects.filter(is_active=True).filter(id=pk).get()
-        self.queryset.last_name=last_name
-        self.queryset.save()
-        
-        return Response({'message': f'El nombre del objeto con ID {pk} ha sido cambiado a {last_name}.'})
+     
      
       def create(self, request):
          
          serializer  = self.serializer_class(data=request.data)
-         
+         print(serializer)
          if serializer.is_valid():
           
+            recipient_list= [request.data['email']] 
+            name = request.data['name']
+            last_name = request.data['last_name']
+            username = request.data['username']
+            password = request.data['password']
+          
+            message = f'Hola {name} {last_name},\n\nAqui tienes el usuario: {username} y la contraseña {password}\n \nAtentamente,\nEl equipo de admnistrador'
+            print(message)
+            subject = 'Nuevo Administrador'
+            from_email = 'xskulldragon@gmail.com'
+           
+            
+            send_mail(subject, message,from_email, recipient_list,fail_silently=False)
             serializer.save()
+            
             return Response({
-                'message': 'Postulant register'
+                'message': 'Admin register'
             }, status=status.HTTP_201_CREATED)
+         print(serializer.errors)
          return Response({
             'message': 'An error has occured during the registration',
             'errors': serializer.errors
@@ -110,11 +109,11 @@ class PostulantViewSet(viewsets.GenericViewSet):
         return Response(user_serializer.data)
       def update(self, request, pk=None):
         user = self.get_object(pk)
-        user_serializer = UpdatePostulantSerializer(user, data=request.data)
+        user_serializer = UpdateAdminSerializer(user, data=request.data)
         if user_serializer.is_valid():
             user_serializer.save()
             return Response({
-                'message': 'Postulant update'
+                'message': 'Admin update'
             }, status=status.HTTP_200_OK)
         return Response({
             'message': 'An error has occured during the update',
@@ -124,10 +123,9 @@ class PostulantViewSet(viewsets.GenericViewSet):
         user_destroy = self.model.objects.filter(id=pk).update(is_active=False)
         if user_destroy == 1:
                 return Response({
-                'message': 'Postulant deleted'
+                'message': 'Admin deleted'
             })
         return Response({
-            'message': 'Postulant does not exist'
+            'message': 'Admin does not exist'
         }, status=status.HTTP_404_NOT_FOUND)
-
 

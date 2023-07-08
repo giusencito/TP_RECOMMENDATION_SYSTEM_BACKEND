@@ -15,6 +15,7 @@ class PostulantListSerializer(serializers.ModelSerializer):
      class Meta:
             model = Postulant
      def to_representation(self, instance):
+            print(instance)
             return {
             'id': instance['id'],
             'name': instance['name'],

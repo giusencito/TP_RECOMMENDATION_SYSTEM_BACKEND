@@ -54,7 +54,13 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'backend.urls'
 LOCAL_APPS =[
     'apps.user',
-    'apps.postulants'
+    'apps.postulants',
+    'apps.admins',
+    'apps.typetest',
+    'apps.tests',
+    'apps.section',
+    'apps.question',
+    'apps.option'
 ]
 THIRD_APPS=[
     'corsheaders',
