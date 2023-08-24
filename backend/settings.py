@@ -64,7 +64,8 @@ LOCAL_APPS =[
     'apps.resultTest',
     'apps.resultSection',
     'apps.linkedinJobs',
-    'apps.recomendation'
+    'apps.recomendation',
+    'apps.courserecomendation'
 ]
 THIRD_APPS=[
     'corsheaders',

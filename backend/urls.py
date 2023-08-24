@@ -54,6 +54,7 @@ urlpatterns = [
     path('resultSection/',include('apps.resultSection.api.router')),
     path('linkedinJob/',include('apps.linkedinJobs.api.router')),
     path('recomendation/',include('apps.recomendation.api.router')),
+    path('courserecomendation/',include('apps.courserecomendation.api.router')),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('login/',Login.as_view(), name = 'login'),
