@@ -65,7 +65,8 @@ LOCAL_APPS =[
     'apps.resultSection',
     'apps.linkedinJobs',
     'apps.recomendation',
-    'apps.courserecomendation'
+    'apps.courserecomendation',
+    'apps.course'
 ]
 THIRD_APPS=[
     'corsheaders',
@@ -118,7 +119,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'JobBrainProfile',
         'USER': 'root',
-        'PASSWORD': 'Destructor#12',
+        'PASSWORD': 'Alejandrosebastian1',
         'HOST': 'localhost',
         'PORT': '3306',
        

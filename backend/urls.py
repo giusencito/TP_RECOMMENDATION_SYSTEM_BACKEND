@@ -53,6 +53,7 @@ urlpatterns = [
     path('resultTest/',include('apps.resultTest.api.router')),
     path('resultSection/',include('apps.resultSection.api.router')),
     path('linkedinJob/',include('apps.linkedinJobs.api.router')),
+    path('course/',include('apps.course.api.router')),
     path('recomendation/',include('apps.recomendation.api.router')),
     path('courserecomendation/',include('apps.courserecomendation.api.router')),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
