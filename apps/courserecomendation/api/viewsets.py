@@ -6,6 +6,7 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import json
+from apps.linkedinJobs.models import LinkedinJobs
 from rest_framework.decorators import action
 from surprise import Dataset, Reader, SVD
 from surprise.model_selection import train_test_split
@@ -52,21 +53,17 @@ class CourseRecomendationViewset(viewsets.ModelViewSet):
         coursedf.to_csv('csv/courses.csv', sep='\t',index=False) 
         return Response(self.todos_los_cursos)
     
-    @swagger_auto_schema(
-    method='post',
-    manual_parameters=[
-        openapi.Parameter(
-            name='job_title',
-            in_=openapi.IN_QUERY,
-            type=openapi.TYPE_STRING,
-            required=True
-            )
-        ]
-    )
-    @action(detail=False, methods=['post'])
-    def CourseRecomendation(self,request):
-        job_title = request.query_params.get('job_title')
-        print(job_title) 
+    
+    @action(detail=True, methods=['post'])
+    def CourseRecomendation(self,request,pk=None):
+        job_id = pk
+        print(job_id)
+        
+        job = get_object_or_404(LinkedinJobs, pk=job_id)
+        print(type(job))
+        print(job.jobName)
+        print(job.jobDescription)
+
         cursos_solo_titulos = []
         all_courses_list = []
 
@@ -75,10 +72,10 @@ class CourseRecomendationViewset(viewsets.ModelViewSet):
 
         cursos_solo_titulos = course_df['CourseTitle'].tolist()
 
-        openai.api_key = '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' #verificar
+        openai.api_key = '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' #verificar
         expert_tips = ['Prepararse para una buena entrevista laboral', 'Tener Experiencia','Desarrollar un buen CV', 'Tener competencias blandas', 'Tener competencias tecnicas', 'Tener valores y principios']
         prompt = [{ "role": "user",
-           "content": f"Se tienen los siguientes cursos de capacitación: {cursos_solo_titulos}  Ahora te voy a pasar unos tips o consejos para conseguir un empleo de ingeniero de Software dados por un experto: {expert_tips}  Finalmente, te voy a pasar el nombre de un empleo: Programador / Desarrollador Fullstack Junior - Developer Fullstack  y su respectiva descripción: Somos una empresa del sector Industrial, nos encontramos en la búsqueda del mejor talento que ocupar el puesto de Desarrollador Fullstack - Developer Fullstack Requisitos Contar con dos años de experiencia en el puesto. Angular 13. Lenguaje de programación C#, .Net, .NetCore. Base de datos: MySQL, SQL Server y MariaDB (deseable). Desarrollo de API REST. Disponibilidad para laboral de forma presencial. Beneficios Planilla completa y desde primer día. Linea de carrera. Agradable clima laboral. ¡Postula y se parte de esta gran familia! Ahora con toda la información obtenida necesito que me recomiendes los mejores 5 cursos no tecnicos de capacitación para este empleo basándote en los nombres de los cursos que te brinde en un inicio, los tips o consejos para conseguir un empleo de ingeniero de Software dados por el experto y en la descripcion del empleo. Recuerda que los cursos que me recomiendes deben tener el enfoque de ayudar a que se pueda conseguir dicho empleo brindado y que los cursos sean solamente de los que te brinde no pueden ser otros cursos desconocidos. No te olvides DEBEN SER SOLO LOS CURSOS QUE TE BRINDE EN UN INICIO. La respuesta debe tener el siguiente formato: - [Curso de capacitación brindado al inicio 1] - [Curso de capacitación brindado al inicio 2] - [Curso de capacitación brindado al inicio 3] - [Curso de capacitación brindado al inicio 4] - [Curso de capacitación brindado al inicio 5]"
+           "content": f"Se tienen los siguientes cursos de capacitación: {cursos_solo_titulos}  Ahora te voy a pasar unos tips o consejos para conseguir un empleo de ingeniero de Software dados por un experto: {expert_tips}  Finalmente, te voy a pasar el nombre de un empleo: {job.jobName}  y su respectiva descripción: {job.jobDescription} Ahora con toda la información obtenida necesito que me recomiendes los mejores 5 cursos no tecnicos de capacitación para este empleo basándote en los nombres de los cursos que te brinde en un inicio, los tips o consejos para conseguir un empleo de ingeniero de Software dados por el experto y en la descripcion del empleo. Recuerda que los cursos que me recomiendes deben tener el enfoque de ayudar a que se pueda conseguir dicho empleo brindado y que los cursos sean solamente de los que te brinde no pueden ser otros cursos desconocidos. No te olvides DEBEN SER SOLO LOS CURSOS QUE TE BRINDE EN UN INICIO. La respuesta debe tener el siguiente formato: - [Curso de capacitación brindado al inicio 1] - [Curso de capacitación brindado al inicio 2] - [Curso de capacitación brindado al inicio 3] - [Curso de capacitación brindado al inicio 4] - [Curso de capacitación brindado al inicio 5]"
         }]
 
         response = openai.ChatCompletion.create(
