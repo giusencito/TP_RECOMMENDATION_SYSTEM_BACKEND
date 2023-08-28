@@ -9,12 +9,13 @@ class LinkedinJobsSerializer(serializers.ModelSerializer):
                 'jobUrl':instance.jobUrl,
                 'posibilityPercentage':instance.posibilityPercentage,
                 'resultTest': f'{instance.resultTest.id}'
-            
+                
                 
                 }
        def validate_resultTest(self, value):
             if value == '' or value == None:
                 raise serializers.ValidationError("Debe ingresar un resultTest.")
+            return value
        def validate(self, data):
             if 'resultTest' not in data.keys():
                raise serializers.ValidationError({

@@ -11,9 +11,11 @@ class ResultSectionSerializer(serializers.ModelSerializer):
       def validate_section(self, value):
             if value == '' or value == None:
                 raise serializers.ValidationError("Debe ingresar una seccion.")
+            return value
       def validate_resultTest(self, value):
             if value == '' or value == None:
                 raise serializers.ValidationError("Debe ingresar una resultado del Test.")
+            return value
       def validate(self, data):
             if 'section' not in data.keys():
                raise serializers.ValidationError({

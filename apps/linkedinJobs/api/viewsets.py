@@ -47,12 +47,12 @@ class LinkedinJobsViewSets(viewsets.ModelViewSet):
     @action(detail=True, methods=['get'])
     def getLinkedinJobbyResultTest(self,request,pk=None):
        
-        self.queryset = self.serializer_class().Meta.model.objects.filter(state=True).filter(section_id=pk)
-        ResultTest = self.get_queryset()
-        ResultTest_serializer = self.serializer_class(ResultTest, many=True)
+        self.queryset = self.serializer_class().Meta.model.objects.filter(state=True).filter(resultTest_id=pk)
+        Linkedinjob = self.get_queryset()
+        Linkedinjob_serializer = self.serializer_class(Linkedinjob, many=True)
         data = {
             
             "total": self.get_queryset().count(),
-            "rows": ResultTest_serializer.data
+            "rows": Linkedinjob_serializer.data
         }
         return Response(data, status=status.HTTP_200_OK)

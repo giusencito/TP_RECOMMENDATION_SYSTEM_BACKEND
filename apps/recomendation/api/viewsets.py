@@ -143,6 +143,7 @@ class RecomendationViewset(viewsets.ModelViewSet):
           recommendations = merged_df[['Jobid', 'Jobname', 'URL', 'Location', 'Date', 'Company','Description']].merge(df_predictions, on='Description')
           recommendations = recommendations.sort_values('similarity_pred', ascending=False)[['Jobname', 'URL', 'Location','Date', 'Company', 'similarity_pred']]
           recommendations = recommendations.drop_duplicates(subset=['Jobname'])
+          recommendations = recommendations.loc[recommendations['similarity_pred'] != 0.0]
           recomendations_json= recommendations.to_json(orient='records')
           recommendations_list = json.loads(recomendations_json)
           return Response(recommendations_list,status=status.HTTP_201_CREATED)

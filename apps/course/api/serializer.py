@@ -12,6 +12,7 @@ class CourseSerializer(serializers.ModelSerializer):
        def validate_job(self, value):
             if value == '' or value == None:
                 raise serializers.ValidationError("Debe ingresar un job.")
+            return value
        def validate(self, data):
             if 'job' not in data.keys():
                raise serializers.ValidationError({
