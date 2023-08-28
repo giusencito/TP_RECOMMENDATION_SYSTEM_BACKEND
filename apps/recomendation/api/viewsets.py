@@ -141,7 +141,7 @@ class RecomendationViewset(viewsets.ModelViewSet):
               predictions.append((test_section, test_description, test_rating, similarity_hybrid_pred))
           df_predictions = pd.DataFrame(predictions, columns=['sectionname', 'Description', 'rating','similarity_pred'])
           recommendations = merged_df[['Jobid', 'Jobname', 'URL', 'Location', 'Date', 'Company','Description']].merge(df_predictions, on='Description')
-          recommendations = recommendations.sort_values('similarity_pred', ascending=False)[['Jobname', 'URL', 'Location','Date', 'Company', 'similarity_pred']]
+          recommendations = recommendations.sort_values('similarity_pred', ascending=False)[['Jobname','Description','URL', 'Location','Date', 'Company', 'similarity_pred']]
           recommendations = recommendations.drop_duplicates(subset=['Jobname'])
           recommendations = recommendations.loc[recommendations['similarity_pred'] != 0.0]
           recomendations_json= recommendations.to_json(orient='records')

@@ -6,7 +6,7 @@ class LinkedinJobs(BaseModel):
     jobName = models.CharField(max_length=100)
     jobDescription = models.TextField()
     jobUrl = models.TextField()
-    posibilityPercentage = models.IntegerField()
+    posibilityPercentage = models.FloatField()
     resultTest=models.ForeignKey(ResultTest, on_delete=models.CASCADE)
     class Meta:
               verbose_name = 'LinkedinJob'
