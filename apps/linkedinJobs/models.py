@@ -6,6 +6,9 @@ class LinkedinJobs(BaseModel):
     jobName = models.CharField(max_length=100)
     jobDescription = models.TextField()
     jobUrl = models.TextField()
+    jobLocation = models.CharField(max_length=100, default=None)
+    jobCompany = models.CharField(max_length=100, default=None)
+    jobDate = models.CharField(max_length=100, default=None)
     posibilityPercentage = models.FloatField()
     resultTest=models.ForeignKey(ResultTest, on_delete=models.CASCADE)
     class Meta:

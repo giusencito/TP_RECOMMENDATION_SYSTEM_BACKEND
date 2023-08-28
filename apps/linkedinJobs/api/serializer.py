@@ -7,6 +7,9 @@ class LinkedinJobsSerializer(serializers.ModelSerializer):
                 'jobName':instance.jobName,
                 'jobDescription':instance.jobDescription,
                 'jobUrl':instance.jobUrl,
+                'jobLocation': instance.jobLocation,
+                'jobCompany': instance.jobCompany,
+                'jobDate': instance.jobDate,
                 'posibilityPercentage':instance.posibilityPercentage,
                 'resultTest': f'{instance.resultTest.id}'
                 
