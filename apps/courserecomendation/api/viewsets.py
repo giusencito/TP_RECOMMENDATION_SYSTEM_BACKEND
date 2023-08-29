@@ -18,6 +18,7 @@ import openai
 
 class CourseRecomendationViewset(viewsets.ModelViewSet):
     todos_los_cursos = []
+    openai.api_key = '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' #verificar
 
     def GetCourses(self):
         for pagina in range(1, 26):
@@ -72,7 +73,6 @@ class CourseRecomendationViewset(viewsets.ModelViewSet):
 
         cursos_solo_titulos = course_df['CourseTitle'].tolist()
 
-        openai.api_key = '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' #verificar
         expert_tips = ['Prepararse para una buena entrevista laboral', 'Tener Experiencia','Desarrollar un buen CV', 'Tener competencias blandas', 'Tener competencias tecnicas', 'Tener valores y principios']
         prompt = [{ "role": "user",
            "content": f"Se tienen los siguientes cursos de capacitación: {cursos_solo_titulos}  Ahora te voy a pasar unos tips o consejos para conseguir un empleo de ingeniero de Software dados por un experto: {expert_tips}  Finalmente, te voy a pasar el nombre de un empleo: {job.jobName}  y su respectiva descripción: {job.jobDescription} Ahora con toda la información obtenida necesito que me recomiendes los mejores 5 cursos no tecnicos de capacitación para este empleo basándote en los nombres de los cursos que te brinde en un inicio, los tips o consejos para conseguir un empleo de ingeniero de Software dados por el experto y en la descripcion del empleo. Recuerda que los cursos que me recomiendes deben tener el enfoque de ayudar a que se pueda conseguir dicho empleo brindado y que los cursos sean solamente de los que te brinde no pueden ser otros cursos desconocidos. No te olvides DEBEN SER SOLO LOS CURSOS QUE TE BRINDE EN UN INICIO. La respuesta debe tener el siguiente formato: - [Curso de capacitación brindado al inicio 1] - [Curso de capacitación brindado al inicio 2] - [Curso de capacitación brindado al inicio 3] - [Curso de capacitación brindado al inicio 4] - [Curso de capacitación brindado al inicio 5]"
@@ -99,3 +99,36 @@ class CourseRecomendationViewset(viewsets.ModelViewSet):
         print(cursos_recomendados)
         
         return Response(cursos_recomendados,status=status.HTTP_201_CREATED)
+
+    @action(detail=True, methods=['post'])
+    def QuestionRecomendation(self, request,pk=None):
+        job_id = pk
+        print(job_id)
+        
+        job = get_object_or_404(LinkedinJobs, pk=job_id)
+        print(type(job))
+        print(job.jobName)
+        print(job.jobDescription)
+
+        prompt = [{ "role": "user",
+           "content": f"Soy ingeniero de software en {job.jobLocation} y estoy postulando a {job.jobName} que tiene la siguiente descripción: {job.jobDescription} me puedes indicar 5 preguntas claves con sus respectivas respuestas para una entrevista laboral en esta especialidad Necesito que me des la respuesta con el siguiente formato: Preguntas [Aqui va la pregunta 1] [Aqui va la pregunta 2] [Aqui va la pregunta 3] [Aqui va la pregunta 4] [Aqui va la pregunta 5] Respuestas: [Aqui va la respuesta de la pregunta 1] [Aqui va la respuesta de la pregunta 2] [Aqui va la respuesta de la pregunta 3] [Aqui va la respuesta de la pregunta 4] [Aqui va la respuesta de la pregunta 5] NO TE OLVIDES QUE TIENES QUE RESPETAR EL FORMATO. Tambien recuerda que la respuesta de cada pregunta debe ser la mas corta, concreta y directa para poder responder la pregunta"
+        }]
+
+        response = openai.ChatCompletion.create(
+            messages = prompt,
+            model = "gpt-3.5-turbo",
+            max_tokens = 500  # Máximo número de tokens en la respuesta generada
+        )
+
+        print(response.choices[0].message.content)
+        print(type(response.choices[0].message.content))
+
+        lines = response.choices[0].message.content.strip().split("\n")
+        lines = [line for line in lines if line.strip() != ""]
+
+        preguntasrespuestas = lines 
+
+        print("Estas son las preguntas y respuestas")
+        print(preguntasrespuestas)
+
+        return Response(preguntasrespuestas,status=status.HTTP_201_CREATED)
