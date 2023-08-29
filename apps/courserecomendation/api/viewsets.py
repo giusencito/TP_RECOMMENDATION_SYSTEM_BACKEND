@@ -18,7 +18,7 @@ import openai
 
 class CourseRecomendationViewset(viewsets.ModelViewSet):
     todos_los_cursos = []
-    openai.api_key = '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' #verificar
+    openai.api_key = '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' #verificar
 
     def GetCourses(self):
         for pagina in range(1, 26):
@@ -75,7 +75,7 @@ class CourseRecomendationViewset(viewsets.ModelViewSet):
 
         expert_tips = ['Prepararse para una buena entrevista laboral', 'Tener Experiencia','Desarrollar un buen CV', 'Tener competencias blandas', 'Tener competencias tecnicas', 'Tener valores y principios']
         prompt = [{ "role": "user",
-           "content": f"Se tienen los siguientes cursos de capacitación: {cursos_solo_titulos}  Ahora te voy a pasar unos tips o consejos para conseguir un empleo de ingeniero de Software dados por un experto: {expert_tips}  Finalmente, te voy a pasar el nombre de un empleo: {job.jobName}  y su respectiva descripción: {job.jobDescription} Ahora con toda la información obtenida necesito que me recomiendes los mejores 5 cursos no tecnicos de capacitación para este empleo basándote en los nombres de los cursos que te brinde en un inicio, los tips o consejos para conseguir un empleo de ingeniero de Software dados por el experto y en la descripcion del empleo. Recuerda que los cursos que me recomiendes deben tener el enfoque de ayudar a que se pueda conseguir dicho empleo brindado y que los cursos sean solamente de los que te brinde no pueden ser otros cursos desconocidos. No te olvides DEBEN SER SOLO LOS CURSOS QUE TE BRINDE EN UN INICIO. La respuesta debe tener el siguiente formato: - [Curso de capacitación brindado al inicio 1] - [Curso de capacitación brindado al inicio 2] - [Curso de capacitación brindado al inicio 3] - [Curso de capacitación brindado al inicio 4] - [Curso de capacitación brindado al inicio 5]"
+           "content": f"Se tienen los siguientes cursos de capacitación: {cursos_solo_titulos}  Ahora te voy a pasar unos tips o consejos para conseguir un empleo de ingeniero de Software dados por un experto: {expert_tips}  Finalmente, te voy a pasar el nombre de un empleo: {job.jobName}  y su respectiva descripción: {job.jobDescription} Ahora con toda la información obtenida necesito que me recomiendes los mejores 5 cursos NO TECNICOS de capacitación para este empleo basándote en los nombres de los cursos que te brinde en un inicio, los tips o consejos para conseguir un empleo de ingeniero de Software dados por el experto y la descripcion del empleo. Recuerda que los cursos que me recomiendes deben tener el objetivo de ayudar a que se pueda conseguir dicho empleo brindado y que los cursos sean solamente de los que te brinde no pueden ser otros cursos desconocidos. No te olvides DEBEN SER SOLO LOS CURSOS QUE TE BRINDE EN UN INICIO. La respuesta debe tener el siguiente formato: - [Curso de capacitación brindado al inicio 1] - [Curso de capacitación brindado al inicio 2] - [Curso de capacitación brindado al inicio 3] - [Curso de capacitación brindado al inicio 4] - [Curso de capacitación brindado al inicio 5]. RECUERDA GPT SIGUE EL FORMATO TIENE QUE TENER SI O SI ESE FORMATO"
         }]
 
         response = openai.ChatCompletion.create(
@@ -84,6 +84,23 @@ class CourseRecomendationViewset(viewsets.ModelViewSet):
             max_tokens = 500  # Máximo número de tokens en la respuesta generada
         )
         
+        print(response.choices[0].message.content)
+
+        if response.choices[0].message.content == "":
+            response = openai.ChatCompletion.create(
+            messages = prompt,
+            model = "gpt-3.5-turbo",
+            max_tokens = 500  # Máximo número de tokens en la respuesta generada
+            )
+        
+        if response.choices[0].message.content == "":
+            response = openai.ChatCompletion.create(
+            messages = prompt,
+            model = "gpt-3.5-turbo",
+            max_tokens = 500  # Máximo número de tokens en la respuesta generada
+            )
+        
+        print("Estos son los cursos luego de validar si esque es vacio en el primer intento")
         print(response.choices[0].message.content)
 
         cursos_recomendados = []
