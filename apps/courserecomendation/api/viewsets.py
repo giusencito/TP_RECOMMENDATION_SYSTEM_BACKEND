@@ -18,7 +18,7 @@ import openai
 
 class CourseRecomendationViewset(viewsets.ModelViewSet):
     todos_los_cursos = []
-    openai.api_key = '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' #verificar
+    openai.api_key = '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' #verificar
 
     def GetCourses(self):
         for pagina in range(1, 26):
@@ -84,23 +84,6 @@ class CourseRecomendationViewset(viewsets.ModelViewSet):
             max_tokens = 500  # Máximo número de tokens en la respuesta generada
         )
         
-        print(response.choices[0].message.content)
-
-        if response.choices[0].message.content == "":
-            response = openai.ChatCompletion.create(
-            messages = prompt,
-            model = "gpt-3.5-turbo",
-            max_tokens = 500  # Máximo número de tokens en la respuesta generada
-            )
-        
-        if response.choices[0].message.content == "":
-            response = openai.ChatCompletion.create(
-            messages = prompt,
-            model = "gpt-3.5-turbo",
-            max_tokens = 500  # Máximo número de tokens en la respuesta generada
-            )
-        
-        print("Estos son los cursos luego de validar si esque es vacio en el primer intento")
         print(response.choices[0].message.content)
 
         cursos_recomendados = []
