@@ -33,7 +33,7 @@ class OptionViewSet(viewsets.ModelViewSet):
         section = self.get_object(pk)
         question_serializer = self.serializer_class(section)
         return Response(question_serializer.data)
-
+     
     def destroy(self, request, pk=None):
         user_destroy = self.model.objects.filter(id=pk).update(is_active=False)
         if user_destroy == 1:
@@ -43,6 +43,20 @@ class OptionViewSet(viewsets.ModelViewSet):
         return Response({
             'message': 'No existe la opcion que desea eliminar'
         }, status=status.HTTP_404_NOT_FOUND)
+    def update(self, request, pk=None):
+        try:
+            option = self.get_object(pk)
+            serializer = self.serializer_class(option, data=request.data)
+            
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data, status=status.HTTP_200_OK)
+            
+            return Response({'message': 'Datos inválidos', 'errors': serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+        
+        except Option.DoesNotExist:
+            return Response({'message': 'La opción que intenta actualizar no existe'}, status=status.HTTP_404_NOT_FOUND)
+
     @action(detail=True, methods=['get'])
     def getoptionbysection(self,request,pk=None):
        

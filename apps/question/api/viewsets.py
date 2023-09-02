@@ -33,6 +33,19 @@ class QuestionViewSet(viewsets.ModelViewSet):
         section = self.get_object(pk)
         question_serializer = self.serializer_class(section)
         return Response(question_serializer.data)
+    def update(self, request, pk=None):
+        try:
+            question = self.get_object(pk)
+            serializer = self.serializer_class(question, data=request.data)
+            
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data, status=status.HTTP_200_OK)
+            
+            return Response({'message': 'Datos inválidos', 'errors': serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+        
+        except Question.DoesNotExist:
+            return Response({'message': 'La question que intenta actualizar no existe'}, status=status.HTTP_404_NOT_FOUND)
 
     def destroy(self, request, pk=None):
         user_destroy = self.model.objects.filter(id=pk).update(is_active=False)
