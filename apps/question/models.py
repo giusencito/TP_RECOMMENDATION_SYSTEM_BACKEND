@@ -3,7 +3,7 @@ from apps.base.models import BaseModel
 from apps.section.models import Section
 # Create your models here.
 class Question(BaseModel):
-    questionname = models.CharField(max_length=200)
+    questionname = models.TextField()
     section = models.ForeignKey(Section, on_delete=models.CASCADE)
     class Meta:
           verbose_name = 'Question'
