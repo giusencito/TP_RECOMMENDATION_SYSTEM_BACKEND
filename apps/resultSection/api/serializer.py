@@ -6,6 +6,7 @@ class ResultSectionSerializer(serializers.ModelSerializer):
                 'id': instance.id,
                 'developmentPercentage': instance.developmentPercentage,
                 'section': f'{instance.section.sectionname}',
+                'test': f'{instance.section.test.testname}',
                 'resultTest': f'{instance.resultTest.id}'
                 }
       def validate_section(self, value):

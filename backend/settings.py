@@ -118,10 +118,10 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bgon9sjyhvi4akdas78u',
-        'USER': 'u15n788yijn1tqea',
-        'PASSWORD': 'LfTR7XvVF6x3YIpFh1Kl',
-        'HOST': 'bgon9sjyhvi4akdas78u-mysql.services.clever-cloud.com',
+        'NAME': 'jobBrainProfile',
+        'USER': 'root',
+        'PASSWORD': 'Destructor#12',
+        'HOST': 'localhost',
         'PORT': '3306',  
     }
 }

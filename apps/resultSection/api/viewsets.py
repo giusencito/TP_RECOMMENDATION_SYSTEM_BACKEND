@@ -69,3 +69,17 @@ class ResultSectionViewSets(viewsets.ModelViewSet):
             "rows": ResultTest_serializer.data
         }
         return Response(data, status=status.HTTP_200_OK)
+    @action(detail=False, methods=['get'])
+    def getResultSectionbyTestAndResultTest(self, request, test_id, result_test_id):
+        result_sections = ResultSection.objects.filter(
+            section__test_id=test_id, resultTest_id=result_test_id, state=True
+        )
+        
+        result_sections_serializer = self.serializer_class(result_sections, many=True)
+        
+        data = {
+            "total": result_sections.count(),
+            "rows": result_sections_serializer.data
+        }
+        return Response(data, status=status.HTTP_200_OK)
+ 

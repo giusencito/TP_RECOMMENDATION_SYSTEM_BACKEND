@@ -12,4 +12,4 @@ class ResultTest(BaseModel):
     
       def __str__(self):
            
-        return f'{self.id} was  created {self.obtainDate}'
+        return f'{self.id} was  created {self.postulant}'
