@@ -186,7 +186,9 @@ class RecomendationViewset(viewsets.ModelViewSet):
         print("Este es el serializer de section")
         print(section_serializer.data)
 
-        id_section_list = [{'id': item['id'], 'sectionname': section['sectionname']} for item in ResultTest_serializer.data for section in section_serializer.data if section['sectionname'] == item['section']]
+        id_section_list = [{'id': idx, 'sectionname': section['sectionname']}
+                  for idx, section in enumerate(section_serializer.data)
+                  if any(item['section'] == section['sectionname'] for item in ResultTest_serializer.data)]
         
         section_id_mapping = {section['sectionname']: section['id'] for section in id_section_list}
 
