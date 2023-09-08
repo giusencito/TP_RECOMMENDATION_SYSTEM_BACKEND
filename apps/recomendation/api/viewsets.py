@@ -6,6 +6,9 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import json
+from apps.resultSection.models import ResultSection
+from apps.resultSection.api.serializer import ResultSectionSerializer
+from apps.section.api.serializer import SectionSerializer
 from rest_framework.decorators import action
 from surprise import Dataset, Reader, SVD
 from surprise.model_selection import train_test_split
@@ -16,6 +19,8 @@ class RecomendationViewset(viewsets.ModelViewSet):
       jobs_per_page = 25
       total_jobs = 25
       data = []
+      queryset = None
+      queryset2 = None
       
       def GetJob(self,url):
           while self.start < self.total_jobs:
@@ -112,34 +117,34 @@ class RecomendationViewset(viewsets.ModelViewSet):
           jobs_df = pd.read_csv('csv/jobs.csv',sep='\t')
           ratings_df = pd.read_csv('csv/ratings_section.csv')
           sections_df = pd.read_csv('csv/section.csv')
-          all_combinations = pd.MultiIndex.from_product([sections_df['id'], jobs_df['Jobid']], names=['sectionId', 'Jobid'])
+          all_combinations = pd.MultiIndex.from_product([sections_df['id'], jobs_df['Jobid']], names=['section', 'Jobid'])
           all_combinations_df = pd.DataFrame(index=all_combinations).reset_index() 
-          merged_df = all_combinations_df.merge(ratings_df, on='sectionId', how='left')
-          merged_df = merged_df.merge(sections_df, left_on='sectionId', right_on='id', how='left')
+          merged_df = all_combinations_df.merge(ratings_df, on='section', how='left')
+          merged_df = merged_df.merge(sections_df, left_on='section', right_on='id', how='left')
           merged_df = merged_df.merge(jobs_df, left_on='Jobid', right_on='Jobid', how='left')
-          merged_df.dropna(subset=['rating'], inplace=True)
+          merged_df.dropna(subset=['developmentPercentage'], inplace=True)
           reader = Reader(rating_scale=(1, 5))
-          data = Dataset.load_from_df(merged_df[['sectionname', 'Description', 'rating']], reader)
+          data = Dataset.load_from_df(merged_df[['sectionname', 'Description', 'developmentPercentage']], reader)
           trainset, testset = train_test_split(data,test_size=0.2)
           knn_model = KNNBasic()
           knn_model.fit(trainset)
           content_model = SVD()
           content_model.fit(trainset)
           predictions = []
-          max_rating = merged_df['rating'].max()
-          min_rating = merged_df['rating'].min()
+          max_rating = merged_df['developmentPercentage'].max()
+          min_rating = merged_df['developmentPercentage'].min()
           for test_section, test_description, test_rating in testset:
               knn_pred = knn_model.predict(test_section, test_description, test_rating).est
               content_pred = content_model.predict(test_section, test_description, test_rating).est
-              similarity_pred_content = self.calculate_similarity({'sectionname': test_section, 'Description': test_description, 'rating': content_pred})
-              similarity_pred_knn = self.calculate_similarity({'sectionname': test_section, 'Description': test_description, 'rating': knn_pred})
+              similarity_pred_content = self.calculate_similarity({'sectionname': test_section, 'Description': test_description, 'developmentPercentage': content_pred})
+              similarity_pred_knn = self.calculate_similarity({'sectionname': test_section, 'Description': test_description, 'developmentPercentage': knn_pred})
               similarity_hybrid_pred = min((similarity_pred_content + similarity_pred_knn) / 2, 1.0)
               similarity_hybrid_pred = round(similarity_hybrid_pred, 1)
-              section_rating = merged_df.loc[merged_df['sectionname'] == test_section, 'rating'].iloc[0]
+              section_rating = merged_df.loc[merged_df['sectionname'] == test_section, 'developmentPercentage'].iloc[0]
               normalized_rating = (section_rating - min_rating) / (max_rating - min_rating)
               similarity_hybrid_pred *= normalized_rating
               predictions.append((test_section, test_description, test_rating, similarity_hybrid_pred))
-          df_predictions = pd.DataFrame(predictions, columns=['sectionname', 'Description', 'rating','similarity_pred'])
+          df_predictions = pd.DataFrame(predictions, columns=['sectionname', 'Description', 'developmentPercentage','similarity_pred'])
           recommendations = merged_df[['Jobid', 'Jobname', 'URL', 'Location', 'Date', 'Company','Description']].merge(df_predictions, on='Description')
           recommendations = recommendations.sort_values('similarity_pred', ascending=False)[['Jobname','Description','URL', 'Location','Date', 'Company', 'similarity_pred']]
           recommendations = recommendations.drop_duplicates(subset=['Jobname'])
@@ -155,17 +160,54 @@ class RecomendationViewset(viewsets.ModelViewSet):
         if sectionname is None or pd.isnull(description):
            return 0
         else:
-           rating = row['rating']
+           rating = row['developmentPercentage']
            similarity = description.lower().count(sectionname.lower()) * rating
            return similarity
 
+      def get_queryset(self):
+        if self.queryset is None:
+            self.queryset = ResultSectionSerializer().Meta.model.objects.filter(state=True)
+        return self.queryset
+      
+      def get_querysetSection(self):
+        if self.queryset2 is None:
+            self.queryset2 = SectionSerializer().Meta.model.objects.filter(state=True)
+        return self.queryset2  
+
+      @action(detail=True, methods=['get'])
+      def getSectionResults(self,request,pk=None):
+        self.queryset = ResultSectionSerializer().Meta.model.objects.filter(state=True).filter(resultTest_id=pk)
+        ResultTest = self.get_queryset()
+        ResultTest_serializer = ResultSectionSerializer(ResultTest, many=True)
+        print("resultsection con el queryset")
+        print(ResultTest_serializer.data)
+
+        section_serializer = SectionSerializer(self.get_querysetSection(), many=True)
+        print("Este es el serializer de section")
+        print(section_serializer.data)
+
+        id_section_list = [{'id': idx, 'sectionname': section['sectionname']}
+                  for idx, section in enumerate(section_serializer.data)
+                  if any(item['section'] == section['sectionname'] for item in ResultTest_serializer.data)]
         
+        section_id_mapping = {section['sectionname']: section['id'] for section in id_section_list}
 
-          
-          
-          
+        for item in ResultTest_serializer.data:
+            item['section'] = section_id_mapping.get(item['section'], '')
+            item['developmentPercentage'] = item['developmentPercentage'] / 100
 
+        print("Cambios realizados")
+        print(id_section_list)
 
+        print(ResultTest_serializer.data)
 
-          
-    
+        dfratings_sections = pd.DataFrame(ResultTest_serializer.data)
+        dfsections = pd.DataFrame(id_section_list)
+
+        dfratings_sections = dfratings_sections[['resultTest', 'section', 'developmentPercentage']]
+        dfsections = dfsections[['id','sectionname']]
+
+        dfratings_sections.to_csv('csv/ratings_section.csv', index=False)
+        dfsections.to_csv('csv/section.csv', index=False)
+        
+        return Response(status=status.HTTP_200_OK)
