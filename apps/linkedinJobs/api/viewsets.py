@@ -3,9 +3,9 @@ from rest_framework import viewsets
 from django.shortcuts import get_object_or_404
 from rest_framework.response import Response
 from apps.linkedinJobs.models import LinkedinJobs
-from apps.linkedinJobs.api.serializer import LinkedinJobsSerializer
+from apps.linkedinJobs.api.serializer import LinkedinJobsSerializer,LinkedinJobsHistorySerializer
 from rest_framework.decorators import action
-
+from django.db.models import Subquery, F, Min,OuterRef
 class LinkedinJobsViewSets(viewsets.ModelViewSet):
     model = LinkedinJobs
     serializer_class = LinkedinJobsSerializer
@@ -56,3 +56,53 @@ class LinkedinJobsViewSets(viewsets.ModelViewSet):
             "rows": Linkedinjob_serializer.data
         }
         return Response(data, status=status.HTTP_200_OK)
+    @action(detail=True, methods=['get'])
+    def getLinkedinJobbyResultTestJustOne(self,request,pk=None):
+       
+        self.queryset = self.serializer_class().Meta.model.objects.filter(state=True).filter(resultTest_id=pk).first()
+        Linkedinjob = self.get_queryset()
+        if Linkedinjob:
+           Linkedinjob_serializer = self.serializer_class(Linkedinjob)
+           data = {
+            "Linkedinjob": Linkedinjob_serializer.data
+           }
+           return Response(data, status=status.HTTP_200_OK)
+        else:
+             return Response({"message": "Error Match"}, status=status.HTTP_404_NOT_FOUND)
+    @action(detail=False, methods=['get'])
+    def getLinkedinJobsByResultTestAndPostulant(self, request, result_test_id, postulant_id):
+        self.serializer_class=LinkedinJobsHistorySerializer
+        linkedinJobs = LinkedinJobs.objects.filter(
+            resultTest_id=result_test_id, state=True,resultTest__postulant_id=postulant_id
+        )
+        linkedinJobs_serializer = self.serializer_class(linkedinJobs, many=True)
+
+       
+        data = {
+            "total": linkedinJobs.count(),
+            "rows": linkedinJobs_serializer.data
+        }
+        return Response(data, status=status.HTTP_200_OK)
+    @action(detail=False, methods=['get'])
+    def getLinkedinJobsByPostulantsJustOne(self, request,postulant_id):
+        self.serializer_class=LinkedinJobsHistorySerializer
+        linkedinJobs = LinkedinJobs.objects.filter(
+                    state=True, resultTest__postulant_id=postulant_id
+                      )
+        min_result_test_subquery = linkedinJobs.filter(
+                       resultTest=OuterRef('resultTest')
+                       ).order_by('resultTest', 'id').values('id')[:1]
+        unique_linkedin_jobs = linkedinJobs.filter(id=Subquery(min_result_test_subquery))
+
+        linkedinJobs_serializer = self.serializer_class(unique_linkedin_jobs, many=True)
+
+       
+        data = {
+            "total": unique_linkedin_jobs.count(),
+            "rows": linkedinJobs_serializer.data
+        }
+        return Response(data, status=status.HTTP_200_OK)
+   
+
+
+    

@@ -6,5 +6,6 @@ router.register(r'ResultSectionViewSets',ResultSectionViewSets,basename='ResultS
 urlpatterns = [
     
     path('getResultSectionbyTestAndResultTest/<int:test_id>/<int:result_test_id>/', ResultSectionViewSets.as_view({'get': 'getResultSectionbyTestAndResultTest'}), name='get_result_section_by_test_and_result_test'),
+   
 ]
 urlpatterns += router.urls
