@@ -3,9 +3,9 @@ from rest_framework import viewsets
 from django.shortcuts import get_object_or_404
 from rest_framework.response import Response
 from apps.selectedjob.models import SelectedJob
-from apps.selectedjob.api.serializer import SelectedJobSerializer
+from apps.selectedjob.api.serializer import SelectedJobSerializer,SelectedJobEmailSerializer,SendTestReviewSerializer
 from rest_framework.decorators import action
-
+from django.core.mail import send_mail
 class SelectedJobViewSets(viewsets.ModelViewSet):
     model = SelectedJob
     serializer_class = SelectedJobSerializer
@@ -57,3 +57,45 @@ class SelectedJobViewSets(viewsets.ModelViewSet):
             "rows": SelectedJob_serializer.data
         }
         return Response(data, status=status.HTTP_200_OK)
+    @action(detail=False, methods=['get'])
+    def getSelectedJobsbyLinkedinJobs(self, request,resulttest_id):
+        self.serializer_class=SelectedJobEmailSerializer
+        selected_jobs = SelectedJob.objects.filter(job__resultTest_id=resulttest_id, state=True)
+
+        selected_jobs_serializer = self.serializer_class(selected_jobs, many=True)
+
+        data = {
+            "total": selected_jobs.count(),
+            "rows": selected_jobs_serializer.data
+        }
+
+        return Response(data, status=status.HTTP_200_OK)
+ 
+    
+    
+    
+
+class SendTestEmail(viewsets.ModelViewSet):
+    serializer_class = SendTestReviewSerializer
+    def create(self,request):
+        serializer = self.serializer_class(data=request.data)
+        
+        if serializer.is_valid():
+            print('fff')
+            user = serializer.validated_data['email']
+            #token = default_token_generator.make_token(user)
+            #user.token_password = token
+            #user.save()
+            subject = 'Cuestionario de Verificación'
+            from_email = 'xskulldragon@gmail.com'
+            recipient_list= [user.email] 
+            print(recipient_list)
+            #reset_password_link = f'http://localhost:4200/change-password/{token}'
+            message = f'Hola {user.username},\n\ Aqui esta el cuestionario de verificación'
+            send_mail(subject, message,from_email, recipient_list,fail_silently=False)
+            return Response({
+                'message': 'correo enviado'
+            })
+        else:
+            print(serializer.data)
+            return Response({'message':'errror'},status= status.HTTP_400_BAD_REQUEST)
