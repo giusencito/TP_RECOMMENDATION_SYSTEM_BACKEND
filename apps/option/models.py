@@ -4,7 +4,7 @@ from apps.question.models import Question
 from django.core.validators import MinValueValidator
 # Create your models here.
 class Option(BaseModel):
-    optionname= models.CharField(max_length=200)
+    optionname= models.TextField()
     optionscore= models.IntegerField(validators=[MinValueValidator(0)])
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     class Meta:

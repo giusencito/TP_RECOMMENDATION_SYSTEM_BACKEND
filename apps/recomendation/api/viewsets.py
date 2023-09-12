@@ -14,6 +14,8 @@ from surprise import Dataset, Reader, SVD
 from surprise.model_selection import train_test_split
 from surprise.prediction_algorithms import KNNBasic
 from surprise import accuracy
+from sklearn.feature_extraction.text import TfidfVectorizer
+
 class RecomendationViewset(viewsets.ModelViewSet):
       start = 0
       jobs_per_page = 25
@@ -122,11 +124,11 @@ class RecomendationViewset(viewsets.ModelViewSet):
           merged_df = all_combinations_df.merge(ratings_df, on='section', how='left')
           merged_df = merged_df.merge(sections_df, left_on='section', right_on='id', how='left')
           merged_df = merged_df.merge(jobs_df, left_on='Jobid', right_on='Jobid', how='left')
-          merged_df.dropna(subset=['developmentPercentage'], inplace=True)
+          merged_df['developmentPercentage'].fillna(0, inplace=True)
           reader = Reader(rating_scale=(1, 5))
           data = Dataset.load_from_df(merged_df[['sectionname', 'Description', 'developmentPercentage']], reader)
-          trainset, testset = train_test_split(data,test_size=0.2)
-          knn_model = KNNBasic()
+          trainset, testset = train_test_split(data,test_size=0.2, random_state=42)
+          knn_model = KNNBasic(sim_options={'name': 'cosine', 'user_based': False})
           knn_model.fit(trainset)
           content_model = SVD()
           content_model.fit(trainset)
@@ -161,7 +163,9 @@ class RecomendationViewset(viewsets.ModelViewSet):
            return 0
         else:
            rating = row['developmentPercentage']
-           similarity = description.lower().count(sectionname.lower()) * rating
+           tfidf_vectorizer = TfidfVectorizer()
+           tfidf_matrix = tfidf_vectorizer.fit_transform([sectionname, description])
+           similarity = (tfidf_matrix * tfidf_matrix.T).A[0, 1] * rating
            return similarity
 
       def get_queryset(self):
