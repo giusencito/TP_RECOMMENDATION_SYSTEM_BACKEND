@@ -14,6 +14,8 @@ from surprise import Dataset, Reader, SVD
 from surprise.model_selection import train_test_split
 from surprise.prediction_algorithms import KNNBasic
 from surprise import accuracy
+from sklearn.feature_extraction.text import TfidfVectorizer
+
 class RecomendationViewset(viewsets.ModelViewSet):
       start = 0
       jobs_per_page = 25
@@ -161,7 +163,9 @@ class RecomendationViewset(viewsets.ModelViewSet):
            return 0
         else:
            rating = row['developmentPercentage']
-           similarity = description.lower().count(sectionname.lower()) * rating
+           tfidf_vectorizer = TfidfVectorizer()
+           tfidf_matrix = tfidf_vectorizer.fit_transform([sectionname, description])
+           similarity = (tfidf_matrix * tfidf_matrix.T).A[0, 1] * rating
            return similarity
 
       def get_queryset(self):
