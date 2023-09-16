@@ -122,7 +122,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'jobBrainProfile',
         'USER': 'root',
-        'PASSWORD': 'Destructor#12',
+        'PASSWORD': 'Alejandrosebastian1',
         'HOST': 'localhost',
         'PORT': '3306',  
     }
