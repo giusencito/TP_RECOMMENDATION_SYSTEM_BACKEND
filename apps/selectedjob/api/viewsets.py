@@ -3,9 +3,11 @@ from rest_framework import viewsets
 from django.shortcuts import get_object_or_404
 from rest_framework.response import Response
 from apps.selectedjob.models import SelectedJob
+from apps.feedback.models import Feedback
 from apps.selectedjob.api.serializer import SelectedJobSerializer,SelectedJobEmailSerializer,SendTestReviewSerializer
 from rest_framework.decorators import action
 from django.core.mail import send_mail
+from django.contrib.auth.tokens import default_token_generator
 class SelectedJobViewSets(viewsets.ModelViewSet):
     model = SelectedJob
     serializer_class = SelectedJobSerializer
@@ -75,23 +77,24 @@ class SelectedJobViewSets(viewsets.ModelViewSet):
     
     
 
-class SendTestEmail(viewsets.ModelViewSet):
+class SendTestEmail(viewsets.GenericViewSet):
     serializer_class = SendTestReviewSerializer
-    def create(self,request):
+    @action(detail=False, methods=['post']) 
+    def send_email(self,request):
         serializer = self.serializer_class(data=request.data)
         
         if serializer.is_valid():
             print('fff')
-            user = serializer.validated_data['email']
-            #token = default_token_generator.make_token(user)
+            user = serializer.validated_data['user']
+            Feedback = serializer.validated_data['feedback']
             #user.token_password = token
             #user.save()
             subject = 'Cuestionario de Verificación'
             from_email = 'xskulldragon@gmail.com'
             recipient_list= [user.email] 
             print(recipient_list)
-            #reset_password_link = f'http://localhost:4200/change-password/{token}'
-            message = f'Hola {user.username},\n\ Aqui esta el cuestionario de verificación'
+            reset_password_link = f'http://localhost:4200/start-validation-test/{Feedback.token_link}/{user.id}'
+            message = f'Hola {user.username},\n\nAqui esta el cuestionario de verificación sigue este enlace: {reset_password_link}\n\nAtentamente,\nEl equipo de tu aplicación'
             send_mail(subject, message,from_email, recipient_list,fail_silently=False)
             return Response({
                 'message': 'correo enviado'

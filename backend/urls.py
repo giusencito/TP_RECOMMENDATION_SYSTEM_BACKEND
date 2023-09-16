@@ -54,6 +54,7 @@ urlpatterns = [
     path('resultSection/',include('apps.resultSection.api.router')),
     path('linkedinJob/',include('apps.linkedinJobs.api.router')),
     path('selectedJob/',include('apps.selectedjob.api.router')),
+    path('feedback/',include('apps.feedback.api.router')),
     path('course/',include('apps.course.api.router')),
     path('interviewquestions/',include('apps.InterviewQuestions.api.router')),
     path('recomendation/',include('apps.recomendation.api.router')),

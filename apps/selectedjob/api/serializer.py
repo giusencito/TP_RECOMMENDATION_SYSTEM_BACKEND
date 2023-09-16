@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from apps.selectedjob.models import SelectedJob
 from apps.postulants.models import Postulant
+from apps.feedback.models import Feedback
 class SelectedJobSerializer(serializers.ModelSerializer):
        def to_representation(self,instance):
             return {
@@ -46,12 +47,22 @@ class SelectedJobEmailSerializer(serializers.ModelSerializer):
           exclude = ('state','created_date','modified_date','deleted_date')
 class SendTestReviewSerializer(serializers.Serializer):
     email = serializers.EmailField()
-    def validate_email(self, value):
-        try: 
-           
-            user =  Postulant.objects.filter(is_active=True).get(email=value)
-            print(user)
+    token = serializers.CharField()
+
+    def validate(self, data):
+        email = data.get('email')
+        token = data.get('token')
+
+        try:
+            user = Postulant.objects.get(email=email, is_active=True)
         except Postulant.DoesNotExist:
-            raise serializers.ValidationError( {'message':'correo no existe'}  )  
-        print(type(user))  
-        return user
+            raise serializers.ValidationError({'message': 'El correo no existe'})
+
+        try:
+            feedback = Feedback.objects.get(postulant=user, token_link=token, state=True)
+        except Feedback.DoesNotExist:
+            raise serializers.ValidationError({'message': 'El feedback no existe'})
+
+        return {'user': user, 'feedback': feedback}
+    
+        
