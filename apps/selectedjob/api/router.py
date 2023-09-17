@@ -7,6 +7,7 @@ router.register(r'SelectedJobViewSets/SendTestEmail',SendTestEmail,basename='Sen
 
 urlpatterns = [
     path('SelectedJobViewSets/getSelectedJobsbyResultTest/<int:resulttest_id>/', SelectedJobViewSets.as_view({'get': 'getSelectedJobsbyLinkedinJobs'}), name='selectedjob-by-linkedinjob'),
+    path('SelectedJobViewSets/get_selected_jobs_by_test_id/<int:test_id>/', SelectedJobViewSets.as_view({'get': 'get_selected_jobs_by_test_id'}), name='get_selected_jobs_by_test_id'),
 
 
 ]

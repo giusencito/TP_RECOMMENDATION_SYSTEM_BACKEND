@@ -4,7 +4,7 @@ from rest_framework import viewsets
 from django.shortcuts import get_object_or_404
 from rest_framework.response import Response
 from apps.feedback.models import Feedback
-from apps.feedback.api.serializer import FeedbackSerializer
+from apps.feedback.api.serializer import FeedbackSerializer,FeedbackReviewSerializer
 from rest_framework.decorators import action
 
 
@@ -53,9 +53,9 @@ class FeedbackViewSets(viewsets.ModelViewSet):
         }
         return Response(data, status=status.HTTP_200_OK)
     @action(detail=True, methods=['get'])
-    def getFeedbackbyPostulant(self,request,pk=None):
+    def getFeedbackbyresultTest(self,request,pk=None):
        
-        self.queryset = self.serializer_class().Meta.model.objects.filter(state=True).filter(postulant_id=pk)
+        self.queryset = self.serializer_class().Meta.model.objects.filter(state=True).filter(resultTest_id=pk)
         Feedback = self.get_queryset()
         Feedback_serializer = self.serializer_class(Feedback, many=True)
         data = {
@@ -64,3 +64,26 @@ class FeedbackViewSets(viewsets.ModelViewSet):
             "rows": Feedback_serializer.data
         }
         return Response(data, status=status.HTTP_200_OK)
+    @action(detail=True, methods=['get'])
+    def getFeedbackbyselectedJob(self,request,pk=None):
+       
+        self.queryset = self.serializer_class().Meta.model.objects.filter(state=True).filter(selectedjob=pk)
+        Feedback = self.get_queryset()
+        Feedback_serializer = self.serializer_class(Feedback, many=True)
+        data = {
+            
+            "total": self.get_queryset().count(),
+            "rows": Feedback_serializer.data
+        }
+        return Response(data, status=status.HTTP_200_OK)
+    @action(detail=False, methods=['get'])
+    def get_feedback_by_result_test(self, request, result_test_id):
+        self.serializer_class=FeedbackReviewSerializer
+        feedback = Feedback.objects.filter(selectedjob__job__resultTest__id=result_test_id, state=True)
+        feedback_serializer = self.serializer_class(feedback, many=True)
+        data = {
+            "total": feedback.count(),
+            "rows": feedback_serializer.data
+        }
+        return Response(data, status=status.HTTP_200_OK)
+    

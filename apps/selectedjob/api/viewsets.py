@@ -59,6 +59,10 @@ class SelectedJobViewSets(viewsets.ModelViewSet):
             "rows": SelectedJob_serializer.data
         }
         return Response(data, status=status.HTTP_200_OK)
+    
+        
+        
+        
     @action(detail=False, methods=['get'])
     def getSelectedJobsbyLinkedinJobs(self, request,resulttest_id):
         self.serializer_class=SelectedJobEmailSerializer
@@ -72,6 +76,7 @@ class SelectedJobViewSets(viewsets.ModelViewSet):
         }
 
         return Response(data, status=status.HTTP_200_OK)
+    
  
     
     
@@ -89,11 +94,12 @@ class SendTestEmail(viewsets.GenericViewSet):
             Feedback = serializer.validated_data['feedback']
             #user.token_password = token
             #user.save()
+            id=Feedback.resultTest.id
             subject = 'Cuestionario de Verificación'
             from_email = 'xskulldragon@gmail.com'
             recipient_list= [user.email] 
             print(recipient_list)
-            reset_password_link = f'http://localhost:4200/start-validation-test/{Feedback.token_link}/{user.id}'
+            reset_password_link = f'http://localhost:4200/start-validation-test/{Feedback.token_link}/{id}'
             message = f'Hola {user.username},\n\nAqui esta el cuestionario de verificación sigue este enlace: {reset_password_link}\n\nAtentamente,\nEl equipo de tu aplicación'
             send_mail(subject, message,from_email, recipient_list,fail_silently=False)
             return Response({

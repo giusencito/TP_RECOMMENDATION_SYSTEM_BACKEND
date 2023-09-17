@@ -5,6 +5,7 @@ from apps.linkedinJobs.models import LinkedinJobs
 class SelectedJob(BaseModel):
     register = models.DateField(auto_now_add=True)
     job = models.ForeignKey(LinkedinJobs, on_delete=models.CASCADE)
+    
     class Meta:
               verbose_name = 'SelectedJob'
               verbose_name_plural = 'SelectedJobs'

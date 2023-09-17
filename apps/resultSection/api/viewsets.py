@@ -82,4 +82,4 @@ class ResultSectionViewSets(viewsets.ModelViewSet):
             "rows": result_sections_serializer.data
         }
         return Response(data, status=status.HTTP_200_OK)
- 
+    

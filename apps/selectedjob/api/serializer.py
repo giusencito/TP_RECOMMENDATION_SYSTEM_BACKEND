@@ -59,7 +59,7 @@ class SendTestReviewSerializer(serializers.Serializer):
             raise serializers.ValidationError({'message': 'El correo no existe'})
 
         try:
-            feedback = Feedback.objects.get(postulant=user, token_link=token, state=True)
+            feedback = Feedback.objects.get(selectedjob__job__resultTest__postulant=user, token_link=token, state=True)
         except Feedback.DoesNotExist:
             raise serializers.ValidationError({'message': 'El feedback no existe'})
 
