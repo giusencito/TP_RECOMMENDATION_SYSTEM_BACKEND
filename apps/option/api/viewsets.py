@@ -3,6 +3,10 @@ from rest_framework import viewsets
 from django.shortcuts import get_object_or_404
 from rest_framework.response import Response
 from apps.option.models import Option
+from apps.section.models import Section
+
+from apps.question.models import Question
+from django.http import JsonResponse
 from apps.option.api.serializer import OptionSerializer
 from rest_framework.decorators import action
 class OptionViewSet(viewsets.ModelViewSet):
@@ -69,3 +73,21 @@ class OptionViewSet(viewsets.ModelViewSet):
             "rows": questions_serializer.data
         }
         return Response(data, status=status.HTTP_200_OK)
+    
+    @action(detail=False, methods=['get'])
+    def get_questions_with_options(self,request, section_id):
+        try:
+            section = Section.objects.filter(state=True).get(pk=section_id)
+            questions = Question.objects.filter(section=section,state=True)
+            questions_with_options = []
+            for question in questions:
+                options = Option.objects.filter(question=question)
+                options_data = [{'optionname': option.optionname, 'optionscore': option.optionscore} for option in options]
+                question_data = {
+                'questionname': question.questionname,
+                'options': options_data,
+                }
+                questions_with_options.append(question_data)
+            return JsonResponse({'sectionname':section.sectionname,'total':section.totalscore,'testname':section.test.testname,'questions': questions_with_options})
+        except Section.DoesNotExist:
+               return JsonResponse({'error': 'La sección no existe'}, status=404)

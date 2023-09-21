@@ -3,6 +3,10 @@ from rest_framework import viewsets
 from django.shortcuts import get_object_or_404
 from rest_framework.response import Response
 from apps.tests.models import Test
+from apps.section.models import Section
+from apps.question.models import Question
+from apps.option.models import Option
+
 from apps.tests.api.serializer import TestSerializer
 from rest_framework.decorators import action
 class TestViewSet(viewsets.ModelViewSet):
@@ -44,3 +48,36 @@ class TestViewSet(viewsets.ModelViewSet):
             "rows": assitans_serializer.data
         }
         return Response(data, status=status.HTTP_200_OK)
+    @action(detail=True, methods=['get'])
+    def get_test_with_sections_and_questions(self, request, pk=None):
+        print(pk)
+        test = get_object_or_404(self.serializer_class.Meta.model, pk=pk)
+        test_serializer = self.serializer_class(test)
+        test_data = test_serializer.data
+        sections_data = []
+        sections = Section.objects.filter(test=test,state=True)
+        for section in sections:
+            section_data = {
+                "section": section.sectionname,
+                "totalscore": section.totalscore,
+                "questions": []
+            }
+            questions = Question.objects.filter(section=section)
+            for question in questions:
+                question_data = {
+                    "questionname": question.questionname,
+                    "options": []
+                }
+                options = Option.objects.filter(question=question)
+                for option in options:
+                    option_data = {
+                        "optionname": option.optionname,
+                        "optionscore": option.optionscore
+                    }
+                    question_data["options"].append(option_data)
+                section_data["questions"].append(question_data)
+            sections_data.append(section_data)
+            
+            
+        test_data["sections"] = sections_data   
+        return Response(test_data, status=status.HTTP_200_OK)

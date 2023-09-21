@@ -6,7 +6,7 @@ from rest_framework.response import Response
 from apps.feedback.models import Feedback
 from apps.feedback.api.serializer import FeedbackSerializer,FeedbackReviewSerializer
 from rest_framework.decorators import action
-
+from django.db.models import Count
 
 
 class FeedbackViewSets(viewsets.ModelViewSet):
@@ -79,7 +79,7 @@ class FeedbackViewSets(viewsets.ModelViewSet):
     @action(detail=False, methods=['get'])
     def get_feedback_by_result_test(self, request, result_test_id):
         self.serializer_class=FeedbackReviewSerializer
-        feedback = Feedback.objects.filter(selectedjob__job__resultTest__id=result_test_id, state=True)
+        feedback = Feedback.objects.annotate(resultsection_count=Count('resultTest__resultsection')).filter(selectedjob__job__resultTest__id=result_test_id,resultsection_count__gt=0 ,state=True)
         feedback_serializer = self.serializer_class(feedback, many=True)
         data = {
             "total": feedback.count(),
