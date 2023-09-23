@@ -5,8 +5,10 @@ from rest_framework.response import Response
 from apps.tests.models import Test
 from apps.section.models import Section
 from apps.question.models import Question
-from apps.option.models import Option
+from apps.typetest.models import TypeTest
 
+from apps.option.models import Option
+from django.db.models import Q
 from apps.tests.api.serializer import TestSerializer
 from rest_framework.decorators import action
 class TestViewSet(viewsets.ModelViewSet):
@@ -48,6 +50,23 @@ class TestViewSet(viewsets.ModelViewSet):
             "rows": assitans_serializer.data
         }
         return Response(data, status=status.HTTP_200_OK)
+    @action(detail=False, methods=['get'])
+    def excludeTestbyTypeTest(self,request,pk1,pk2):
+        type_test1 = get_object_or_404(TypeTest, pk=pk1)
+        type_test2 = get_object_or_404(TypeTest, pk=pk2)
+        tests = Test.objects.filter(
+            state=True
+        ).exclude(
+            Q(typetest=type_test1) | Q(typetest=type_test2)
+        )
+        
+        assitans_serializer = self.serializer_class(tests, many=True)
+        data = {
+            
+            "total": tests.count(),
+            "rows": assitans_serializer.data
+        }
+        return Response(data, status=status.HTTP_200_OK)
     @action(detail=True, methods=['get'])
     def get_test_with_sections_and_questions(self, request, pk=None):
         print(pk)
@@ -58,6 +77,7 @@ class TestViewSet(viewsets.ModelViewSet):
         sections = Section.objects.filter(test=test,state=True)
         for section in sections:
             section_data = {
+                "id": section.id,
                 "section": section.sectionname,
                 "totalscore": section.totalscore,
                 "questions": []

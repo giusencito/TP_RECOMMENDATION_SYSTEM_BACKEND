@@ -8,6 +8,7 @@ from apps.selectedjob.api.serializer import SelectedJobSerializer,SelectedJobEma
 from rest_framework.decorators import action
 from django.core.mail import send_mail
 from django.contrib.auth.tokens import default_token_generator
+from django.db.models import Subquery, OuterRef
 class SelectedJobViewSets(viewsets.ModelViewSet):
     model = SelectedJob
     serializer_class = SelectedJobSerializer
@@ -66,7 +67,8 @@ class SelectedJobViewSets(viewsets.ModelViewSet):
     @action(detail=False, methods=['get'])
     def getSelectedJobsbyLinkedinJobs(self, request,resulttest_id):
         self.serializer_class=SelectedJobEmailSerializer
-        selected_jobs = SelectedJob.objects.filter(job__resultTest_id=resulttest_id, state=True)
+        feedback_ids = Feedback.objects.filter(selectedjob=OuterRef('id')).values('selectedjob_id')
+        selected_jobs = SelectedJob.objects.filter(job__resultTest_id=resulttest_id, state=True).exclude(id__in=Subquery(feedback_ids))
 
         selected_jobs_serializer = self.serializer_class(selected_jobs, many=True)
 
@@ -89,16 +91,15 @@ class SendTestEmail(viewsets.GenericViewSet):
         serializer = self.serializer_class(data=request.data)
         
         if serializer.is_valid():
-            print('fff')
             user = serializer.validated_data['user']
             Feedback = serializer.validated_data['feedback']
             #user.token_password = token
             #user.save()
+            job= Feedback.selectedjob.job.jobName
             id=Feedback.resultTest.id
-            subject = 'Cuestionario de Verificación'
+            subject = 'Cuestionario de Verificación del Empleo '+job
             from_email = 'xskulldragon@gmail.com'
             recipient_list= [user.email] 
-            print(recipient_list)
             reset_password_link = f'http://localhost:4200/start-validation-test/{Feedback.token_link}/{id}'
             message = f'Hola {user.username},\n\nAqui esta el cuestionario de verificación sigue este enlace: {reset_password_link}\n\nAtentamente,\nEl equipo de tu aplicación'
             send_mail(subject, message,from_email, recipient_list,fail_silently=False)
