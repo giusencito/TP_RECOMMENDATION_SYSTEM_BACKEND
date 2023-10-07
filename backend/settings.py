@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-=abw+*4_be9@%!gu3r+cj=@v+^n-&tsb-m#gbuw=9mchj3737-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -116,19 +116,12 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'jobBrainProfile',
-        'USER': 'root',
-        'PASSWORD': 'Destructor#12',
-        'HOST': 'localhost',
-        'PORT': '3306',  
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -172,11 +165,6 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'xskulldragon@gmail.com'
 EMAIL_HOST_PASSWORD = 'hddwlesdqqhqinbu'
 AUTH_USER_MODEL = 'user.User'
-CORS_ORIGIN_WHITELIST = [
-    "http://localhost:4200",
-    "http://localhost:3000",
-    
-]
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),

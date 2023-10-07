@@ -19,7 +19,7 @@ import openai
 class CourseRecomendationViewset(viewsets.ModelViewSet):
     todos_los_cursos = []
 
-    openai.api_key = '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' #verificar
+    openai.api_key = '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' #verificar
 
 
     def GetCourses(self):

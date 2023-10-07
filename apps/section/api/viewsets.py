@@ -35,7 +35,7 @@ class SectionViewSet(viewsets.ModelViewSet):
         return Response(inventtory_serializer.data)
 
     def destroy(self, request, pk=None):
-        user_destroy = self.model.objects.filter(id=pk).update(is_active=False)
+        user_destroy = self.model.objects.filter(id=pk).update(state=False)
         if user_destroy == 1:
             return Response({
                 'message': 'section eliminado correctamente'

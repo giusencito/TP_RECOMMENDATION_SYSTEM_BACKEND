@@ -116,19 +116,29 @@ class RecomendationViewset(viewsets.ModelViewSet):
           return Response(df_head_json)
       @action(detail=False, methods=['post'])
       def hydridRecommendation(self,request):
-          jobs_df = pd.read_csv('csv/jobs.csv',sep='\t')
+          jobs_df = pd.read_csv('csv/jobs.csv',sep='\t')   
           ratings_df = pd.read_csv('csv/ratings_section.csv')
           sections_df = pd.read_csv('csv/section.csv')
-          all_combinations = pd.MultiIndex.from_product([sections_df['id'], jobs_df['Jobid']], names=['section', 'Jobid'])
-          all_combinations_df = pd.DataFrame(index=all_combinations).reset_index() 
-          merged_df = all_combinations_df.merge(ratings_df, on='section', how='left')
-          merged_df = merged_df.merge(sections_df, left_on='section', right_on='id', how='left')
-          merged_df = merged_df.merge(jobs_df, left_on='Jobid', right_on='Jobid', how='left')
+          all_combinations = pd.MultiIndex.from_product(
+              [sections_df['id'], jobs_df['Jobid']], 
+              names=['section', 'Jobid'])
+          all_combinations_df = pd.DataFrame(
+              index=all_combinations).reset_index() 
+          merged_df = all_combinations_df.merge(
+              ratings_df, on='section', how='left')
+          merged_df = merged_df.merge(
+             sections_df, left_on='section', 
+             right_on='id', how='left')
+          merged_df = merged_df.merge(jobs_df, 
+                left_on='Jobid', right_on='Jobid', how='left')
           merged_df['developmentPercentage'].fillna(0, inplace=True)
           reader = Reader(rating_scale=(1, 5))
-          data = Dataset.load_from_df(merged_df[['sectionname', 'Description', 'developmentPercentage']], reader)
-          trainset, testset = train_test_split(data,test_size=0.2, random_state=42)
-          knn_model = KNNBasic(sim_options={'name': 'cosine', 'user_based': False})
+          data = Dataset.load_from_df(merged_df[['sectionname', 
+                    'Description', 'developmentPercentage']], reader)
+          trainset, testset = train_test_split(
+              data,test_size=0.2, random_state=42)
+          knn_model = KNNBasic(sim_options={'name': 'cosine', 
+                                            'user_based': False})
           knn_model.fit(trainset)
           content_model = SVD()
           content_model.fit(trainset)
@@ -136,19 +146,29 @@ class RecomendationViewset(viewsets.ModelViewSet):
           max_rating = merged_df['developmentPercentage'].max()
           min_rating = merged_df['developmentPercentage'].min()
           for test_section, test_description, test_rating in testset:
-              knn_pred = knn_model.predict(test_section, test_description, test_rating).est
-              content_pred = content_model.predict(test_section, test_description, test_rating).est
-              similarity_pred_content = self.calculate_similarity({'sectionname': test_section, 'Description': test_description, 'developmentPercentage': content_pred})
-              similarity_pred_knn = self.calculate_similarity({'sectionname': test_section, 'Description': test_description, 'developmentPercentage': knn_pred})
-              similarity_hybrid_pred = min((similarity_pred_content + similarity_pred_knn) / 2, 1.0)
+              knn_pred = knn_model.predict(test_section, 
+                                           test_description, test_rating).est
+              content_pred = content_model.predict(test_section, test_description,
+                                                   test_rating).est
+              similarity_pred_content = self.calculate_similarity({'sectionname': test_section, 
+                        'Description': test_description, 'developmentPercentage': content_pred})
+              similarity_pred_knn = self.calculate_similarity({'sectionname': test_section, 
+                        'Description': test_description, 'developmentPercentage': knn_pred})
+              similarity_hybrid_pred = min((similarity_pred_content + 
+                                            similarity_pred_knn) / 2, 1.0)
               similarity_hybrid_pred = round(similarity_hybrid_pred, 1)
-              section_rating = merged_df.loc[merged_df['sectionname'] == test_section, 'developmentPercentage'].iloc[0]
+              section_rating = merged_df.loc[merged_df['sectionname'] == test_section, 
+                                             'developmentPercentage'].iloc[0]
               normalized_rating = (section_rating - min_rating) / (max_rating - min_rating)
               similarity_hybrid_pred *= normalized_rating
-              predictions.append((test_section, test_description, test_rating, similarity_hybrid_pred))
-          df_predictions = pd.DataFrame(predictions, columns=['sectionname', 'Description', 'developmentPercentage','similarity_pred'])
-          recommendations = merged_df[['Jobid', 'Jobname', 'URL', 'Location', 'Date', 'Company','Description']].merge(df_predictions, on='Description')
-          recommendations = recommendations.sort_values('similarity_pred', ascending=False)[['Jobname','Description','URL', 'Location','Date', 'Company', 'similarity_pred']]
+              predictions.append((test_section, test_description, 
+                                  test_rating, similarity_hybrid_pred))
+          df_predictions = pd.DataFrame(predictions, columns=['sectionname', 'Description',
+                          'developmentPercentage','similarity_pred'])
+          recommendations = merged_df[['Jobid', 'Jobname', 'URL', 'Location', 'Date', 'Company',
+                                       'Description']].merge(df_predictions, on='Description')
+          recommendations = recommendations.sort_values('similarity_pred', ascending=False
+                )[['Jobname','Description','URL','Location','Date', 'Company', 'similarity_pred']]
           recommendations = recommendations.drop_duplicates(subset=['Jobname'])
           recommendations = recommendations.loc[recommendations['similarity_pred'] != 0.0]
           recomendations_json= recommendations.to_json(orient='records')
@@ -164,8 +184,10 @@ class RecomendationViewset(viewsets.ModelViewSet):
         else:
            rating = row['developmentPercentage']
            tfidf_vectorizer = TfidfVectorizer()
-           tfidf_matrix = tfidf_vectorizer.fit_transform([sectionname, description])
-           similarity = (tfidf_matrix * tfidf_matrix.T).A[0, 1] * rating
+           tfidf_matrix = tfidf_vectorizer.fit_transform(
+               [sectionname, description])
+           similarity = (tfidf_matrix * 
+                         tfidf_matrix.T).A[0, 1] * rating
            return similarity
 
       def get_queryset(self):
