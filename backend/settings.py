@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 from datetime import timedelta
 import os 
+import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -119,15 +120,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sys',
-        'USER': 'admin',
-        'PASSWORD': 'admin123',
-        'HOST': 'database-1.ceyktdivclng.us-east-1.rds.amazonaws.com',
-        'PORT': '3306',  
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+DATABASES["default"]= dj_database_url.parse("postgres://jobbrainprofile_qa6h_user:eSbWjx5cDljCtJviFGkBOvZY4lhRu2iA@dpg-ckgtvquafg7c73f6p1fg-a.oregon-postgres.render.com/jobbrainprofile_qa6h")
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
