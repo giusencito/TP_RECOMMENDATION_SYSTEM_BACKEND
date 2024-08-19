@@ -5,7 +5,7 @@ class SectionSerializer(serializers.ModelSerializer):
     def to_representation(self,instance):
             return {
                 'id': instance.id,
-                'sectionname': instance.sectionname, 
+                'SectioNname': instance.sectionname, 
                 'totalscore': instance.totalscore, 
                 'test': f'{instance.test.testname}'
             }

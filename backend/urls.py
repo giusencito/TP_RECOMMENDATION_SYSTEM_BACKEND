@@ -58,6 +58,7 @@ urlpatterns = [
     path('course/',include('apps.course.api.router')),
     path('interviewquestions/',include('apps.InterviewQuestions.api.router')),
     path('recomendation/',include('apps.recomendation.api.router')),
+    path('hybridrecomendation/',include('apps.hybridRecomendation.router')),
     path('courserecomendation/',include('apps.courserecomendation.api.router')),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),

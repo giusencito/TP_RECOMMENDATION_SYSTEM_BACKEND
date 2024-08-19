@@ -70,6 +70,7 @@ LOCAL_APPS =[
     'apps.InterviewQuestions',
     'apps.selectedjob',
     'apps.feedback',
+    'apps.hybridRecomendation',
 ]
 THIRD_APPS=[
     'corsheaders',

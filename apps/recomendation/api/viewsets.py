@@ -66,31 +66,31 @@ class RecomendationViewset(viewsets.ModelViewSet):
           url = f"https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Backend&location=Lima%2C%20Per%C3%BA&f_TPR=r2592000&geoId=100829422&trk=public_jobs_jobs-search-bar_search-submit&refresh=true&start={self.start}"
           self.GetJob(url)
           self.start=0
-          df = pd.DataFrame(self.data, columns=['Jobname', 'URL', 'Location', 'Date', 'Company', 'Description'])
+          df = pd.DataFrame(self.data, columns=['JobName', 'URL', 'Location', 'Date', 'Company', 'Description'])
           df.to_csv('csv/Backendjobs.csv', sep='\t',index=False)
       def getFrontendJobs(self):
           url = f"https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Frontend&location=Lima%2C%20Per%C3%BA&f_TPR=r2592000&geoId=100829422&trk=public_jobs_jobs-search-bar_search-submit&refresh=true&start={self.start}"
           self.GetJob(url)
           self.start=0
-          df = pd.DataFrame(self.data, columns=['Jobname', 'URL', 'Location', 'Date', 'Company', 'Description'])
+          df = pd.DataFrame(self.data, columns=['JobName', 'URL', 'Location', 'Date', 'Company', 'Description'])
           df.to_csv('csv/Frontendjobs.csv', sep='\t',index=False)
       def getFullSatckJobs(self):
           url = f"https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Fullstack&location=Lima%2C%20Per%C3%BA&f_TPR=r2592000&geoId=100829422&trk=public_jobs_jobs-search-bar_search-submit&refresh=true&start={self.start}"
           self.GetJob(url)
           self.start=0
-          df = pd.DataFrame(self.data, columns=['Jobname', 'URL', 'Location', 'Date', 'Company', 'Description'])
+          df = pd.DataFrame(self.data, columns=['JobName', 'URL', 'Location', 'Date', 'Company', 'Description'])
           df.to_csv('csv/Fullstackjobs.csv', sep='\t',index=False)
       def getMobileJobs(self):
           url = f"https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20M%C3%B3vil&location=Lima%2C%20Per%C3%BA&f_TPR=r2592000&geoId=100829422&trk=public_jobs_jobs-search-bar_search-submit&refresh=true&start={self.start}"
           self.GetJob(url)
           self.start=0
-          df = pd.DataFrame(self.data, columns=['Jobname', 'URL', 'Location', 'Date', 'Company', 'Description'])
+          df = pd.DataFrame(self.data, columns=['JobName', 'URL', 'Location', 'Date', 'Company', 'Description'])
           df.to_csv('csv/Moviljobs.csv', sep='\t',index=False)
       def getDataJobs(self):
           url = f"https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Ingenier%C3%ADa%20de%20datos&location=Lima%2C%20Per%C3%BA&f_TPR=r2592000&geoId=100829422&trk=public_jobs_jobs-search-bar_search-submit&refresh=true&start={self.start}"
           self.GetJob(url)
           self.start=0
-          df = pd.DataFrame(self.data, columns=['Jobname', 'URL', 'Location', 'Date', 'Company', 'Description'])
+          df = pd.DataFrame(self.data, columns=['JobName', 'URL', 'Location', 'Date', 'Company', 'Description'])
           df.to_csv('csv/Datosjobs.csv', sep='\t',index=False)
       
       
@@ -108,7 +108,7 @@ class RecomendationViewset(viewsets.ModelViewSet):
               df = pd.read_csv(archivo, sep='\t')
               dataframes.append(df)
           df_unido = pd.concat(dataframes)
-          df_unido.insert(0, 'Jobid', range(1, len(df_unido) + 1))
+          df_unido.insert(0, 'JobId', range(1, len(df_unido) + 1))
           df_unido.to_csv('csv/jobs.csv', sep='\t', index=False, line_terminator='\n')
           df = pd.read_csv('csv/jobs.csv', sep='\t')
           df_head_json =df.head(5).to_json(orient='records')
@@ -119,54 +119,56 @@ class RecomendationViewset(viewsets.ModelViewSet):
           jobs_df = pd.read_csv('csv/jobs.csv',sep='\t')
           ratings_df = pd.read_csv('csv/ratings_section.csv')
           sections_df = pd.read_csv('csv/section.csv')
-          all_combinations = pd.MultiIndex.from_product([sections_df['id'], jobs_df['Jobid']], names=['section', 'Jobid'])
-          all_combinations_df = pd.DataFrame(index=all_combinations).reset_index() 
-          merged_df = all_combinations_df.merge(ratings_df, on='section', how='left')
-          merged_df = merged_df.merge(sections_df, left_on='section', right_on='id', how='left')
-          merged_df = merged_df.merge(jobs_df, left_on='Jobid', right_on='Jobid', how='left')
-          merged_df['developmentPercentage'].fillna(0, inplace=True)
+          all_combinations = pd.MultiIndex.from_product(
+              [sections_df['Id'], jobs_df['JobId']], 
+              names=['Section', 'JobId']
+          )
+          all_combinations_df = pd.DataFrame(index=all_combinations).reset_index()  
+          merged_df = all_combinations_df.merge(ratings_df, on='Section', how='left')
+          merged_df = merged_df.merge(sections_df, left_on='Section', right_on='Id', how='left')
+          merged_df = merged_df.merge(jobs_df, left_on='JobId', right_on='JobId', how='left')
+          merged_df['DevelopmentPercentage'].fillna(0, inplace=True)
           reader = Reader(rating_scale=(1, 5))
-          data = Dataset.load_from_df(merged_df[['sectionname', 'Description', 'developmentPercentage']], reader)
+          data = Dataset.load_from_df(merged_df[['SectionName', 'Description', 'DevelopmentPercentage']], reader)
           trainset, testset = train_test_split(data,test_size=0.2, random_state=42)
           knn_model = KNNBasic(sim_options={'name': 'cosine', 'user_based': False})
           knn_model.fit(trainset)
           content_model = SVD()
           content_model.fit(trainset)
           predictions = []
-          max_rating = merged_df['developmentPercentage'].max()
-          min_rating = merged_df['developmentPercentage'].min()
+          max_rating = merged_df['DevelopmentPercentage'].max()
+          min_rating = merged_df['DevelopmentPercentage'].min()
           for test_section, test_description, test_rating in testset:
               knn_pred = knn_model.predict(test_section, test_description, test_rating).est
               content_pred = content_model.predict(test_section, test_description, test_rating).est
-              similarity_pred_content = self.calculate_similarity({'sectionname': test_section, 'Description': test_description, 'developmentPercentage': content_pred})
-              similarity_pred_knn = self.calculate_similarity({'sectionname': test_section, 'Description': test_description, 'developmentPercentage': knn_pred})
+              similarity_pred_content = self.calculate_similarity({'SectionName': test_section, 'Description': test_description, 'DevelopmentPercentage': content_pred})
+              similarity_pred_knn = self.calculate_similarity({'SectionName': test_section, 'Description': test_description, 'DevelopmentPercentage': knn_pred})
               similarity_hybrid_pred = min((similarity_pred_content + similarity_pred_knn) / 2, 1.0)
               similarity_hybrid_pred = round(similarity_hybrid_pred, 1)
-              section_rating = merged_df.loc[merged_df['sectionname'] == test_section, 'developmentPercentage'].iloc[0]
+              section_rating = merged_df.loc[merged_df['SectionName'] == test_section, 'DevelopmentPercentage'].iloc[0]
               normalized_rating = (section_rating - min_rating) / (max_rating - min_rating)
               similarity_hybrid_pred *= normalized_rating
               predictions.append((test_section, test_description, test_rating, similarity_hybrid_pred))
-          df_predictions = pd.DataFrame(predictions, columns=['sectionname', 'Description', 'developmentPercentage','similarity_pred'])
-          recommendations = merged_df[['Jobid', 'Jobname', 'URL', 'Location', 'Date', 'Company','Description']].merge(df_predictions, on='Description')
-          recommendations = recommendations.sort_values('similarity_pred', ascending=False)[['Jobname','Description','URL', 'Location','Date', 'Company', 'similarity_pred']]
-          recommendations = recommendations.drop_duplicates(subset=['Jobname'])
-          recommendations = recommendations.loc[recommendations['similarity_pred'] != 0.0]
+          df_predictions = pd.DataFrame(predictions, columns=['SectionName', 'Description', 'DevelopmentPercentage','SimilarityPred'])
+          recommendations = merged_df[['JobId', 'JobName', 'URL', 'Location', 'Date', 'Company','Description']].merge(df_predictions, on='Description')
+          recommendations = recommendations.sort_values('SimilarityPred', ascending=False)[['JobName','Description','URL', 'Location','Date', 'Company', 'SimilarityPred']]
+          recommendations = recommendations.drop_duplicates(subset=['JobName'])
+          recommendations = recommendations.loc[recommendations['SimilarityPred'] != 0.0]
           recomendations_json= recommendations.to_json(orient='records')
           recommendations_list = json.loads(recomendations_json)
           return Response(recommendations_list,status=status.HTTP_201_CREATED)
               
 
       def calculate_similarity(self,row):
-        sectionname = row['sectionname']
+        section_name = row['SectionName']
         description = row['Description']
-        if sectionname is None or pd.isnull(description):
+        if section_name is None or pd.isna(description):
            return 0
-        else:
-           rating = row['developmentPercentage']
-           tfidf_vectorizer = TfidfVectorizer()
-           tfidf_matrix = tfidf_vectorizer.fit_transform([sectionname, description])
-           similarity = (tfidf_matrix * tfidf_matrix.T).A[0, 1] * rating
-           return similarity
+        rating = row['DevelopmentPercentage']
+        tfidf_vectorizer = TfidfVectorizer()
+        tfidf_matrix = tfidf_vectorizer.fit_transform([section_name, description])
+        similarity_score = (tfidf_matrix * tfidf_matrix.T).A[0, 1] * rating
+        return similarity_score
 
       def get_queryset(self):
         if self.queryset is None:
@@ -183,33 +185,19 @@ class RecomendationViewset(viewsets.ModelViewSet):
         self.queryset = ResultSectionSerializer().Meta.model.objects.filter(state=True).filter(resultTest_id=pk)
         ResultTest = self.get_queryset()
         ResultTest_serializer = ResultSectionSerializer(ResultTest, many=True)
-        print("resultsection con el queryset")
-        print(ResultTest_serializer.data)
-
         section_serializer = SectionSerializer(self.get_querysetSection(), many=True)
-        print("Este es el serializer de section")
-        print(section_serializer.data)
-
-        id_section_list = [{'id': idx, 'sectionname': section['sectionname']}
+        id_section_list = [{'Id': idx, 'SectionName': section['SectionName']}
                   for idx, section in enumerate(section_serializer.data)
-                  if any(item['section'] == section['sectionname'] for item in ResultTest_serializer.data)]
-        
-        section_id_mapping = {section['sectionname']: section['id'] for section in id_section_list}
-
+                  if any(item['Section'] == section['SectionName'] for item in ResultTest_serializer.data)]
+        section_id_mapping = {section['SectionName']: section['id'] for section in id_section_list}
         for item in ResultTest_serializer.data:
-            item['section'] = section_id_mapping.get(item['section'], '')
-            item['developmentPercentage'] = item['developmentPercentage'] / 100
-
-        print("Cambios realizados")
-        print(id_section_list)
-
-        print(ResultTest_serializer.data)
-
+            item['Section'] = section_id_mapping.get(item['Section'], '')
+            item['DevelopmentPercentage'] = item['DevelopmentPercentage'] / 100
         dfratings_sections = pd.DataFrame(ResultTest_serializer.data)
         dfsections = pd.DataFrame(id_section_list)
 
-        dfratings_sections = dfratings_sections[['resultTest', 'section', 'developmentPercentage']]
-        dfsections = dfsections[['id','sectionname']]
+        dfratings_sections = dfratings_sections[['ResultTest', 'Section', 'DevelopmentPercentage']]
+        dfsections = dfsections[['Id','SectionName']]
 
         dfratings_sections.to_csv('csv/ratings_section.csv', index=False)
         dfsections.to_csv('csv/section.csv', index=False)

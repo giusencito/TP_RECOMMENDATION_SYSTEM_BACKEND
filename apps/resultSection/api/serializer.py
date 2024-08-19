@@ -4,10 +4,10 @@ class ResultSectionSerializer(serializers.ModelSerializer):
       def to_representation(self,instance):
             return {
                 'id': instance.id,
-                'developmentPercentage': instance.developmentPercentage,
-                'section': f'{instance.section.sectionname}',
+                'DevelopmentPercentage': instance.developmentPercentage,
+                'Section': f'{instance.section.sectionname}',
                 'test': f'{instance.section.test.testname}',
-                'resultTest': f'{instance.resultTest.id}'
+                'ResultTest': f'{instance.resultTest.id}'
                 }
       def validate_section(self, value):
             if value == '' or value == None:
