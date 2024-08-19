@@ -27,11 +27,11 @@ class HybridRecomendationViewset(viewsets.ModelViewSet):
       data = []
       model = LinkedinJobs
       serializer_class = LinkedinJobsSerializer
-      BackendUrl= f"https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Backend&location=Lima%2C%20Per%C3%BA&f_TPR=r2592000&geoId=100829422&trk=public_jobs_jobs-search-bar_search-submit&refresh=true&start={start}"
-      FrontendUrl=f"https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Frontend&location=Lima%2C%20Per%C3%BA&f_TPR=r2592000&geoId=100829422&trk=public_jobs_jobs-search-bar_search-submit&refresh=true&start={start}"
-      FullStackUrl =f"https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Fullstack&location=Lima%2C%20Per%C3%BA&f_TPR=r2592000&geoId=100829422&trk=public_jobs_jobs-search-bar_search-submit&refresh=true&start={start}"
-      MobileUrl = f"https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20M%C3%B3vil&location=Lima%2C%20Per%C3%BA&f_TPR=r2592000&geoId=100829422&trk=public_jobs_jobs-search-bar_search-submit&refresh=true&start={start}"
-      DataUrl =   f"https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Ingenier%C3%ADa%20de%20datos&location=Lima%2C%20Per%C3%BA&f_TPR=r2592000&geoId=100829422&trk=public_jobs_jobs-search-bar_search-submit&refresh=true&start={start}"
+      BackendUrl=   f"https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Backend&location=Lima%2C%20Per%C3%BA&f_TPR=r2592000&geoId=100829422&trk=public_jobs_jobs-search-bar_search-submit&refresh=true&start=0"
+      FrontendUrl=  f"https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Frontend&location=Lima%2C%20Per%C3%BA&f_TPR=r2592000&geoId=100829422&trk=public_jobs_jobs-search-bar_search-submit&refresh=true&start=0"
+      FullStackUrl =f"https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Fullstack&location=Lima%2C%20Per%C3%BA&f_TPR=r2592000&geoId=100829422&trk=public_jobs_jobs-search-bar_search-submit&refresh=true&start=0"
+      MobileUrl =   f"https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20M%C3%B3vil&location=Lima%2C%20Per%C3%BA&f_TPR=r2592000&geoId=100829422&trk=public_jobs_jobs-search-bar_search-submit&refresh=true&start=0"
+      DataUrl =     f"https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Ingenier%C3%ADa%20de%20datos&location=Lima%2C%20Per%C3%BA&f_TPR=r2592000&geoId=100829422&trk=public_jobs_jobs-search-bar_search-submit&refresh=true&start=0"
       def GetText(self,job,tag,class_name):
           element = job.find(tag, class_=class_name)
           return element.text.strip() if element else "Text not found"
@@ -55,10 +55,15 @@ class HybridRecomendationViewset(viewsets.ModelViewSet):
                 [p.strip() for box in description_boxes for p in box.strings if p.strip()]
           )
       def GetJob(self,url,file):
+          dataJob=[]
           while self.start < self.total_jobs:
                 response = requests.get(url)
                 soup = BeautifulSoup(response.text, 'html.parser')
                 jobs = soup.find_all('li')
+                while len(jobs) ==0:
+                      response = requests.get(url)
+                      soup = BeautifulSoup(response.text, 'html.parser')
+                      jobs = soup.find_all('li')
                 for job in jobs:
                     title = self.GetText(job, 'h3', 'base-search-card__title')
                     location = self.GetText(job, 'span', 'job-search-card__location')
@@ -66,11 +71,24 @@ class HybridRecomendationViewset(viewsets.ModelViewSet):
                     job_company = self.GetText(job, 'h4', 'base-search-card__subtitle')
                     publish_date = self.GetPublishDate(job)
                     description = self.GetDescription(job_url)
-                    self.data.append([title, job_url, location, publish_date, job_company, description])
+                    dataJob.append([title, job_url, location, publish_date, job_company, description])
                 self.start += self.jobs_per_page
           self.start=0
-          df = pd.DataFrame(self.data, columns=['JobName', 'URL', 'Location', 'Date', 'Company', 'Description'])
+          df = pd.DataFrame(dataJob, columns=['JobName', 'URL', 'Location', 'Date', 'Company', 'Description'])
           df.to_csv(file ,sep='\t',index=False)
+      
+      
+      def DefineJob(self,job):
+           url = self.GetURL(job)
+           return {
+            'JobName': self.GetText(job, 'h3', 'base-search-card__title'),
+            'URL': url,
+            'Location': self.GetText(job, 'span', 'job-search-card__location'),
+            'Date': self.GetPublishDate(job),
+            'Company': self.GetText(job, 'h4', 'base-search-card__subtitle'),
+            'Description': self.GetDescription(url)
+        }
+
       @action(detail=False, methods=['get'])
       def getAllJobs(self,request):
           self.GetJob(self.BackendUrl,'csv/Backendjobs.csv')
