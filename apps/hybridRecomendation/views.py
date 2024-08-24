@@ -18,7 +18,7 @@ from apps.linkedinJobs.api.serializer import LinkedinJobsSerializer
 from apps.resultTest.api.serializer import ResultTestSerializer
 from django.shortcuts import get_object_or_404
 from apps.resultTest.models import ResultTest
-
+import time
 # Create your views here.
 class HybridRecomendationViewset(viewsets.ModelViewSet):
       start = 0
@@ -54,6 +54,37 @@ class HybridRecomendationViewset(viewsets.ModelViewSet):
           return "\n".join(
                 [p.strip() for box in description_boxes for p in box.strings if p.strip()]
           )
+      def GetJobv2(self,url,file):
+          dataJob=[]
+          max_retries = 5
+          while self.start < self.total_jobs:
+                for attempt in range(max_retries):
+                    response = requests.get(url)
+                    soup = BeautifulSoup(response.text, 'html.parser')
+                    jobs = soup.find_all('li')
+                    if jobs:
+                        break
+                    else:
+                        print(f"No jobs found on attempt {attempt + 1}. Retrying...")
+                        time.sleep(1)
+                if not jobs:
+                   print(f"No jobs found on page")
+                   continue
+                for job in jobs:
+                    title = self.GetText(job, 'h3', 'base-search-card__title')
+                    location = self.GetText(job, 'span', 'job-search-card__location')
+                    job_url = self.GetURL(job)
+                    job_company = self.GetText(job, 'h4', 'base-search-card__subtitle')
+                    publish_date = self.GetPublishDate(job)
+                    description = self.GetDescription(job_url)
+                    dataJob.append([title, job_url, location, publish_date, job_company, description])
+                self.start += self.jobs_per_page
+          self.start=0
+          df = pd.DataFrame(dataJob, columns=['JobName', 'URL', 'Location', 'Date', 'Company', 'Description'])
+          df.to_csv(file ,sep='\t',index=False)
+
+
+    
       def GetJob(self,url,file):
           dataJob=[]
           while self.start < self.total_jobs:
@@ -91,11 +122,11 @@ class HybridRecomendationViewset(viewsets.ModelViewSet):
 
       @action(detail=False, methods=['get'])
       def getAllJobs(self,request):
-          self.GetJob(self.BackendUrl,'csv/Backendjobs.csv')
-          self.GetJob(self.FrontendUrl,'csv/Frontendjobs.csv')
-          self.GetJob(self.FullStackUrl,'csv/Fullstackjobs.csv')
-          self.GetJob(self.MobileUrl,'csv/Moviljobs.csv')
-          self.GetJob(self.DataUrl,'csv/Datosjobs.csv')
+          self.GetJobv2(self.BackendUrl,'csv/Backendjobs.csv')
+          self.GetJobv2(self.FrontendUrl,'csv/Frontendjobs.csv')
+          self.GetJobv2(self.FullStackUrl,'csv/Fullstackjobs.csv')
+          self.GetJobv2(self.MobileUrl,'csv/Moviljobs.csv')
+          self.GetJobv2(self.DataUrl,'csv/Datosjobs.csv')
           archivos_csv = ['csv/Backendjobs.csv', 'csv/Datosjobs.csv', 'csv/Frontendjobs.csv', 'csv/Fullstackjobs.csv', 'csv/Moviljobs.csv']
           dataframes = []
           for archivo in archivos_csv:

@@ -1,54 +1,52 @@
 JobId	JobName	URL	Location	Date	Company	Description
-1	Backend Engineer (Node.js)	https://pe.linkedin.com/jobs/view/backend-engineer-node-js-at-yape-4002939385?position=1&pageNum=0&refId=72g1O6cT1rcuuF8Ao7Nl5Q%3D%3D&trackingId=ZR876SpnuRjVIhy4agk8HQ%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	2 days ago	Yape	"Somos 15 millones de yaperos y 2.5 millones de empresas que utilizan Yape a diario. Estamos disponibles para todos, lo que nos convierte en una plataforma única y clave del ecosistema digital del Perú.
-Esperamos que te involucres en discusiones relacionadas con todos los aspectos del desarrollo de productos y tecnología.
-Nuestro desafío es que estamos creciendo rápidamente y tenemos una amplia cantidad de datos que pueden ser explotados para mejorar la vida de los yaperos y nuestro negocio. Nos motiva construir un país conectado sin barreras, que fomente el crecimiento y desarrollo para todos los peruanos.
-Para seguir brindando la mejor experiencia a nuestros yaperos, necesitamos el mejor talento.
-Sé parte de esta emocionante misión y contribuye con nuestro propósito de hacer más simple el día a día de las personas para que sigan movilizando sus vidas.
-¡Contágiate de la Vibra Yape y haz que la vida fluya!
-Responsabilidades
-Responsable por el funcionamiento del sistema y manejo de los datos dentro de la aplicación.
-Su función es integrar aplicaciones con múltiples sistemas, capas de negocio y servicios necesarios con el objetivo de proporcionar una interfaz simple de programación de aplicación (API) para mostrar la información a través de una interfaz de usuario (GUI).
-Es el responsable principal de la operación, el rendimiento y la escalabilidad de los servicios. Integra sistemas legados, trabaja con la capa de datos y base de datos.
-Genera documentación para poder integrar las APIs desarrolladas con distintas interfaces de usuario.
-Monitorea la eficiencia de cada uno de los servicios desarrollados y desarrolla pruebas unitarias e integración para validar los distintos flujos de negocio.
+1	Desarrollador Backend	https://pe.linkedin.com/jobs/view/desarrollador-backend-at-m%C3%A9trica-andina-3998200262?position=1&pageNum=0&refId=uOYe9b5npXaTnKYVNUV%2FKA%3D%3D&trackingId=3ppu%2BW4m3d82H0e1pWerkg%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	Métrica Andina	"Por encargo de nuestro cliente nos encontramos en la búsqueda de
+3 Desarrolladores Backend Junior, Semi Senior y Senior
 Requisitos
-3 años de experiencia en desarrollo Back End.
-Experiencia en lenguaje
-Node.js
-(Indispensable)
-Experiencia en creación de servicios REST (Indispensable)
-GraphQL
-Conocimiento de patrones de diseño de software y clean code (Indispensable)
-Conocimiento y aplicación de
-Kafka
-(Indispensable)
-Capaz de desarrollar códigos que tengan una calidad, seguridad y legibilidad impecables.
-1 a 2 años de experiencia trabajando en equipos ágiles - Deseable
-Conocimiento de prácticas de seguridad con OWASP 10 - Deseable"
-2	Desarrollador/a Backend Java	https://pe.linkedin.com/jobs/view/desarrollador-a-backend-java-at-periferia-it-group-3994801956?position=2&pageNum=0&refId=72g1O6cT1rcuuF8Ao7Nl5Q%3D%3D&trackingId=5OtPeFkD8zmvCRTdqleqiw%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	Periferia IT Group	"¡Prepárate para vivir una nueva etapa con Periferia IT Group! 🌟Si tienes experiencia como
-Desarrollador/a
-Backend Java
-y quieres generar un impacto en el mundo tecnológico, esta es tu oportunidad para unirte a nuestro equipo. Trabajarás con más de 1,000 profesionales en una multinacional colombiana líder en el sector TI, con fuerte presencia en América Latina y Estados Unidos. ¡Impulsa tu carrera con nosotros y haz crecer tu potencial! 🚀📈💼💻
-¿Te gustaría llevar tu carrera al siguiente nivel con Periferia IT Group?
-👥 Únete a nuestra cultura Periferia enfocada al servicio y la innovación, donde cada idea cuenta para superar las expectativas de nuestros clientes.
-🚀 Sumérgete en un entorno laboral dinámico que fomenta el aprendizaje continuo y el desarrollo personal.
-💡 Participa en proyectos desafiantes donde podrás aplicar tus conocimientos y habilidades para generar un impacto real.
-🤝 Disfruta de un equilibrio entre tu vida personal y laboral, mientras promovemos el bienestar integral de todos nuestros colaboradores.
-Para destacar en tu postulación debes:
-🎓 Ser técnico/a o egresado/a universitario/a en Ingeniería de Sistemas o disciplinas relacionadas.
-💻 Contar con experiencia superior a 3 años en desarrollo Java 11+ y Spring Framework.
-📊 Dominar un nivel alto en Base de Datos SQL Server.
-🌱 Capacidad de adaptarse a nuevas tecnologías y enfoques innovadores para maximizar su impacto.
-Tus funciones específicas serán:
-📈 Desarrollar componentes backend con microservicios.
-Lo que encontrarás al unirte al mundo de Periferia IT Group:
-🏠🏢 Trabajo híbrido en Cercado de Lima/Perú.
-📜 Contrato a plazo indeterminado.
-💰 Salario negociable según experiencia y habilidades.
-🎁 Beneficios a la carta para tu bienestar y estilo de vida.
-¡Da el paso y únete hoy a nuestro equipo Periferia IT! 🎉"
-3	Analista Desarrollador/a Backend	https://pe.linkedin.com/jobs/view/analista-desarrollador-a-backend-at-bbva-en-per%C3%BA-3986477083?position=3&pageNum=0&refId=72g1O6cT1rcuuF8Ao7Nl5Q%3D%3D&trackingId=rtqLIqy1t%2F43asaOZmqkvg%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	2 weeks ago	BBVA en Perú	Description not found
-4	Estudiantes Para Trabajo De Desarrollador Java	https://pe.linkedin.com/jobs/view/estudiantes-para-trabajo-de-desarrollador-java-3997476132?position=4&pageNum=0&refId=72g1O6cT1rcuuF8Ao7Nl5Q%3D%3D&trackingId=R95pnQH%2BUykhhPgx2tkYJg%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	Digital Solutions 324 Sl	"Se busca Programadores Java para Trabajo Remoto y/o estudiantes de Programación.
+Técnico/Bachiller en Ingeniería de Sistemas, Computación e Informática y/o afines.
+Más de 1 año de experiencia
+Ejerciendo el rol de desarrollador backend o programador.
+Lenguajes de programación TypeScript y Python
+Frameworks NodeJS, Chalice, NestJS
+Base de datos NoSQL DynamoDB, MongoDB
+Base de datos SQL Oracle, MySQL y/o PostgreSQL
+Versionamiento de código Git
+Pruebas Unitarias / E2E Jest, Mocha, Chai, Sinon, Superset.
+Pruebas de Performance newman, autocannon, K6.
+Contenedores Docker y Docker Compose.
+Desarrollo cloud AWS con Lambda, Api Gateway, ECS, Fargate, SNS, SQS.
+Trabajando en entornos cloud con AWS.
+Diseñando e implementando microservicios.
+Beneficios
+Planilla desde el primer día con todos los beneficios acorde a ley.
+Remuneración fija superior al mercado.
+Seguro Vida Ley.
+Participar de un programa de reconocimiento.
+Buen clima laboral
+Convenios educativos, descuentos en centros comerciales, recreativos, etc.
+Pertenecer a una prestigiosa empresa de tecnología y generar lazos transnacionales.
+En Métrica Andina estamos comprometidos con la inclusión, diversidad y equidad de género. Por ello, los procesos de selección buscan asegurar la igualdad de derechos y oportunidades.
+¡Si estás listo para dar el siguiente paso en tu carrera y te apasiona la tecnología, esta es tu oportunidad!
+#ChambeaenMétrica
+Métrica Andina es la primera filial latinoamericana del grupo de consultoría español Métrica Consulting. El grupo comenzó operaciones con el inicio del nuevo siglo y desde entonces ha participado en distintos proyectos en distintos países de Europa Occidental y Latino América. Con Métrica Andina, hemos comenzado a ofrecer nuestros servicios técnicos en el mercado Peruano y desde ahí queremos llegar a la región andina en los próximos años."
+2	Backend Engineer (Node.js)	https://pe.linkedin.com/jobs/view/backend-engineer-node-js-at-yape-4002939385?position=2&pageNum=0&refId=uOYe9b5npXaTnKYVNUV%2FKA%3D%3D&trackingId=vKmLSOBk7CtefRZmHYhjgQ%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	Yape	Description not found
+3	Analista Desarrollador/a Backend	https://pe.linkedin.com/jobs/view/analista-desarrollador-a-backend-at-bbva-en-per%C3%BA-3986477083?position=3&pageNum=0&refId=uOYe9b5npXaTnKYVNUV%2FKA%3D%3D&trackingId=GmSRnSrT%2BTayLyM6RLp4aQ%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	3 weeks ago	BBVA en Perú	"Lo que harás:
+-Diseña, desarrolla y propone soluciones óptimas con autonomía en proyectos o productos.
+- Facilita el intercambio de conocimientos / experiencias relevantes
+- Proporciona soporte técnico cualificado y resuelve problemas
+- Realiza tareas de expertise medio
+- Desarrollos de Complejidad alta en diversos ámbitos de contextos homogéneos
+- Comprende necesidades de negocio de carácter general
+- Soluciona problemas complejos cambiando enfoques, conceptos.
+- Tiene iniciativa para identificar y desarrollar nuevas oportunidades sobre las tecnologías y aplicativos existentes dentro de un ámbito específico
+Lo que necesitas:
+• Formación universitaria o técnica / Bachiller en Ing. Sistemas, Informática o carreras afines.
+• Experiencia de 2 años en Desarrollo de Software
+• Sólida experiencia en programación orientada en Java8 y conocimientos en Java 11.
+• Conocimiento de Base de datos (SQL, MySQL y Oracle).
+• Conocimiento en metodologías de programación, de diseño y desarrollo de sistemas de información.
+• Conocimiento en spring framework y Spring Boot.
+• Conocimiento en pruebas unitarias y automatización de procesos (AWS)."
+4	Estudiantes Para Trabajo De Desarrollador Java	https://pe.linkedin.com/jobs/view/estudiantes-para-trabajo-de-desarrollador-java-3997476132?position=4&pageNum=0&refId=uOYe9b5npXaTnKYVNUV%2FKA%3D%3D&trackingId=iwmO%2BPsGfrz9ASMe1R2yTQ%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	Digital Solutions 324 Sl	"Se busca Programadores Java para Trabajo Remoto y/o estudiantes de Programación.
 Empresa: Digital Solutions
 Ubicación: Trabajo Remoto
 Tipo de Contrato: Prestación de servicios.
@@ -65,132 +63,90 @@ Pago competitivo por hora entre 4 a 10 euros.
 Trabajo de lunes a viernes 8 horas diarias.
 Ambiente de trabajo colaborativo y dinámico.
 Si cumple con el perfil enviar hoja de vida a ******"
-5	Analista Desarrollador Backend	https://pe.linkedin.com/jobs/view/analista-desarrollador-backend-at-costamar-travel-group-3989695819?position=5&pageNum=0&refId=72g1O6cT1rcuuF8Ao7Nl5Q%3D%3D&trackingId=CXuQNIhVRA3cJN7qDHeaug%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	2 weeks ago	Costamar Travel Group	"COSTAMAR TRAVEL SAC una de las empresas más grandes de Turismo a nivel Mundial, con 44 años de experiencia en el mercado.
-Se encuentra en la búsqueda de:ANALISTA DESARROLLADOR BACKEND
-Funciones
-Construir y mantener aplicaciones web escalables
-Trabajar de forma colaborativa con los miembros del equipo
-Analizar, investigar, resolver y brindar solucionesRequerido:
-Requerido
-Sólidos conocimientos de programación orientada a objetos y buenas prácticas de desarrollo .
-Experiencia mínima de 2 años, como java 8 / react.
-Conocimiento de pruebas unitarias con JUnit
-Conocimientos intermedios de arquitectura orientada a servicios (Webservices REST / SOAP)
-Conocimientos de Spring Boot / Spring Framework (Spring MVC)
-Conocimientos de MySQL, MongoDB
-Conocimientos intermedios de tecnologías web (HTML / CSS / JS)
-Experiencia con framework CSS.
-Experiencia en React, Redux, Flux (indispensable).
-Manejo de GIT
-Habilidad para analizar, identificar, investigar, resolver y brindar soluciones
-Conocimiento de prácticas y metodologías agiles (XP / Scrum, Kanban)Se Ofrece:
-Ingreso a planilla con todos los beneficios de ley desde el primer día de labores (CTS, vacaciones, essalud, gratificaciones).
-Se Ofrece
-Sueldo superior al mercado
-Línea de carrera y excelente clima laboral
-Capacitaciones constantes
-En Costamar Travel, según su código de ética, no se discrimina a las personas con discapacidad, ni sexo, ni religión."
-6	Desarrollador de back-end	https://pe.linkedin.com/jobs/view/desarrollador-de-back-end-at-soaint-3988075446?position=6&pageNum=0&refId=72g1O6cT1rcuuF8Ao7Nl5Q%3D%3D&trackingId=tG26MOdwG4JFWm8AhbH2nw%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	2 weeks ago	SOAINT	Description not found
-7	Back End Developer	https://pe.linkedin.com/jobs/view/back-end-developer-at-softtek-4003172693?position=7&pageNum=0&refId=72g1O6cT1rcuuF8Ao7Nl5Q%3D%3D&trackingId=j6jmDrNDaot2mgUlS7h28g%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	2 days ago	Softtek	"Softtek es un proveedor global de servicios orientados a procesos de TI con más de 30 oficinas en Norteamérica, Latinoamérica, Europa y Asia. Maximizamos el valor del software para el mundo: Creamos, Probamos, Implementamos y damos mantenimiento a sistemas que empoderan organizaciones e individuos. En la actualidad nos encontramos en la búsqueda de un talento para el perfil: Backend Developer
-Requisitos:
-Experiencia de 4+ años desarrollando en la especialidad.
-Bachiller y/o Técnico Ingeniería de Sistemas, Software, Informática o afines.
-Competencia técnica de OOP, patrones de diseño de software
-Competencia técnica en infraestructura On Cloud.
-Experiencia solida en
-Node.js, AWS
-(indispensable)
-Competencia técnica de desarrollo API REST bajo un marco de programación como: SpringBoot, Express.JS, Nest.JS, etc.
-Competencia técnica de Marco de trabajo Ágil.
-Funciones:
-Participar activamente en el análisis y diseño de la aplicación.
-Resolver los errores identificados durante la iteración.
-Escribir infraestructura como código para soportar los servicios desarrollados.
-Realizar revisión de código e integrar cambios en git.
-Ofrecemos:
-Ingreso a planilla con todos los beneficios de ley.
-EPS al 100%
-Modalidad de trabajo: HIBRIDO
-Capacitación constante y línea de carrera.
-Podrás optar por los descuentos corporativos en empresas de entretenimiento, educación, entre otros.
-Contamos con una plataforma exclusiva virtual con más de 3,000 cursos orientados a potencializar tus habilidades técnicas como blandas.
-En Softtek reconocemos que el talento es diverso; respetamos la identidad y condiciones de vida de cada persona y promovemos la equidad de trato y de oportunidades. Para lograr lo anterior, creamos un ambiente incluyente en el cual las personas muestran qué las define y emplean sus diferentes características para lograr mejores resultados.
-Por ello, promovemos la diversidad generacional, origen étnico, nacionalidad y la inclusión de personas con habilidades diferentes y/o discapacidad. En cumplimiento de la Ley N° 29973 y su reglamento.
-Te invitamos a conocer más sobre la #SofttekLife en: https://www.softtek.com/es-ar/haz-tu-carrera-en-softtek
-#Softtek #SofttekLife #TalentoIT"
-8	Desarrollador Full Stack	https://pe.linkedin.com/jobs/view/desarrollador-full-stack-at-apuesta-total-3980870471?position=8&pageNum=0&refId=72g1O6cT1rcuuF8Ao7Nl5Q%3D%3D&trackingId=qhBcbFsP2yT8aFjy8xRiOA%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	4 weeks ago	Apuesta Total	"Apuesta Total empresa líder del rubro de entretenimiento se encuentra en la búsqueda del mejor talento para ocupar el cargo de Desarrollador Full Stack para laborar en nuestras oficinas en Santiago de Surco.
-Requisitos
-Técnico completo en Sistemas, Informática y/o afines
-Experiencia mínima de 4 años ejerciendo el puesto de Desarrollador Full Stack o 2 años como Front y 2 años como Back.
-Conocimiento de Linux y Windows a nivel Intermedio
-Conocimiento de MySQL, SQL Server u Oracle a nivel avanzado
-Conocimiento de NodeJS/NestJs, Spring o.Net a nivel avanzado
-Conocimiento de Angular, React o NextJs a nivel avanzado
-Conocimiento de PHP, CSS y HTML a nivel Intermedio
-Conocimiento de MongoDB y Casandra a nivel básico
-Conocimiento de buenas prácticas y principios SOLID
-Conocimiento de paradigmas de lenguajes de programación.
-Funciones
-Analizar, diseñar y desarrollar soluciones web según los requerimientos del área interesada cumpliendo los estándares de buenas prácticas y documentación de código establecidas por el área de desarrollo.
-Solucionar errores o problemas en la ejecución de las aplicaciones o sitios web reportados o como resultado del mejoramiento de área.
-Integrar aplicaciones y servicios con otros proveedores a través de APIs (componentes) o Servicios Web según especificaciones técnicas de ambas partes.
-Desarrollar el prototipo de interfaz de usuario para ejemplificar los requerimientos del sistema.
-Informar del avance y progreso de actividades en el status de proyectos.
-Otras que le puedan ser asignadas por el superior inmediato.
-Condiciones Laborales
-Excelente clima laboral.
-Planilla desde el 1er día de trabajo con todos los beneficios de ley + beneficios corporativos.
-Línea de carrera.
-Remuneración acorde al puesto.
-¡Forma parte de esta gran familia!"
-9	Desarrollador de back-end	https://pe.linkedin.com/jobs/view/desarrollador-de-back-end-at-ntt-data-europe-latam-3989204462?position=9&pageNum=0&refId=72g1O6cT1rcuuF8Ao7Nl5Q%3D%3D&trackingId=8uUo%2B72GGH%2FvzDXjo7Qv0w%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	2 weeks ago	NTT DATA Europe & Latam	"En NTT DATA estamos buscando profesionales con experiencia como
-BACKEND JAVA - MICROSERVICIOS
-, apasionados por las tecnologías para formar parte de nuestro stagg y participar en proyectos grandes y asumir nuevos retos.
-Nuestro talento nos ha hecho poder decir con orgullo que somos una de las 6 empresas TOP de tecnologías del mundo.
-Para incorporarte a nuestro equipo tendrás que contar con los siguientes requisitos:
-Egresado, Bachiller o Titulado en Ingeniería de Sistemas, Software, Computación, Informática o afines.
-Experiencia de 05 años a más trabajando con Java.
-Experienicia en creación de
-Microservicios
-Experiencia o Conocimientos en Programación Reactiva.
-Disponibilidad para trabajar de manera híbrida (2 veces por semana)
-A cambio, ¿Qué ofrecemos?
-Contrato a Plazo Indeterminado desde el primer día.
-EPS y Seguro Oncológico cubierto al 100%.
-Tarjeta de Alimentación Sodexo.
-Tres (03) medios días libres al año.
-Bonificaciones por Certificaciones.
-Otros beneficios adicionales
-Si te encuentras interesado y cumples con los requisitos, hazme llegar tu CV Actualizado, Disponibilidad y Pretensiones a: mguardia(arroba)emeal.nttdata.com
-“NTTDATA mantiene un política de contratación inclusiva, por lo que invita a cualquier persona a participar en el proceso de selección de la referencia
-”
-Nuestros MODELO RETRIBUTIVO consta de seguro de vida 👨🏽‍⚕️👩🏼‍⚕️, seguro médico gratuito para ti y tus cargas legales 🩺, seguro dental🦷, asignación de colación 🍔🍎🍳🥑 y variados beneficios de CONCILIACIÓN y EQUILIBRIO de la vida laboral y profesional 🧘🏼‍♂️?
-?."
-10	Programador full stack	https://pe.linkedin.com/jobs/view/programador-full-stack-at-inetum-3989984584?position=10&pageNum=0&refId=72g1O6cT1rcuuF8Ao7Nl5Q%3D%3D&trackingId=4RAmQKPM4y3%2Ff9QOC4cx8Q%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	2 weeks ago	Inetum	"Somos Inetum, una compañía de servicios ágiles que proporciona soluciones digitales y un grupo global de tecnólogos que acompaña a sus clientes en el proceso de digitalización aprovechando al máximo el digital flow.
-Ofrecemos a nuestros clientes una combinación única de proximidad, organización sectorial y soluciones de calidad. Presente en más de 26 países, el grupo tiene cerca de 27,000 colaboradores y apunta a seguir creciendo.
-¡En Inetum acompañamos a nuestros clientes y colaboradores en su camino al éxito!
-Si te gusta reinventarte y resolver problemas con nuevas estrategias, trabajar en proyectos de TI y negocios, ¡postula ahora!
-Actualmente nos encontramos en búsqueda de
-2 Fullstack Developer
-para que se integre a nuestro equipo de desarrollo.
-¿Qué esperamos de ti?
-Profesional o técnico en sistemas, computación, informática o afines.
-Experiencia en desarrollo mínima de 3 años.
-Experiencia desarrollando con Node.JS
-Experiencia con Nube AWS o Azure (Artifacts, Redis, AKS)
-Experiencia con Python, Git, SQL Server Integration Services, PostgreSQL, Api, Rest
-Experiencia en estándares web como JavaScript, React y así como capacidades de navegador.
-Experiencia en patrones de diseño de nivel intermedio.
-Experiencia en base de datos relacionales y no relacionales.
-¿Qué puedes esperar de nosotros?
-Remuneración en planilla, con todas las condiciones de ley, desde el primer día.
-Estabilidad laboral, capacitación permanente y posibilidad de línea de carrera.
-Vale de alimentación (tarjeta Sodexo) y bono por trabajo remoto/movilidad.
-Línea de carrera
-Convenios y descuentos corporativos (salud, educativos, entretenimiento).
-Conoce más de nosotros en www.inetum.com/es o visita nuestras redes sociales como Inetum Perú para conocer más de nuestra cultura corporativa y metodologías de trabajo. ¡Te esperamos!
-En Inetum promovemos la diversidad de género, origen étnico, nacionalidad, la inclusión de personas con discapacidad y/o habilidades diferentes mediante la igualdad de oportunidades en todos los procesos, y buscamos ampliar las oportunidades de desarrollo profesional."
-11	Practicante Yape - CRM	https://pe.linkedin.com/jobs/view/practicante-yape-crm-at-yape-3997364921?position=1&pageNum=0&refId=vcG9%2FPgk%2F5ple5d7A%2BGXHw%3D%3D&trackingId=%2BKg4whh7e7%2FZWXyPTWMQxA%3D%3D&trk=public_jobs_jserp-result_search-card	La Molina, Peru	1 week ago	Yape	"Somos más de 15 millones de yaperos y 2 millones de empresas que utilizan Yape a diario. Estamos disponibles para todos, lo que nos convierte en una plataforma única y clave del ecosistema digital del Perú.
+5	Desarrollador Full-Stack	https://pe.linkedin.com/jobs/view/desarrollador-full-stack-at-who-co-3999782911?position=5&pageNum=0&refId=uOYe9b5npXaTnKYVNUV%2FKA%3D%3D&trackingId=d3lhia5Zk5EImuzXO%2BNaUw%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	WHO&Co.	"This is a remote position.
+¿Te gustan los nuevos desafíos en el área de la tecnología y cuentas con experiencia como Desarrollador ?, ¿Te consideras un experto Full Stack en lenguajes de programación, sistemas operativos, frameworks y habilidades para llevar adelante funciones técnicas con el código?, ¿Dominas Java8/Spring Boot (backend) en combinación con Vue.js ?
+¡Esta posición podría ser para ti!
+Nuestro cliente es una importante empresa de soluciones tecnológicas para las organizaciones, con presencia en Chile, Perú, República Dominicana y constantes planes de expansión para Latam.
+Main Responsabilities:
+Funciones Front-end:
+Implementar interfaces de usuario, según las propuestas del área de UI/UX y los requerimientos del proyecto
+Aplicar guía de estilos definidas por el equipo de UI/UX
+Integrar interfaces de usuarios con las APIs del Back-end implementado
+Funciones Back-end:
+Desarrollar las funcionalidades necesarias para satisfacer los requerimientos del proyecto.
+Construir las APIs que serán usadas por el equipo de Front-end en la elaboración de las interfaces de usuario
+Integrar el proyecto asignado con sistemas informáticos externos
+RequirementsRequisitos
+Conocimientos Front-end:
+HTML5, CSS (con pre procesado SASS) y Javascript avanzado (vanilla)
+Vue.js (excluyente) + Vuetify.js
+Conocimientos en Material Design
+Conocimientos de arquitectura orientada a microservicios
+Poseer portafolio en Github, Gitlab, Bitbucket y/o Stackoverflow (Deseable)
+Haber desarrollado proyectos basados en PWA (Deseable)
+Conocimientos Back-end:
+Java 8 o superior (excluyente)
+Spring o SpringBoot (excluyente)
+PostgreSQL y/o MySQL (excluyente)
+Conocimientos de arquitectura orientada a microservicios
+MongoDB (Deseable)
+Conocimientos en herramientas de reportería (JasperReports) (Deseable)
+Poseer portafolio en Github, Gitlab, Bitbucket y/o Stackoverflow (Deseable)
+Manejo de ElasticSearch (Deseable)
+Competencias requeridas para el cargo:
+Orientación al aprendizaje de nuevas tecnologías
+Buenas prácticas de desarrollo, escritura y mantención de código fuente
+Trabajo en equipo / Colaboración
+Iniciativa, Persistencia, Orientación a la Calidad"
+6	Analista Desarrollador Backend	https://pe.linkedin.com/jobs/view/analista-desarrollador-backend-at-costamar-travel-group-3989695819?position=6&pageNum=0&refId=uOYe9b5npXaTnKYVNUV%2FKA%3D%3D&trackingId=MGDt8XOFLGJ1ujZftGrjFQ%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	3 weeks ago	Costamar Travel Group	Description not found
+7	Desarrollador Backend	https://pe.linkedin.com/jobs/view/desarrollador-backend-at-soaint-4002156974?position=7&pageNum=0&refId=uOYe9b5npXaTnKYVNUV%2FKA%3D%3D&trackingId=wlGJpET88nF5DAsL3i5ivw%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	4 days ago	SOAINT	"Te apasiona el desarrollo tecnológico?
+🌍💙
+En
+SOAINT
+tenemos más de 15 años dedicados a transformar el mundo a través de la tecnología con soluciones de Analytics, Desarrollo, Automatización y otros y contamos con presencia en España y LATAM. Actualmente buscamos al perfil de
+Desarrollador Backend
+para sumarse a nuestro equipo. Si eres una persona
+analítica
+y con facilidad para la
+resolución de problemas
+, ¡esta es tu oportunidad! 👀🚀
+🌟
+¿Qué harás en este rol?
+✅Desarrollar y mantener APIs RESTful usando Spring Boot.
+✅Implementación en nube Azure
+✅Gestionar y optimizar bases de datos relacionales y NoSQL.
+✅Implementar autenticación y autorización con Spring Security.
+✅Integrar y consumir servicios externos mediante APIs.
+✅Escribir y ejecutar pruebas unitarias y de integración.
+¿Qué buscamos en ti?
+Bachiller en Ingeniería de Sistemas y/o Ingeniería Informática y/o Ingeniería de Computación y Sistemas o afines.
+Experiencia mínima de 3 años en desarrollo de software.
+Desarrollo Backend con el lenguaje Java con Spring Boot.
+Experiencia en plataformas de nubes: Azure Cloud, Azure DevOps
+Experiencia con Spring Security (OAuth2, JWT)
+Conocimiento en Spring Data, JPA, Retrofit y Swagger.
+Experiencia en Jenkins
+Experiencia en las bases SQL Server y Oracle
+Manejo de APIs
+Experiencia en metodologías ágiles
+🚩
+¿Qué te ofrecemos?
+💰 Contrato Indefinido y por planilla 100% desde el primer día.
+✨ Trabajo híbrido (2 días presencial y 3 remotos)
+🚑 Cobertura EPS 100% (Plan Esencial) y Seguro de Vida Ley.
+📚 Oportunidades de desarrollo profesional y crecimiento.
+📎 Plataforma de capacitación online gratuita.
+✨ Mediodía libre por cumpleaños
+🚲 Descuentos y convenios en educación, gimnasio y mucho más.
+🚀 Ser parte de una empresa internacional en el sector de consultoría y servicios TI.
+Tu próxima aventura profesional te aguarda.
+¡Postúlate ahora y sé parte de nuestra historia de éxito!🚀
+En SOAINT no distinguimos por razón de discapacidad, género, orientación, identidad y expresión de género, lugar de origen o generación. Creemos en la igualdad de oportunidades en todos nuestros procesos y buscamos promover la inclusión e inserción laboral.
+Conoce más de cómo se #ViveSOAINT en este link: https://www.linkedin.com/company/soaint/life/vivesoaint/"
+8	Desarrollador de back-end	https://pe.linkedin.com/jobs/view/desarrollador-de-back-end-at-soaint-3988075446?position=8&pageNum=0&refId=uOYe9b5npXaTnKYVNUV%2FKA%3D%3D&trackingId=sgRFDaH0nZ1vn8048PNukQ%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	5 days ago	SOAINT	Description not found
+9	Back End Developer	https://pe.linkedin.com/jobs/view/back-end-developer-at-softtek-4003172693?position=9&pageNum=0&refId=uOYe9b5npXaTnKYVNUV%2FKA%3D%3D&trackingId=f7I%2FPVpiu1znnjmqu1IBKw%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	Softtek	Description not found
+10	Programador Full Stack	https://pe.linkedin.com/jobs/view/programador-full-stack-at-cl%C3%ADnica-de-especialidades-m%C3%A9dicas-3998515320?position=10&pageNum=0&refId=uOYe9b5npXaTnKYVNUV%2FKA%3D%3D&trackingId=Ca4L9Cnk6AqoVjvjHKaNVw%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	Clínica de Especialidades Médicas	Description not found
+11	Practicante Yape - CRM	https://pe.linkedin.com/jobs/view/practicante-yape-crm-at-yape-3997364921?position=1&pageNum=0&refId=8c4zi9jG1ajRhPGdzDX%2BOA%3D%3D&trackingId=3wk%2F7lDaXUXpoE277nn6nA%3D%3D&trk=public_jobs_jserp-result_search-card	La Molina, Peru	2 weeks ago	Yape	"Somos más de 15 millones de yaperos y 2 millones de empresas que utilizan Yape a diario. Estamos disponibles para todos, lo que nos convierte en una plataforma única y clave del ecosistema digital del Perú.
 Esperamos que te involucres en discusiones relacionadas con todos los aspectos del desarrollo de productos y tecnología.
 Nuestro desafío es que estamos creciendo rápidamente y tenemos una amplia cantidad de datos que pueden ser explotados para mejorar la vida de los yaperos y nuestro negocio. Nos motiva construir un país conectado sin barreras, que fomente el crecimiento y desarrollo para todos los peruanos.
 Para seguir brindando la mejor experiencia a nuestros yaperos, necesitamos el mejor talento.
@@ -212,7 +168,7 @@ Estudiantes de 7mo y 8avo de las carreras de Ingeniería Industrial, Marketing, 
 Deseable alguna experiencia de 06 meses en áreas de Marketing y/o CRM.
 Conocimientos en SQL, Power BI, Excel avanzado.
 Habilidades de comunicación, resolución de problemas y trabajo en equipo."
-12	Practicante Yape - Marketplace Platform	https://pe.linkedin.com/jobs/view/practicante-yape-marketplace-platform-at-yape-3997361955?position=2&pageNum=0&refId=vcG9%2FPgk%2F5ple5d7A%2BGXHw%3D%3D&trackingId=bAzgyaDq3TmUzLPCfQE6kA%3D%3D&trk=public_jobs_jserp-result_search-card	La Molina, Peru	1 week ago	Yape	"Somos más de 15 millones de yaperos y 2 millones de empresas que utilizan Yape a diario. Estamos disponibles para todos, lo que nos convierte en una plataforma única y clave del ecosistema digital del Perú.
+12	Practicante Yape - Marketplace Platform	https://pe.linkedin.com/jobs/view/practicante-yape-marketplace-platform-at-yape-3997361955?position=2&pageNum=0&refId=8c4zi9jG1ajRhPGdzDX%2BOA%3D%3D&trackingId=WYQS1Su5cVH3MP2Bsgt3Lw%3D%3D&trk=public_jobs_jserp-result_search-card	La Molina, Peru	2 weeks ago	Yape	"Somos más de 15 millones de yaperos y 2 millones de empresas que utilizan Yape a diario. Estamos disponibles para todos, lo que nos convierte en una plataforma única y clave del ecosistema digital del Perú.
 Esperamos que te involucres en discusiones relacionadas con todos los aspectos del desarrollo de productos y tecnología.
 Nuestro desafío es que estamos creciendo rápidamente y tenemos una amplia cantidad de datos que pueden ser explotados para mejorar la vida de los yaperos y nuestro negocio. Nos motiva construir un país conectado sin barreras, que fomente el crecimiento y desarrollo para todos los peruanos.
 Para seguir brindando la mejor experiencia a nuestros yaperos, necesitamos el mejor talento.
@@ -230,31 +186,28 @@ Estudiantes de 7mo y 8avo de las carreras de Ingeniería Industrial, Sistemas, G
 Deseable alguna experiencia de 06 meses.
 Conocimientos en SQL, Power BI, Excel avanzado.
 Habilidades de comunicación, resolución de problemas y trabajo en equipo."
-13	Practicante Profesional de Gestión de Datos	https://pe.linkedin.com/jobs/view/practicante-profesional-de-gesti%C3%B3n-de-datos-at-los-portales-3980868619?position=3&pageNum=0&refId=vcG9%2FPgk%2F5ple5d7A%2BGXHw%3D%3D&trackingId=SsHvZlQPeajXplQZSznIXw%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	4 weeks ago	Los Portales	"Los Portales, Empresa Con Más De 60 Años Liderando El Desarrollo De Negocios En El Sector Inmobiliario Para Las Familias Peruanas, Se Encuentra En La Búsqueda De Un (a)
-Practicante de Gestión de Datos
-Funciones
-Describir y documentar la estructura, fuentes de datos y procesos de transformación involucrados en cada Datamart.
-Documentar los tableros creados, donde se detalle la configuración, fuentes de datos y métricas utilizadas.
-Mantener actualizado el inventario de Datamart y tableros del proyecto.
-Redactar procedimientos y políticas asociadas a Gobierno de datos.
-Dar soporte al desarrollo y mantenimiento de un Framework de gobierno de datos, asegurando que las prácticas de documentación cumplan con los estándares y políticas de la organización.
-Apoyar en la creación de presentaciones del proyecto de gestión de datos, sintetizando información técnica y visual para los distintos stakeholders.
+13	Practicante Yape - Analytics CX	https://pe.linkedin.com/jobs/view/practicante-yape-analytics-cx-at-yape-3998280079?position=3&pageNum=0&refId=8c4zi9jG1ajRhPGdzDX%2BOA%3D%3D&trackingId=LptttwoWP%2FtQYgqdedx6xQ%3D%3D&trk=public_jobs_jserp-result_search-card	La Molina, Peru	1 week ago	Yape	"Somos más de 15 millones de yaperos y 2 millones de empresas que utilizan Yape a diario. Estamos disponibles para todos, lo que nos convierte en una plataforma única y clave del ecosistema digital del Perú.
+Esperamos que te involucres en discusiones relacionadas con todos los aspectos del desarrollo de productos y tecnología.
+Nuestro desafío es que estamos creciendo rápidamente y tenemos una amplia cantidad de datos que pueden ser explotados para mejorar la vida de los yaperos y nuestro negocio. Nos motiva construir un país conectado sin barreras, que fomente el crecimiento y desarrollo para todos los peruanos.
+Para seguir brindando la mejor experiencia a nuestros yaperos, necesitamos el mejor talento.
+Sé parte de esta emocionante misión y contribuye con nuestro propósito de hacer más simple el día a día de las personas para que sigan movilizando sus vidas.
+¡Contágiate de la Vibra Yape y haz que la vida fluya!
+Descripción del rol
+Nos encontramos en la búsqueda de un practicante con un perfil orientado a negocio y análisis/extracción de información. Participará de proyectos ad-hoc cross de alto impacto en la Tribu de Experiencia.
+Responsabilidades:
+Participar en proyectos ad-hoc cross de alto impacto en la Tribu Experiencia en coordinación con diferentes equipos.
+Apoyo en los diversos proyectos gestionando Power BI.
+Procesamiento de datos y analíticas para obtener insights.
+Presentación de resultados y documentación correspondiente al proyecto.
 Requisitos
-Egresado en Ingeniería de Sistemas, Informática, Administración, Industrial o afines.
-Experiencia previa realizando prácticas en gestión de datos.
-Conocimiento en Datamart, análisis de datos, gestión de proyectos, herramientas agile.
-Manejo de SQL y Power Bi a nivel intermedio.
-Disponibilidad para realizar un convenio de prácticas por un periódo de 6 meses.
-Beneficios
-Convenio de prácticas desde el primer día con todos los beneficios de ley.
-Seguro FOLA.
-Remuneración acorde al mercado.
-Oportunidad de línea de carrera.
-Capacitaciones en una empresa en constante crecimiento.
-Las ofertas de empleo y acceso a medios de formación educativa no podrán contener requisitos que constituyan discriminación, anulación o alteración de igualdad de oportunidades de trato.
-(Ley N° 26772)"
-14	Científico de datos	https://pe.linkedin.com/jobs/view/cient%C3%ADfico-de-datos-at-corporaci%C3%B3n-aceros-arequipa-4002218205?position=4&pageNum=0&refId=vcG9%2FPgk%2F5ple5d7A%2BGXHw%3D%3D&trackingId=RHuFHHfmVlL8qEPxtoEfmw%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	3 days ago	Corporación Aceros Arequipa	Description not found
-15	Practicante de Experiencia del Colaborador	https://pe.linkedin.com/jobs/view/practicante-de-experiencia-del-colaborador-at-cementos-pacasmayo-saa-3986765200?position=5&pageNum=0&refId=vcG9%2FPgk%2F5ple5d7A%2BGXHw%3D%3D&trackingId=Z57kklEi9V%2BmuXCDxFhUXA%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	2 weeks ago	Cementos Pacasmayo SAA	"En Cementos Pacasmayo nos encontramos en la búsqueda de personas que quieran trascender; y contribuir con el desarrollo de nuestro país, personas que busquen que el Perú siga avanzando.
+Estos son algunos de los requisitos que esperamos para este rol:
+Estudiantes de 7mo y 8avo de las carreras de Ingeniería Industrial, Sistemas, Gestión de empresas, Administración de empresas y carreras afines.
+Idealmente con experiencia o experiencia en proyectos o iniciativas fuera o dentro de la universidad (3 meses a más).
+Exploración y análisis de datos (Nivel intermedio).
+Excel Avanzado, PLSQL Intermedio (Deseable Avanzado), Python Basico (Deseable Intermedio), PBI Intermedio.
+Automatizar y generar reportes con análisis de datos (Nivel intermedio)."
+14	Científico de datos	https://pe.linkedin.com/jobs/view/cient%C3%ADfico-de-datos-at-corporaci%C3%B3n-aceros-arequipa-4002218205?position=4&pageNum=0&refId=8c4zi9jG1ajRhPGdzDX%2BOA%3D%3D&trackingId=teNpflmaJ8FhSBE3K6W59w%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	Corporación Aceros Arequipa	Description not found
+15	Practicante de Experiencia del Colaborador	https://pe.linkedin.com/jobs/view/practicante-de-experiencia-del-colaborador-at-cementos-pacasmayo-saa-3986765200?position=5&pageNum=0&refId=8c4zi9jG1ajRhPGdzDX%2BOA%3D%3D&trackingId=4aRayP%2Fvj9j5Kp%2BftRGZNA%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	3 weeks ago	Cementos Pacasmayo SAA	"En Cementos Pacasmayo nos encontramos en la búsqueda de personas que quieran trascender; y contribuir con el desarrollo de nuestro país, personas que busquen que el Perú siga avanzando.
 ¡Postula al puesto de
 Practicante
 de Experiencia del Colaborador
@@ -274,34 +227,7 @@ Seguro FOLA al 100%.
 Excelente ambiente de trabajo.
 Al postular se afirma su consentimiento y autorización del uso de sus datos personales expuestos en su CV, dentro del marco de la Ley de Protección de Datos Personales N° 29733, para fines únicamente de postulación con la organización. Este registro se deriva al área de GH para el proceso de selección.
 Pacasmayo es mucho más que una empresa, es la suma del esfuerzo individual de muchísimas personas. Personas que quieren trascender y hacer un esfuerzo especial, para lograr ser una empresa líder en la provisión de soluciones constructivas que se anticipe a las necesidades de las personas, las empresas y los países.Somos reconocidos por nuestros altos estándares de calidad, solidez financiera, por nuestra política de Buen Gobierno Corporativo y por nuestro excelente clima laboral, con el respeto hacia el medio ambiente, y nuestras buenas relaciones con las comunidades del entorno. Te invitamos a formar parte de esta gran familia y contribuir con el desarrollo de nuestro país, para que el Perú siga avanzando.Ingresa a www.cementospacasmayo.com.pe y conoce más sobre nosotros."
-16	Practicante Business Intelligence	https://pe.linkedin.com/jobs/view/practicante-business-intelligence-at-sodimac-3996523940?position=6&pageNum=0&refId=vcG9%2FPgk%2F5ple5d7A%2BGXHw%3D%3D&trackingId=DNiwsKEprQ9iOcy2r%2BjZgg%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	Sodimac	Description not found
-17	Auxiliar de Business Intelligence	https://pe.linkedin.com/jobs/view/auxiliar-de-business-intelligence-at-grupo-m4g-3982608521?position=7&pageNum=0&refId=vcG9%2FPgk%2F5ple5d7A%2BGXHw%3D%3D&trackingId=XIoxcAXdlWUZSHcvv4HoDA%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	3 weeks ago	Grupo M4G	"En M4G estamos en la búsqueda de un Auxiliar de Business Intelligence para integrarse a nuestro equipo. Somos un equipo que nos impulsamos por trascender desde lo humano hacia lo tecnológico. Creemos que podemos construir un mundo mejor.
-Funciones:
-∙ Analizar, organizar y transformar bases de datos para la toma de decisiones
-comerciales.
-∙ Realizar el modelamiento de bases de datos para la creación de indicadores.
-∙ Generar reportería avanzada para las distintas áreas de la empresa.
-∙ Trabajar en la plataforma de Análisis de datos de Zoho, Zoho Analytics.
-∙ Actualizar los reportes existentes para que siga corriendo la información.
-Requirements
-Requisitos
-:
-Estudiante, egresado o bachiller de las carreras de Ingeniería Estadística, de Sistemas, Industrial o
-afines.
-Conocimiento intermedio/avanzado en el manejo BD SQL Server.
-Conocimiento de Estadística, manejo de bases de datos.
-Inglés Intermedio
-Deseable manejo de Power BI a nivel Intermedio.
-Benefits
-Beneficios
-Pertenecer a una empresa sólida.
-Desarrollo personal.
-Descuentos corporativos.
-Constantes capacitaciones.
-Horario Híbrido
-Presencial 9:00 a. m hasta 6:00 p. m.
-Virtual 8:00 a- m. hasta 5:30 p. m."
-18	Asistente de Data	https://pe.linkedin.com/jobs/view/asistente-de-data-at-inlearning-escuelas-de-educaci%C3%B3n-superior-3996046053?position=8&pageNum=0&refId=vcG9%2FPgk%2F5ple5d7A%2BGXHw%3D%3D&trackingId=ssbcY%2Fqjvx%2FIQXCv56SnoA%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	inLearning Escuelas de Educación Superior	"En inLearning Institutos, plataforma educativa del grupo Intercorp, conformada por Idat, Zegel, la Escuela de Arte Corriente Alterna y el Centro de la Imagen, empresas que promueven la equidad de género, igualdad e inclusión, nos encontramos en la búsqueda de un(a) Asistente de Data.
+16	Asistente de Data	https://pe.linkedin.com/jobs/view/asistente-de-data-at-inlearning-escuelas-de-educaci%C3%B3n-superior-3996046053?position=6&pageNum=0&refId=8c4zi9jG1ajRhPGdzDX%2BOA%3D%3D&trackingId=n310L5dGDa2h%2BTIvKBWbEw%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	2 weeks ago	inLearning Escuelas de Educación Superior	"En inLearning Institutos, plataforma educativa del grupo Intercorp, conformada por Idat, Zegel, la Escuela de Arte Corriente Alterna y el Centro de la Imagen, empresas que promueven la equidad de género, igualdad e inclusión, nos encontramos en la búsqueda de un(a) Asistente de Data.
 Propósito
 Apoyar en la recolección, procesamiento y análisis de datos para la creación de reportes y dashboards que faciliten la toma de decisiones informadas en la institución.
 Funciones
@@ -332,43 +258,93 @@ Atractivos descuentos para ti y tu familia en las instituciones educativas del g
 Semana Classifieds (Semana libre entre Navidad y Año Nuevo)
 En inLearning Institutos (Zegel, Idat, Corriente Alterna, Centro de la Imagen e Innova Teaching School) estamos comprometidos con promover la igualdad de género, diversidad e inclusión en nuestros procesos de atracción y selección del talento, brindando igualdad de oportunidades laborales para los/las postulantes, asegurando ambientes saludables, equitativos y seguros.
 Además, queremos que sepas que este cargo admite postulaciones para personas con discapacidad de acuerdo con el marco de la Ley de Inclusión Laboral en el Perú."
-19	ANALISTA ASESORIA DE PRICING I	https://pe.linkedin.com/jobs/view/analista-asesoria-de-pricing-i-at-banco-de-cr%C3%A9dito-bcp-4002934785?position=9&pageNum=0&refId=vcG9%2FPgk%2F5ple5d7A%2BGXHw%3D%3D&trackingId=olhw7i%2F%2Fxf3Kc4S4u32Huw%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	2 days ago	Banco de Crédito BCP	"ANALISTA ASESORIA DE PRICING I (Data & Analytics)
-Queremos que tu talento se sume al de CREDICORP. Juntos tendremos la posibilidad de generar un impacto positivo en nuestro país, teniendo como objetivo que los peruanos logren transformar sus planes en realidad.
-“Somos una organización comprometida con la igualdad de oportunidades para hombres y mujeres, y en línea con ello, todos nuestros procesos de selección se rigen bajo una política de igualdad de derechos y oportunidades, donde nuestros postulantes son considerados sin importar su origen, lengua, raza, sexo, idioma, religión, opinión, edad, talla, procedencia educativa, condición económica, social, física, mental o cualquier otra índole, promoviendo así una cultura de respeto mutuo”
-¡Sé parte de nuestro equipo como ANALISTA ASESORIA DE PRICING I #Credicorp
-¿Ya sabes qué hacemos los ANALISTAS ASESORIA DE PRICING I en Credicorp?
-Somos los encargados de asegurar la captura de valor de las líneas de negocio y la construcción de capacidades estructurales de pricing, alineados a los objetivos estratégicos de la empresa y el corporativo.
-Nuestras responsabilidades principales son:
-Construcción, implementación y seguimiento de diversas iniciativas y/o proyectos.
-Gestionar la generación y tratamiento de data necesaria para los análisis de iniciativas en la línea de negocio.
-Diseñar y construir modelos de precios (valoración, disposición de pago, rentabilidad, etc).
-Diseñar y gestionar ideas/propuestas para la elaboración de iniciativas de pilotos y control.
-Participación en proyectos relacionados con la rentabilización del negocio.
-Debes postular a este rol solo si …
-Eres Bachiller de las carreras de Economía, Ingeniería Estadística, Ciencias actuariales, Ingeniería Industrial, Finanzas o afines.
-Tienes experiencia de 1 año en puestos de Data & Analytics o Pricing Analytics.
-Tienes experiencia en seguros o actuarial (deseable).
-Tienes sólidos fundamentos analíticos, ciencia de datos y skills de comunicación.
-Tienes interés por las finanzas, planeamiento y gestión comercial, con foco en desarrollar el análisis estratégico y de gestión de business case.
-Tienes experiencia en empresas de seguros, consultoras, banca, servicios, financieros o afines.
-Sobre todo, si dominas …
-Python nivel intermedio
-Microsoft Office nivel intermedio avanzado, especialmente Excel (Tablas dinámicas/funciones, Macros).
-SQL – deseable
-Radar – deseable
-Idioma inglés nivel intermedio
-¿Qué beneficios disfrutarás?
-Seguirás sumando experiencia y desarrollo profesional gracias al equipo de grandes líderes, una cultura de colaboración que inspira y oportunidades para innovar. Si estás dispuesto a asumir grandes retos, llegó el momento de sumarte al Credicorp.
-Ingreso a Planilla.
-Pago de Bonos por Desempeño
-Pago de Utilidades
-Flex time
-Beneficios financieros
-Oportunidades de desarrollo"
-20	Analista de base de datos	https://pe.linkedin.com/jobs/view/analista-de-base-de-datos-at-valtx-per%C3%BA-3997835752?position=10&pageNum=0&refId=vcG9%2FPgk%2F5ple5d7A%2BGXHw%3D%3D&trackingId=ou%2Bs7OKBOKBFm12RYNitSw%3D%3D&trk=public_jobs_jserp-result_search-card	San Borja, Peru	1 week ago	Valtx Perú	Description not found
-21	Desarrollador FrontEnd	https://pe.linkedin.com/jobs/view/desarrollador-frontend-at-canvia-3987655734?position=1&pageNum=0&refId=kZRV0NOHx6jnEaaL8mS%2F3A%3D%3D&trackingId=YJACdKK9jdYSKzVYM7GOJA%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	2 weeks ago	Canvia	Description not found
-22	Desarrollador Frontend	https://pe.linkedin.com/jobs/view/desarrollador-frontend-at-fractal-3996662725?position=2&pageNum=0&refId=kZRV0NOHx6jnEaaL8mS%2F3A%3D%3D&trackingId=h6pzI4NmhEo5VngX8mCUtA%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	FRACTAL	Description not found
-23	Frontend Developer	https://pe.linkedin.com/jobs/view/frontend-developer-at-softtek-3991911763?position=3&pageNum=0&refId=kZRV0NOHx6jnEaaL8mS%2F3A%3D%3D&trackingId=TU%2F%2FLKPl3FVdpDKneVRBWg%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	2 weeks ago	Softtek	"Softtek es un proveedor global de servicios orientados a procesos de TI con más de 30 oficinas en Norteamérica, Latinoamérica, Europa y Asia. Maximizamos el valor del software para el mundo: Creamos, Probamos, Implementamos y damos mantenimiento a sistemas que empoderan organizaciones e individuos. En la actualidad nos encontramos en la búsqueda de un talento para el perfil:
+17	Analista de permanencia	https://pe.linkedin.com/jobs/view/analista-de-permanencia-at-trust-consulting-4002985351?position=7&pageNum=0&refId=8c4zi9jG1ajRhPGdzDX%2BOA%3D%3D&trackingId=bOh32fgc3kCc8EUbPUUMxg%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	Trust Consulting	"Por encargo de uno de nuestros principales clientes, importante empresa del sector salud, en Trust Consulting nos encontramos en la búsqueda del mejor talento para ocupar la posición de Analista de permanencia en Lima.
+Propósito De La Posición
+Implementar, acompañar y hacer seguimiento a las acciones para la mejora de la cobranza temprana de los canales Remoto 1, Remoto 2, Indirecto 2.0 y call´s de TLMK buscando la mejora de la persistencia.
+Perfil
+Egresado de las carreras de Administración, Ingeniería y/o a fines.
+Experiencia
+Experiencia mínima de 2 años como Analista de retenciones en el rubro de seguros (de preferencia de salud).
+Experiencia en gestión comercial, gestión de análisis, cobranzas, retenciones, cuotas y afiliaciones.
+Conocimientos Específicos
+Manejo de base de datos
+Excel Avanzado
+SQL Intermedio
+Power BI Intermedio
+Inglés a nivel intermedio (Deseable)
+Modalidad De Trabajo
+Remoto (Disponibilidad para asistir a oficina 2 veces al mes)
+Horarios
+Lunes a viernes 8:30 am a 6:00pm
+Funciones
+Implementar acciones de mejora para la recuperación del alta morosa temprana.
+Análisis y coordinación de desarrollos de los nuevos proyectos e iniciativas de Permanencia.
+Mejorar los procesos buscando la automatización de reportería y generación de indicadores eficientes.
+Seguimiento al Dashboard de Persistencia y Gestión del MKF Intermedio, identificando alertas y mejoras en los resultados de la gestión del consultor.
+Adherirse a las políticas de seguridad del paciente y promover el cumplimiento de las Prácticas Organizacionales Requeridas.
+Cumplir con la Política de Cuidados Centradas en la Persona"" o ""Fomentar la cultura de cuidados centrados en las personas brindando una atención de calidad y calidez.
+Beneficios
+Planilla completa.
+Tarjeta de Alimentos.
+Seguro de EPS 85% a partir del 4to mes para ti y tus dependientes.
+Programa oncológico 100% a partir del 4to mes para ti y tus dependientes.
+En el caso desee afiliar a los padres o hermanos hay un 60% de descuento (opcional), a partir del 4to mes."
+18	Analista Programador Junior	https://pe.linkedin.com/jobs/view/analista-programador-junior-at-buildsoft-3995985523?position=8&pageNum=0&refId=8c4zi9jG1ajRhPGdzDX%2BOA%3D%3D&trackingId=w%2FiZyv0ciNp%2Br4MYkwX2vw%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	2 weeks ago	BuildSoft	Description not found
+19	Jefe de Innovación Tecnológica (Barranco)	https://pe.linkedin.com/jobs/view/jefe-de-innovaci%C3%B3n-tecnol%C3%B3gica-barranco-at-andean-3999335498?position=9&pageNum=0&refId=8c4zi9jG1ajRhPGdzDX%2BOA%3D%3D&trackingId=4jDqUjRoZOdlja%2FBsSDDPA%3D%3D&trk=public_jobs_jserp-result_search-card	Barranco, Peru	1 week ago	Andean	Description not found
+20	Analista de Control y Gestión	https://pe.linkedin.com/jobs/view/analista-de-control-y-gesti%C3%B3n-at-grupo-intercorp-4000982213?position=10&pageNum=0&refId=8c4zi9jG1ajRhPGdzDX%2BOA%3D%3D&trackingId=WMGgTnz%2FFJMNRzfebQKFhA%3D%3D&trk=public_jobs_jserp-result_search-card	San Borja, Peru	1 week ago	Grupo Intercorp	"Super Food Holding, empresa que fomenta y respeta en sus procesos de atracción y crecimiento de talento la equidad de género, inclusión y diversidad; nos encontramos en búsqueda del mejor talento para ocupar la posición de:Analista de Control y GestiónObjetivo del Puesto:
+Evaluación, seguimiento y control de las actividades ejecutadas por el área. En la búsqueda de mejoras y eficiencias, creación de reportes de control de gestión y actualización para la mejor toma de decisión en la compañía
+Funciones Principales
+Identificar oportunidad de mejora y automatización en los procesos y contribuir a su implementación.
+Mantener actualizado los reportes de la Gerencia de Infraestructura y Seguridad (Gastos, productividad, kpis, accidentes, etc)
+Búsqueda continua de nuevas herramientas tecnológicas para la mejora de procesos.
+Creaciones de cuestionarios, optimización de tableros y nuevos tableros de control
+Evaluación, seguimiento y control de las actividades y/o servicios ejecutados en el área.
+Revisar y consolidar las bases de datos que administra la gerencia de Infraestructura y Seguridad.
+Establecer una gestión en base de indicadores y herramientas de control.
+Identificar y evaluar los riesgos potenciales del área.
+Implementar planes y estrategias para mitigar riesgos del área.Requisitos:
+Bachiller en Gestión Empresarial, Ingeniería Industrial, Administración o Afines (Indispensable).
+Tener experiencia mínima de 1 año como Analista de BI, Analista de Control y Gestión, Analista de Riesgos o 2 años como Asistente de Control y Gestión/Proceso, Riesgos o similares (Indispensable).
+Conocimiento de Big Query (Indispensable)
+Conocimiento de Power BI (Indispensable)
+Conocimiento de Excel a nivel Intermedio (Indispensable)
+Conocimiento de Power Automate (Deseable)
+Conocimiento de gestión de presupuestos (Deseable).
+Orientado al trabajo en equipo.
+Beneficios
+Beneficios de acuerdo a Ley.
+Beneficios del grupo Intercorp.
+Recuerda utilizar nuestros canales de reclutamiento oficiales (Portal de empleo Intercorp Retail, Bumeran y Computrabajo) y que participar en el proceso no tiene costo."
+21	Desarrollador FrontEnd	https://pe.linkedin.com/jobs/view/desarrollador-frontend-at-canvia-3987655734?position=1&pageNum=0&refId=4nDa3upoNuVifKSGlhw7Qw%3D%3D&trackingId=zbhtejzbWGroesGoJ5NoFg%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	3 weeks ago	Canvia	"Metodología para el análisis de sistemas.
+Conocimiento de las plataformas informáticas con las que cuenta el Banco.
+Técnicas de estimación de esfuerzo de desarrollo.
+Ingeniería de requerimientos.
+Gestión del suministro de servicios TI Técnicas de Negociación.
+Modelamiento de Procesos.
+Gestión de riesgos
+Gestión de proyectos
+Requisitos
+(React, Redux) (Angular, boostrap, HTML) Deseable conocimiento (Java Script, Vue Js, Whesphere boostrap, Application Server, Apache Tomcat, IIS, Jboss, Cloud)
+Somos Canvia! Nuestro propósito es hacer más fácil la vida de las personas, innovando e implementando proyectos de transformación digital de nuestros clientes de manera ágil y segura."
+22	Desarrollador Frontend	https://pe.linkedin.com/jobs/view/desarrollador-frontend-at-fractal-3996662725?position=2&pageNum=0&refId=4nDa3upoNuVifKSGlhw7Qw%3D%3D&trackingId=MmoOhP%2FIC4tGgBnRThfG4w%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	2 weeks ago	FRACTAL	"FRACTAL Soluciones TI
+, somos una empresa peruana de Consultoría en Gestión de Tecnología de la Información con más de 10 años en el mercado, que ofrece soluciones que contribuyen al mejoramiento de los procesos y negocios de nuestros clientes, basados en profesionales altamente calificados y aplicando los más altos estándares de calidad.
+Nos encontramos en búsqueda de un
+Desarrollador Frontend
+p
+ara un proyecto
+con nuestro cliente del sector bancario con el siguiente perfil
+Egresado(a) de ingeniería de sistemas, informática o similar.
++3 años de experiencia bajo el puesto
+Traducir los diseños y wireframes en código funcional utilizando HTML, CSS y JavaScript
+Utilizar herramientas y frameworks modernos como React, Angular, Vue.js o Svelte.
+Beneficios
+Capacitación AWS
+Descuentos corporativos
+Actividades de bienestar y más...
+Conócenos en https //www.fractal.com.pe/
+¡Somos experiencia, somos tecnología, somos Fractal!"
+23	Frontend Developer	https://pe.linkedin.com/jobs/view/frontend-developer-at-softtek-3991911763?position=3&pageNum=0&refId=4nDa3upoNuVifKSGlhw7Qw%3D%3D&trackingId=euGpxKbSZ6a0zx3wZCCi6Q%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	3 weeks ago	Softtek	Description not found
+24	Desarrollador de front-end	https://pe.linkedin.com/jobs/view/desarrollador-de-front-end-at-softtek-4005940274?position=4&pageNum=0&refId=4nDa3upoNuVifKSGlhw7Qw%3D%3D&trackingId=fJL6O%2Fq1Ds9ZNky%2B5V9r0A%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	4 days ago	Softtek	"Softtek es un proveedor global de servicios orientados a procesos de TI con más de 30 oficinas en Norteamérica, Latinoamérica, Europa y Asia. Maximizamos el valor del software para el mundo: Creamos, Probamos, Implementamos y damos mantenimiento a sistemas que empoderan organizaciones e individuos. En la actualidad nos encontramos en la búsqueda de un talento para el perfil:
 Frontend Developer
 Requisitos:
 Experiencia de 4+ años desarrollando en la especialidad.
@@ -385,8 +361,7 @@ Podrás optar por los descuentos corporativos en empresas de entretenimiento, ed
 Contamos con una plataforma exclusiva virtual con más de 3,000 cursos orientados a potencializar tus habilidades técnicas como blandas.
 En Softtek reconocemos que el talento es diverso; respetamos la identidad y condiciones de vida de cada persona y promovemos la equidad de trato y de oportunidades. Para lograr lo anterior, creamos un ambiente incluyente en el cual las personas muestran qué las define y emplean sus diferentes características para lograr mejores resultados.
 Por ello, promovemos la diversidad generacional, origen étnico, nacionalidad y la inclusión de personas con habilidades diferentes y/o discapacidad. En cumplimiento de la Ley N° 29733 y su reglamento."
-24	Desarrollador de front-end	https://pe.linkedin.com/jobs/view/desarrollador-de-front-end-at-softtek-4001747920?position=4&pageNum=0&refId=kZRV0NOHx6jnEaaL8mS%2F3A%3D%3D&trackingId=o7mTdH5MZ5tP94jwCI%2F9IA%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	4 days ago	Softtek	Description not found
-25	Desarrollador de front-end	https://pe.linkedin.com/jobs/view/desarrollador-de-front-end-at-softtek-3982518502?position=5&pageNum=0&refId=kZRV0NOHx6jnEaaL8mS%2F3A%3D%3D&trackingId=S%2FsMy8%2BZUyS3WgY6jlshAw%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	3 weeks ago	Softtek	"Softtek es un proveedor global de servicios orientados a procesos de TI con más de 30 oficinas en Norteamérica, Latinoamérica, Europa y Asia. Maximizamos el valor del software para el mundo: Creamos, Probamos, Implementamos y damos mantenimiento a sistemas que empoderan organizaciones e individuos. En la actualidad nos encontramos en la búsqueda de perfiles de:
+25	Desarrollador de front-end	https://pe.linkedin.com/jobs/view/desarrollador-de-front-end-at-softtek-4001747920?position=5&pageNum=0&refId=4nDa3upoNuVifKSGlhw7Qw%3D%3D&trackingId=uz6eOnzD40w5yFWoS4NafQ%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	Softtek	"Softtek es un proveedor global de servicios orientados a procesos de TI con más de 30 oficinas en Norteamérica, Latinoamérica, Europa y Asia. Maximizamos el valor del software para el mundo: Creamos, Probamos, Implementamos y damos mantenimiento a sistemas que empoderan organizaciones e individuos. En la actualidad nos encontramos en la búsqueda de perfiles de:
 Desarrollador Frontend
 ¿Qué buscamos?:
 4 años
@@ -407,53 +382,38 @@ Ofrecemos:
 Ingreso a planilla con todos los beneficios de ley.
 EPS al 100%
 Modalidad de trabajo:
-Híbrido (1-2 veces presencial por mes en San Isidro-Lima)
+90% Remoto (1-2 veces presencial por mes en San Borja/San Isidro)
 Capacitación constante y línea de carrera.
 Podrás optar por los descuentos corporativos en empresas de entretenimiento, educación, entre otros.
 Contamos con una plataforma exclusiva virtual con más de 3,000 cursos orientados a potenciar tus habilidades técnicas como blandas.
 En Softtek reconocemos que el talento es diverso; respetamos la identidad y condiciones de vida de cada persona y promovemos la equidad de trato y de oportunidades. Para lograr lo anterior, creamos un ambiente incluyente en el cual las personas muestran qué las define y emplean sus diferentes características para lograr mejores resultados.
 Por ello, promovemos la diversidad generacional, origen étnico, nacionalidad y la inclusión de personas con habilidades diferentes y/o discapacidad. En cumplimiento de la Ley N° 29733 y su reglamento."
-26	Desarrollador Frontend Web	https://pe.linkedin.com/jobs/view/desarrollador-frontend-web-at-softtek-3993157650?position=6&pageNum=0&refId=kZRV0NOHx6jnEaaL8mS%2F3A%3D%3D&trackingId=gt9Ol8gffgVDMHxN%2B6sCBA%3D%3D&trk=public_jobs_jserp-result_search-card	San Isidro, Peru	2 weeks ago	Softtek	"Softtek es un proveedor global de servicios orientados a procesos de TI con más de 30 oficinas en Norteamérica, Latinoamérica, Europa y Asia. Maximizamos el valor del software para el mundo: Creamos, Probamos, Implementamos y damos mantenimiento a sistemas que empoderan organizaciones e individuos. En la actualidad nos encontramos en la búsqueda de perfiles de:
-Desarrollador Frontend Web
-Requisitos:
-Bachiller o Titulado de las carreras de Ing. Computación e informática, Sistemas o afines.
-Experiencia de 4 años a más como Desarrollador Frontend Web Developer
-Experiencia en patrones de desarrollo (Singleton, observer, modulo, etc).
-Experiencia en aplicación de pruebas unitarias a componentes creados. (Jest, TestLibrary)
-Competencia técnica en:
-JavaScript
-HTML5 y CSS.
-React.js
-Server Side Rendering
-Aplicaciones web
-Redux, useContext
-integración a API´s (Amplify, Axios)
-GIT
-Funciones:
-Desarrolla nuevas funciones orientadas al usuario.
-Crea código front end, componentes y bibliotecas reutilizables para uso futuro.
-Asegura la viabilidad técnica de los diseños UI/UX.
-Optimiza la aplicación para lograr óptimos tiempos de respuesta, optima estabilidad, seguridad y escalabilidad.
-Da soporte todo el ciclo de vida de la aplicación (Desarrollo, pruebas, lanzamiento y soporte)
-Realiza pruebas unitarias y de IU para mejorar la calidad del desarrollo.
-Realiza análisis causa raíz para una rápida respuesta ante incidentes en la aplicación sobre la cual está desarrollando.
-Se asegura que las aplicaciones nuevas y heredadas cumplan con los estándares de calidad realizando revisiones de pares de código.
-Realiza merge, resuelve conflictos de código y realiza aprobaciones de Pull Request.
-Realiza revisión de pares de código
-Documentar de manera simple (Modelo Ágil) las implementaciones que va realizando.
-Colabora con otros miembros del equipo y partes interesadas.
-Ofrecemos:
-Ingreso a planilla con todos los beneficios de ley.
-EPS al 100%
-Modalidad de trabajo: HIBRIDO
-Horario de trabajo: Lunes a Viernes 09:00 am a 06:00pm
-Lugar de trabajo: San ISIDRO
-Capacitación constante y línea de carrera.
-Podrás optar por los descuentos corporativos en empresas de entretenimiento, educación, entre otros.
-Contamos con una plataforma exclusiva virtual con más de 3,000 cursos orientados a potencializar tus habilidades técnicas como blandas.
-En Softtek reconocemos que el talento es diverso; respetamos la identidad y condiciones de vida de cada persona y promovemos la equidad de trato y de oportunidades. Para lograr lo anterior, creamos un ambiente incluyente en el cual las personas muestran qué las define y emplean sus diferentes características para lograr mejores resultados.
-Por ello, promovemos la diversidad generacional, origen étnico, nacionalidad y la inclusión de personas con habilidades diferentes y/o discapacidad. En cumplimiento de la Ley N° 29973 y su reglamento."
-27	Frontend Developer	https://pe.linkedin.com/jobs/view/frontend-developer-at-softtek-3993829477?position=7&pageNum=0&refId=kZRV0NOHx6jnEaaL8mS%2F3A%3D%3D&trackingId=WryGqlDHGQGSg6m8FVrXtA%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	Softtek	"Softtek es un proveedor global de servicios orientados a procesos de TI con más de 30 oficinas en Norteamérica, Latinoamérica, Europa y Asia. Maximizamos el valor del software para el mundo: Creamos, Probamos, Implementamos y damos mantenimiento a sistemas que empoderan organizaciones e individuos. En la actualidad nos encontramos en la búsqueda de perfiles de:
+26	Desarrollador Web	https://pe.linkedin.com/jobs/view/desarrollador-web-at-grupo-lucky-3999337228?position=6&pageNum=0&refId=4nDa3upoNuVifKSGlhw7Qw%3D%3D&trackingId=JTULjpPz%2Bzh91T%2B4FVItaw%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	Grupo Lucky	"¡Únete a una de las mejores empresas para trabajar en Perú!
+Somos El Grupo Empresarial Líder En Servicios Tecnológicos Aplicados a Los Canales Comerciales y Análisis De Datos Para La Gestión De Marca En El Perú. Nos Encontramos En La Búsqueda De Futuros Líderes Como Tú Que Puedan Integrarse a Nuestra Gran Familia En La Posición De
+DESARROLLADOR WEB
+¿Qué funciones realizarás?
+Apoyar en la construcción y mantenimiento de aplicaciones web.
+Realizar el mantenimiento de bases de datos integradas y externa.
+Investigar nuevas tecnologías que agreguen valor al desarrollo de aplicaciones web.
+¿Qué requisitos debes cumplir?
+Profesional Egresado de la carreras universitarias o tecnicas de desarrollo de sistemas, ingenieria de sistemas o afines.
+Base de datos SQL Server nivel intermedio (Transac-sql, generación de VIEW´s, PROCEDURES)
+Angular v13+ - Obligatorio
+Angular Material - Obligatorio
+Bootstrap, HTML5, Web Responsive - Obligatorio
+Conocimiento en metodologías de desarrollo de software - Obligatorio
+Desarrollo de API´s REST .NET6+ DAPPER - Obligatorio
+Experiencia en Gestión de Proyectos Web con Git y Azure Devops - Obligatorio
+Experiencia en Atención de Requerimientos e Incidencias
+Metodologías de Análisis y Diseño de Base de Datos.
+¿Qué ofrecemos?
+Línea de carrera a corto plazo.
+Un trabajo dinámico donde pondrás a prueba tu talento.
+Un excelente clima laboral.
+Forma parte de una familia que basa su actuar en el buen humor, la pasión y sobre todo, la honestidad, ¿Qué esperas?
+¡Postula con nosotros y empieza a crear tu propia historia!
+¡Juntos seguiremos siendo la empresa más admirada del sector! Ven y vive la experiencia LUCKY"
+27	Frontend Developer	https://pe.linkedin.com/jobs/view/frontend-developer-at-softtek-3993829477?position=7&pageNum=0&refId=4nDa3upoNuVifKSGlhw7Qw%3D%3D&trackingId=7hjbdRjYzILG56JV4d37QA%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	2 weeks ago	Softtek	"Softtek es un proveedor global de servicios orientados a procesos de TI con más de 30 oficinas en Norteamérica, Latinoamérica, Europa y Asia. Maximizamos el valor del software para el mundo: Creamos, Probamos, Implementamos y damos mantenimiento a sistemas que empoderan organizaciones e individuos. En la actualidad nos encontramos en la búsqueda de perfiles de:
 Desarrollador Frontend
 ¿Qué buscamos?:
 5 años
@@ -477,9 +437,62 @@ Podrás optar por los descuentos corporativos en empresas de entretenimiento, ed
 Contamos con una plataforma exclusiva virtual con más de 3,000 cursos orientados a potenciar tus habilidades técnicas como blandas.
 En Softtek reconocemos que el talento es diverso; respetamos la identidad y condiciones de vida de cada persona y promovemos la equidad de trato y de oportunidades. Para lograr lo anterior, creamos un ambiente incluyente en el cual las personas muestran qué las define y emplean sus diferentes características para lograr mejores resultados.
 Por ello, promovemos la diversidad generacional, origen étnico, nacionalidad y la inclusión de personas con habilidades diferentes y/o discapacidad. En cumplimiento de la Ley N° 29733 y su reglamento."
-28	Software Developer Frontend	https://pe.linkedin.com/jobs/view/software-developer-frontend-at-softtek-4003164835?position=8&pageNum=0&refId=kZRV0NOHx6jnEaaL8mS%2F3A%3D%3D&trackingId=WlcOVLEYak5PuhPHfpF7Kw%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	2 days ago	Softtek	Description not found
-29	Desarrollador Frontend JavaScript	https://pe.linkedin.com/jobs/view/desarrollador-frontend-javascript-at-softtek-4001701260?position=9&pageNum=0&refId=kZRV0NOHx6jnEaaL8mS%2F3A%3D%3D&trackingId=GlygIf9t9r5f6wy0ghe3og%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	4 days ago	Softtek	Description not found
-30	Desarrollador Frontend	https://pe.linkedin.com/jobs/view/desarrollador-frontend-at-softtek-3990411321?position=10&pageNum=0&refId=kZRV0NOHx6jnEaaL8mS%2F3A%3D%3D&trackingId=kzbfVnmgBQxhDF%2BkKBlmsw%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	2 weeks ago	Softtek	"Softtek es un proveedor global de servicios orientados a procesos de TI con más de 30 oficinas en Norteamérica, Latinoamérica, Europa y Asia. Maximizamos el valor del software para el mundo: Creamos, Probamos, Implementamos y damos mantenimiento a sistemas que empoderan organizaciones e individuos. En la actualidad nos encontramos en la búsqueda de perfiles de:
+28	Desarrollador Frontend JavaScript	https://pe.linkedin.com/jobs/view/desarrollador-frontend-javascript-at-softtek-4001701260?position=8&pageNum=0&refId=4nDa3upoNuVifKSGlhw7Qw%3D%3D&trackingId=sSEhCTMBHw1Gl8yRYKkGmw%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	Softtek	"Softtek es un proveedor global de servicios orientados a procesos de TI con más de 30 oficinas en Norteamérica, Latinoamérica, Europa y Asia. Maximizamos el valor del software para el mundo: Creamos, Probamos, Implementamos y damos mantenimiento a sistemas que empoderan organizaciones e individuos. En la actualidad nos encontramos en la búsqueda de perfiles de:
+Desarrollador Frontend Senior
+¿Qué buscamos?:
+05 años de experiencia como desarrollador Frontend con React y Angular (Indispensable)
+Tecnologías web: HTML 5 y CSS3
+Lenguajes de programación: Typescript (Avanzado) y JavaScript (avanzado)
+Librerías y FW: Stencil, React y NextJs
+Build tools: Webpack, Gulp, etc.
+Conocimiento en Resposive Design, PWA y SPA
+Pruebas Unitarias / E2E : Cypress, Jest, Mocha, Chai, Sinon, Superset
+Experiencia con AWS
+Funciones:
+Desarrollo e implementación de aplicaciones web y/o móviles (híbridas).
+Trabajar con Producto y UX para entender RQs de los usuarios y colaborar en el diseño de nuevas funcionalidades.
+Utilizar buenas prácticas de desarrollo, incluyendo pruebas automatizadas, estándares de código y revisiones de código.
+Asegurar un estándar de calidad alto en el desarrollo.
+Ofrecemos:
+Ingreso a planilla con todos los beneficios de ley.
+EPS al 100%
+Modalidad de trabajo:
+Híbrido (1-2 veces presencial mensual en San Isidro-Lima)
+Capacitación constante y línea de carrera.
+Podrás optar por los descuentos corporativos en empresas de entretenimiento, educación, entre otros.
+Contamos con una plataforma exclusiva virtual con más de 3,000 cursos orientados a potenciar tus habilidades técnicas como blandas.
+En Softtek reconocemos que el talento es diverso; respetamos la identidad y condiciones de vida de cada persona y promovemos la equidad de trato y de oportunidades. Para lograr lo anterior, creamos un ambiente incluyente en el cual las personas muestran qué las define y emplean sus diferentes características para lograr mejores resultados.
+Por ello, promovemos la diversidad generacional, origen étnico, nacionalidad y la inclusión de personas con habilidades diferentes y/o discapacidad. En cumplimiento de la Ley N° 29733 y su reglamento."
+29	Software Developer Frontend	https://pe.linkedin.com/jobs/view/software-developer-frontend-at-softtek-4003164835?position=9&pageNum=0&refId=4nDa3upoNuVifKSGlhw7Qw%3D%3D&trackingId=sG0DNuxVp3WBDZrFgxB%2FwQ%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	Softtek	"Softtek es un proveedor global de servicios orientados a procesos de TI con más de 30 oficinas en Norteamérica, Latinoamérica, Europa y Asia. Maximizamos el valor del software para el mundo: Creamos, Probamos, Implementamos y damos mantenimiento a sistemas que empoderan organizaciones e individuos. En la actualidad nos encontramos en la búsqueda de perfiles de:
+Software Developer (Front End)
+Modalidad: Remoto 90%
+(2-3 veces presencial por mes en San Isidro-Lima)
+¿Qué buscamos?:
+04-05 años de experiencia como desarrollador Frontend con React y Angular (Indispensable)
+Experiencia con AWS
+Tecnologías web: HTML 5 y CSS3
+Lenguajes de programación: Typescript y JavaScript
+Librerías y FW: Stencil, React y NextJs
+Build tools: Webpack, Gulp, etc.
+Conocimiento en Resposive Design, PWA y SPA
+Pruebas Unitarias / E2E : Cypress, Jest, Mocha, Chai, Sinon, Superset
+Funciones:
+Desarrollo e implementación de aplicaciones web y/o móviles (híbridas).
+Trabajar con Producto y UX para entender RQs de los usuarios y colaborar en el diseño de nuevas funcionalidades.
+Utilizar buenas prácticas de desarrollo, incluyendo pruebas automatizadas, estándares de código y revisiones de código.
+Asegurar un estándar de calidad alto en el desarrollo.
+Ofrecemos:
+Ingreso a planilla con todos los beneficios de ley.
+EPS al 100%
+Modalidad de trabajo:
+Remoto 90%
+(2-3 veces presencial por mes en San Isidro-Lima)
+Capacitación constante y línea de carrera.
+Podrás optar por los descuentos corporativos en empresas de entretenimiento, educación, entre otros.
+Contamos con una plataforma exclusiva virtual con más de 3,000 cursos orientados a potenciar tus habilidades técnicas como blandas.
+En Softtek reconocemos que el talento es diverso; respetamos la identidad y condiciones de vida de cada persona y promovemos la equidad de trato y de oportunidades. Para lograr lo anterior, creamos un ambiente incluyente en el cual las personas muestran qué las define y emplean sus diferentes características para lograr mejores resultados.
+Por ello, promovemos la diversidad generacional, origen étnico, nacionalidad y la inclusión de personas con habilidades diferentes y/o discapacidad. En cumplimiento de la Ley N° 29733 y su reglamento."
+30	Desarrollador Frontend	https://pe.linkedin.com/jobs/view/desarrollador-frontend-at-softtek-3990411321?position=10&pageNum=0&refId=4nDa3upoNuVifKSGlhw7Qw%3D%3D&trackingId=D5sHaMKYT3Ehq4lMD3x%2BlQ%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	3 weeks ago	Softtek	"Softtek es un proveedor global de servicios orientados a procesos de TI con más de 30 oficinas en Norteamérica, Latinoamérica, Europa y Asia. Maximizamos el valor del software para el mundo: Creamos, Probamos, Implementamos y damos mantenimiento a sistemas que empoderan organizaciones e individuos. En la actualidad nos encontramos en la búsqueda de perfiles de:
 Desarrollador Frontend
 ¿Qué buscamos?:
 4 años
@@ -506,29 +519,25 @@ Podrás optar por los descuentos corporativos en empresas de entretenimiento, ed
 Contamos con una plataforma exclusiva virtual con más de 3,000 cursos orientados a potenciar tus habilidades técnicas como blandas.
 En Softtek reconocemos que el talento es diverso; respetamos la identidad y condiciones de vida de cada persona y promovemos la equidad de trato y de oportunidades. Para lograr lo anterior, creamos un ambiente incluyente en el cual las personas muestran qué las define y emplean sus diferentes características para lograr mejores resultados.
 Por ello, promovemos la diversidad generacional, origen étnico, nacionalidad y la inclusión de personas con habilidades diferentes y/o discapacidad. En cumplimiento de la Ley N° 29733 y su reglamento."
-31	Desarrollador FullStack	https://pe.linkedin.com/jobs/view/desarrollador-fullstack-at-csti-corp-3980910666?position=1&pageNum=0&refId=LkbRgolQP96xCvGhzf%2FH6A%3D%3D&trackingId=BNe5%2FDplw9YQmNYju0gxwg%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	3 weeks ago	CSTI Corp	"Nos encontramos en la búsqueda de un
-""Desarrollador FullStack”
+31	desarrolador fullstack	https://pe.linkedin.com/jobs/view/desarrolador-fullstack-at-reclutapro-per%C3%BA-4002982703?position=1&pageNum=0&refId=NgXHlDxn62YJLduXWPAmBw%3D%3D&trackingId=pV0wc31sQGiAIiA4xpoQ3g%3D%3D&trk=public_jobs_jserp-result_search-card	San Isidro, Peru	1 week ago	ReclutaPro Perú	"Título: Desarrollador Fullstack - Reclutapro Pandapé
+Descripción
+Reclutapro Pandapé está buscando un Desarrollador Fullstack con experiencia comprobada en el desarrollo de aplicaciones web y móviles. El candidato ideal debe tener un mínimo de 3 años de experiencia en el desarrollo de software y una sólida comprensión de las tecnologías y herramientas relevantes.
+Responsabilidades
+Desarrollar, mantener y mejorar las aplicaciones web y móviles de la empresa.
+Colaborar con el equipo de diseño para definir y implementar nuevas características y funcionalidades.
+Realizar pruebas unitarias y de integración para garantizar la calidad del software.
+Participar en la planificación de proyectos, establecer plazos y asignar recursos.
+Mantener actualizados los sistemas y garantizar su seguridad y eficiencia.
 Requisitos
-3 años de experiencia en desarrollo frontweb en javascript, deseable el uso de vue js y typescript.
-3 años de experiencia en algún lenguaje de desarrollo (net, java)
-Tener experiencia en nodejs para backend y tener disposición a trabajarlo.
-2 años de experiencia en manejo intermedio de bases de datos mongodb y no relacionales (indispensable, ya que solo trabajan con mongo db)
-2 años de experiencia integrando webservices con herramientas como postman.
-conocimiento de despliegue continuo (github actions) y buenas prácticas de arquitectura de sistemas
-conocimiento y aplicación de metodologías ágiles como scrum (deseable)
-debe tener interés o manejar cualquier nube como aws, azure o gcp
-deseable cursos y/o certificaciones relacionadas al cargo.
-Beneficios
-Horario de Lunes a Viernes de 8 30 am a 5 30pm
-EPS cubierto al 100%
-Planilla Pyme
-Remoto al 100%
-Estabilidad laboral
-¡Ven y únete a la familia CSTI CORP!
-CSTI Corp es una empresa peruana líder en la industria TI con más de 13 años en el mercado en países como Perú, Ecuador, Colombia, Costa Rica y Estados Unidos.
-Ofrece soluciones de negocios en las líneas de Outsourcing, Licenciamientos SAP y Microsoft, soporte y mejora de aplicaciones, así como implementación y migración de sistemas bajo estrategias Cloud, aprovechando su alianza con marcas como Amazon, Azure, Huawei Cloud y Google Cloud."
-32	Desarrollador Full Stack	https://pe.linkedin.com/jobs/view/desarrollador-full-stack-at-innova-schools-3997306907?position=2&pageNum=0&refId=LkbRgolQP96xCvGhzf%2FH6A%3D%3D&trackingId=oYab057w4Au7hLEOfhHlIw%3D%3D&trk=public_jobs_jserp-result_search-card	La Victoria, Peru	1 week ago	Innova Schools	Description not found
-33	Desarrollador Full Stack	https://pe.linkedin.com/jobs/view/desarrollador-full-stack-at-innova-schools-3982049079?position=3&pageNum=0&refId=LkbRgolQP96xCvGhzf%2FH6A%3D%3D&trackingId=jwiKvRL70c8YGrc5Gc3tKw%3D%3D&trk=public_jobs_jserp-result_search-card	La Victoria, Peru	3 weeks ago	Innova Schools	"Intercorp. actualmente contamos con 63 sedes a nivel nacional. Somos una organización que está buscando transformar la educación en el Perú, además que fomenta y respeta en sus procesos de atracción del talento la igualdad de género, inclusión y la diversidad.
+Al menos 3 años de experiencia como Desarrollador Fullstack.
+Conocimientos sólidos en NetCore, MongoDB, SQL Server y Angular 7.
+Experiencia en el desarrollo de aplicaciones .net.
+Comprensión de las prácticas y principios de desarrollo ágil.
+Habilidades excelentes en la resolución de problemas y la toma de decisiones.
+Excelentes habilidades de comunicación y capacidad para trabajar en equipo.
+Reclutapro Pandapé ofrece un entorno de trabajo desafiante y gratificante, oportunidades de crecimiento profesional y un paquete de compensación competitivo. Si estás listo para unirte a un equipo dinámico y hacer una verdadera diferencia, envíanos tu solicitud.
+Nota: Esta oferta de empleo es real y está dirigida a un candidato real. No envíes tu solicitud a ningún correo electrónico o dirección. En su lugar, envía tu solicitud a través de nuestro sistema de seguimiento de solicitantes en nuestro sitio web.Palabras clave: Desarrollador Fullstack, NetCore, MongoDB, SQL Server, Angular 7, .net, Reclutapro Pandapé."
+32	Desarrollador Full Stack	https://pe.linkedin.com/jobs/view/desarrollador-full-stack-at-innova-schools-3997306907?position=2&pageNum=0&refId=NgXHlDxn62YJLduXWPAmBw%3D%3D&trackingId=qTp7q5gtsvV%2F3tkOzkQApg%3D%3D&trk=public_jobs_jserp-result_search-card	La Victoria, Peru	2 weeks ago	Innova Schools	"Somos una cadena privada de colegios, contamos con 63 sedes a nivel nacional. Somos una organización que está buscando transformar la educación en el Perú, además que fomenta y respeta en sus procesos de atracción del talento la igualdad de género, inclusión y la diversidad.
 Actualmente estamos en la búsqueda de un/a DESARROLLADOR FULL STACK
 Principales Funciones
 Desarrollo, testing y despliegue de la solución planteada.
@@ -547,106 +556,97 @@ Manejo intermedio de base de datos, SQL Server / MySQL
 Conocimientos básicos Arquitectura AWS
 Experiencia en desarrollo web y con metodologías de mejora continua como “agile”.
 Experiencia mínima de 3 años como Fullstack"
-34	Desarrollador FullStack	https://pe.linkedin.com/jobs/view/desarrollador-fullstack-at-soaint-3999546234?position=4&pageNum=0&refId=LkbRgolQP96xCvGhzf%2FH6A%3D%3D&trackingId=ZhRAaph81uokf6FSpPEEiw%3D%3D&trk=public_jobs_jserp-result_search-card	Miraflores, Lima, Peru	4 days ago	SOAINT	Description not found
-35	Desarrollador Fullstack NestJS Junior	https://pe.linkedin.com/jobs/view/desarrollador-fullstack-nestjs-junior-at-evol-tsnet-3996583400?position=5&pageNum=0&refId=LkbRgolQP96xCvGhzf%2FH6A%3D%3D&trackingId=8nTfDxa8AV%2Fn24XyyIWFnQ%3D%3D&trk=public_jobs_jserp-result_search-card	San Borja, Peru	1 week ago	EVOL (TSnet)	"ÚNETE A NUESTRO EQUIPO
-Buscamos un
-Desarrollador fullStack Junior
-, quien formará parte del equipo responsable del proceso de transformación digital de uno de nuestros principales clientes, permitiendo canalizar efectivamente las necesidades, creando sinergia y orientando sus acciones a la obtención de resultados a través de su experiencia, conocimientos y habilidades.
-Formación Profesional:
-Bachiller o Titulados de la carrera de Ingeniería Sistemas o afines.
-¿Qué necesitamos de ti?
-Experiencia mínima de 1 año trabajando con arquitectura de microservicios.
-Experiencia y conocimiento en GCP (Google Cloud Platform) minino 1 año- Necesario
-Dominio de Angular, NestJS y Postgres y versionamiento Git- Necesario
-Base de datos Postgres
-Experiencia trabajando con metodologías ágiles.
-Conocimiento y experiencia de SOLID y desarrollo seguro
-Modalidad de trabajo : Remoto
-¿Qué beneficios tendrás?
-EPS cubierto al 100%.
-Programa de capacitaciones.
-Actividades recreativas, salud y bienestar.
-Acceso a plataformas de aprendizaje y Capacitación
-“Cabe informar que el postulante afirma su consentimiento y autorización del uso de sus datos personales expuestos en su CV, dentro del marco de la Ley de Protección de Datos Personales N° 29733, para fines únicamente de postulación con la organización, este registro se deriva al área de RRHH y se conservará durante un plazo máximo de 6 meses, posterior al proceso de selección”.
-MIMP y normas complementarias, se reciben también postulaciones de personas con discapacidad, debidamente acreditadas y certificadas, a fin de ser evaluadas según la descripción del puesto."
-36	DESARROLLADOR FULLSTACK .NET	https://pe.linkedin.com/jobs/view/desarrollador-fullstack-net-at-tata-consultancy-services-3997816954?position=6&pageNum=0&refId=LkbRgolQP96xCvGhzf%2FH6A%3D%3D&trackingId=8hZUKVy8sFBswNWiMeYgYQ%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	Tata Consultancy Services	Description not found
-37	Desarrollador Fullstack (react JS, microservices) - inglés avanzado	https://pe.linkedin.com/jobs/view/desarrollador-fullstack-react-js-microservices-ingl%C3%A9s-avanzado-at-tata-consultancy-services-3999728568?position=7&pageNum=0&refId=LkbRgolQP96xCvGhzf%2FH6A%3D%3D&trackingId=m5XwVvAZz2D0J4GaYU26Rw%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	6 days ago	Tata Consultancy Services	"Tata Consultancy Services es una empresa de servicios de TI, consultoría y soluciones de negocios que se asocia con varias grandes empresas globales para acompañarlos en su trayectoria de transformación. TCS ofrece una cartera integrada enfocada en consultoría y basada en Cognitive de servicios TI, Servicios de Tecnología y Negocios, e ingeniería. Todo esto se ofrece por medio de su único modelo de entrega Ágil de ubicación independiente (Location Independent Agile), reconocido como el parámetro de excelencia en desarrollo de aplicaciones. Como parte del Grupo Tata, el conglomerado industrial más grande de la India, TCS posee más de 390,000 de los consultores mejor capacitados del mundo en 46 países. La empresa generó una facturación consolidada de $17.6 mil millones de dólares en el año fiscal que finalizó el 31 de marzo de 2017, y cotiza en la BSE (anteriormente la Bolsa de Valores de Bombay) y la NSE (Bolsa Nacional de Valores) de la India. Para mayor información, visítenos en www.tcs.com. TATA Consultancy Services (TCS) es un empleador que trabaja sobre la base a méritos y no solicita dinero a postulantes; ni utiliza agencia alguna para hacer ofertas en representación de TCS.
-TCS promueve la Diversidad, Equidad e Inclusión (DEI), para que todos puedan sentirse seguros, respetados y valorados. Nuestro lema es “Inclusión sin Excepción”
-Puesto: Desarrollador Fullstack (react JS, microservices) - inglés avanzado
+33	Desarrollador FullStack	https://pe.linkedin.com/jobs/view/desarrollador-fullstack-at-soaint-3999546234?position=3&pageNum=0&refId=NgXHlDxn62YJLduXWPAmBw%3D%3D&trackingId=quguYhGZYNUAblbo%2Fz57YA%3D%3D&trk=public_jobs_jserp-result_search-card	Miraflores, Lima, Peru	1 week ago	SOAINT	"¿Te apasiona el desarrollo tecnológico?
+🌍💙
+En
+SOAINT
+tenemos más de 15 años dedicados a transformar el mundo a través de la tecnología con soluciones de Analytics, Desarrollo, Automatización y otros y contamos con presencia en España y LATAM. Actualmente buscamos al perfil de
+Desarrollador FullStack
+para sumarse a nuestro equipo. Si eres una persona
+analítica
+y con facilidad para la
+resolución de problemas
+, ¡esta es tu oportunidad! 👀🚀
+🌟
+¿Qué harás en este rol?
+✅Crear y mantener interfaces de usuario dinámicas y responsivas utilizando Angular 14+.
+✅Diseñar y desarrollar aplicaciones móviles nativas para Android utilizando Kotlin
+✅Desarrollar y mantener servicios web backend en Java, asegurando su integración con otras plataformas
+✅Integrar y consumir servicios externos mediante APIs.
+✅Participar en equipos Scrum, gestionando tareas y sprints en Jira para asegurar el cumplimiento de los objetivos del proyecto
+¿Qué buscamos en ti?
+Bachiller en Ingeniería de Sistemas y/o Ingeniería Informática y/o Ingeniería de Computación y Sistemas o afines.
+Experiencia mínima de 3 años en desarrollo de software.
+Desarrollo Backend con el lenguaje Java para Web Services y C# para .Net
+Experiencia cen Android con Kotlin
+Conocimiento en Rest API
+Experiencia en SQL Server
+Experiencia enmetodología SCRUM
+Experiencia en el sector de Banca
+🚩
+¿Qué te ofrecemos?
+💰 Contrato Indefinido y por planilla 100% desde el primer día.
+✨ Trabajo híbrido (1P - 4R)
+🚑 Cobertura EPS 100% (Plan Esencial) y Seguro de Vida Ley.
+📚 Oportunidades de desarrollo profesional y crecimiento.
+📎 Plataforma de capacitación online gratuita.
+✨ Mediodía libre por cumpleaños
+🚲 Descuentos y convenios en educación, gimnasio y mucho más.
+🚀 Ser parte de una empresa internacional en el sector de consultoría y servicios TI.
+Tu próxima aventura profesional te aguarda.
+¡Postúlate ahora y sé parte de nuestra historia de éxito!🚀
+En SOAINT no distinguimos por razón de discapacidad, género, orientación, identidad y expresión de género, lugar de origen o generación. Creemos en la igualdad de oportunidades en todos nuestros procesos y buscamos promover la inclusión e inserción laboral.
+Conoce más de cómo se #ViveSOAINT en este link: https://www.linkedin.com/company/soaint/life/vivesoaint/"
+34	Fullstack Web	https://pe.linkedin.com/jobs/view/fullstack-web-at-zoluxiones-latam-4002973489?position=4&pageNum=0&refId=NgXHlDxn62YJLduXWPAmBw%3D%3D&trackingId=nWhPb3h%2B%2BMoKt1BinG7oZg%3D%3D&trk=public_jobs_jserp-result_search-card	San Isidro, Peru	1 week ago	Zoluxiones LATAM	"Estamos buscando un
+Desarrollador Fullstack
+con experiencia en
+.NET
+para unirse a nuestro equipo de desarrollo. El candidato ideal tendrá un sólido conocimiento tanto en el desarrollo frontend con React como en el desarrollo backend con .NET. Será responsable de diseñar, desarrollar y mantener aplicaciones web completas, asegurando una experiencia de usuario fluida y una funcionalidad robusta.
+Responsabilidades:
+Desarrollar y mantener aplicaciones web utilizando
+React
+para el frontend y
+.NET
+para el backend.
+Crear y gestionar APIs RESTful para la integración entre el frontend y el backend.
+Implementar interfaces de usuario interactivas y responsivas utilizando
+React
+.
+Diseñar y desarrollar servicios y aplicaciones backend utilizando
+.NET Core
+y
+C#
+.
+Colaborar con diseñadores y otros desarrolladores para crear soluciones técnicas eficientes y escalables.
+Realizar pruebas unitarias y de integración para garantizar la calidad del código.
+Optimizar el rendimiento de las aplicaciones y resolver problemas técnicos.
+Documentar el proceso de desarrollo y las características implementadas.
 Requisitos:
-- 3-5 o más años de experiencia como ingeniero front-end práctico
-- Experto en Desarrollo de Aplicaciones Web con tecnologías React JS
-- 3-5 años de experiencia en JavaScript y Redux/Typescript
-- Familiaridad con Microservicios, MicroFrontEnd
-- Experiencia con bibliotecas y API de terceros (Storybook, React Routing, Swagger/OpenAPI)
-- 3-5 o más años de desarrollo de API web para interacción RESTful de capa de datos
-- 3-5 años de experiencia con ORMs (Object Relational Mapping) de Node.js para conectarse a sistemas SQL RDBMS (Relational Database Management System).
-- 3-5 años de experiencia con marcos Backend para Frontend (BFF) como Express, NestJS o Apollo GraphQL, TypeORM, Fastify, msnodesqlV8
-- Experiencia con bases de datos SQL y NoSQL.
-- Sólido conocimiento de plataformas en la nube como Microsoft Azure, Google Cloud.
-- Buen conocimiento de las prácticas y herramientas de DevOps para CICD, incluidos Kubernetes y plataformas en contenedores.
-- Es bueno tener secuencias de comandos Bash/Python
-Funciones:
-- Revisar los requisitos comerciales y proporcionar estimaciones detalladas del esfuerzo o los recursos necesarios para completar la solución. Responsable de la creación y ejecución del diseño técnico, incluida la revisión y aprobación.
-- Responsable de los requisitos no funcionales (por ejemplo, manejo de errores, seguridad, rendimiento, etc.), participar en el diseño funcional y apoyar al analista de negocios según sea necesario.
-- Realizar pruebas unitarias en la aplicación en desarrollo y revisiones de código para módulos desarrollados por pares o desarrolladores externos. Preparar y garantizar la implementación del proceso de gestión de cambios para una transición fluida entre entornos.
-- Soporte y mantenimiento de todas las aplicaciones desarrolladas en el país.
-- Investigar y coordinar con equipos de proyectos especializados en Walmart Home Office sobre el abastecimiento de datos para aplicaciones aprobadas para desarrollo en el país.
-- Proporcionar información sobre el aspecto técnico del proceso de Planes de seguridad de soluciones (SSP).
-- Esforzarse por conocer bien las tecnologías actuales utilizadas en proyectos que se alinean con las estrategias corporativas. Identifique y cree componentes reutilizables en todos los proyectos para garantizar la mejora de la productividad.
-Beneficios:
-✅ Salario por encima del mercado.
-✅Acceso a cursos en Udemy, LinkedIn Learning y otras plataformas de aprendizaje.
-✅Línea de carrera.
-✅Acceso a EPS.
-✅Reembolso de certificaciones.
-✅Descuentos corporativos, recreativos, educativos y gimnasio.
-✅Programas de crecimiento profesional.
-✅Capacitaciones constantes y más."
-38	Desarrollador Fullstack (Java, Microservices, Angular, JS, Springboot) - Inglés avanzado	https://pe.linkedin.com/jobs/view/desarrollador-fullstack-java-microservices-angular-js-springboot-ingl%C3%A9s-avanzado-at-tata-consultancy-services-3999729836?position=8&pageNum=0&refId=LkbRgolQP96xCvGhzf%2FH6A%3D%3D&trackingId=18%2B9VuWcUEEEI5hXQSNMIw%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	6 days ago	Tata Consultancy Services	"Tata Consultancy Services es una empresa de servicios de TI, consultoría y soluciones de negocios que se asocia con varias grandes empresas globales para acompañarlos en su trayectoria de transformación. TCS ofrece una cartera integrada enfocada en consultoría y basada en Cognitive de servicios TI, Servicios de Tecnología y Negocios, e ingeniería. Todo esto se ofrece por medio de su único modelo de entrega Ágil de ubicación independiente (Location Independent Agile), reconocido como el parámetro de excelencia en desarrollo de aplicaciones. Como parte del Grupo Tata, el conglomerado industrial más grande de la India, TCS posee más de 390,000 de los consultores mejor capacitados del mundo en 46 países. La empresa generó una facturación consolidada de $17.6 mil millones de dólares en el año fiscal que finalizó el 31 de marzo de 2017, y cotiza en la BSE (anteriormente la Bolsa de Valores de Bombay) y la NSE (Bolsa Nacional de Valores) de la India. Para mayor información, visítenos en www.tcs.com. TATA Consultancy Services (TCS) es un empleador que trabaja sobre la base a méritos y no solicita dinero a postulantes; ni utiliza agencia alguna para hacer ofertas en representación de TCS.
-TCS promueve la Diversidad, Equidad e Inclusión (DEI), para que todos puedan sentirse seguros, respetados y valorados. Nuestro lema es “Inclusión sin Excepción”
-Puesto: Desarrollador Fullstack (Java, Microservices, Angular, JS, Springboot) - Inglés avanzado
-Requisitos:
-FullStack Developer with the following:
-- 5+ years of experience with:
-- Java, Microservices, Springboot
-- JavaScript and Redux
-- Expert in Web App Development with Angular
-- Camel (message queueing)
-- Unix
-- Basic knowledge of SQL databases
+Experiencia en
+.NET Core
+y
+C#
+para el desarrollo de servicios y aplicaciones backend.
+Conocimiento de bases de datos SQL (SQL Server, PostgreSQL) y diseño de esquemas de datos.
+Familiaridad con herramientas de control de versiones como
+Git
+.
+Experiencia en la integración de APIs RESTful y servicios web.
 Deseable:
-- JPOS Drivers.
-- Kubernetes and Containers.
-- React.
+Experiencia con
+servicios en la nube Azure, AWS
+Conocimientos en metodologías ágiles (Scrum, Kanban).
+Experiencia con herramientas de CI/CD y prácticas de DevOps.
 Beneficios:
-✅ Salario por encima del mercado.
-✅Acceso a cursos en Udemy, LinkedIn Learning y otras plataformas de aprendizaje.
-✅Línea de carrera.
-✅Acceso a EPS.
-✅Reembolso de certificaciones.
-✅Descuentos corporativos, recreativos, educativos y gimnasio.
-✅Programas de crecimiento profesional.
-✅Capacitaciones constantes y más."
-39	Desarrollador Sr .NET	https://pe.linkedin.com/jobs/view/desarrollador-sr-net-at-tata-consultancy-services-3991938726?position=9&pageNum=0&refId=LkbRgolQP96xCvGhzf%2FH6A%3D%3D&trackingId=uJAKSSWZAoZIk69CUQxrMg%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	2 weeks ago	Tata Consultancy Services	"Tata Consultancy Services es una empresa de servicios de TI, consultoría y soluciones de negocios que se asocia con varias grandes empresas globales para acompañarlos en su trayectoria de transformación. TCS ofrece una cartera integrada enfocada en consultoría y basada en Cognitive de servicios TI, Servicios de Tecnología y Negocios, e ingeniería. Todo esto se ofrece por medio de su único modelo de entrega Ágil de ubicación independiente (Location Independent Agile), reconocido como el parámetro de excelencia en desarrollo de aplicaciones. Como parte del Grupo Tata, el conglomerado industrial más grande de la India, TCS posee más de 390,000 de los consultores mejor capacitados del mundo en 46 países. La empresa generó una facturación consolidada de $17.6 mil millones de
-dólares en el año fiscal que finalizó el 31 de marzo de 2017, y cotiza en la BSE (anteriormente la Bolsa de Valores de Bombay) y la NSE (Bolsa Nacional de Valores) de la India. Para mayor información, visítenos en www.tcs.com. TATA
-Consultancy Services (TCS) es un empleador que trabaja sobre la base a méritos y no solicita dinero a postulantes; ni utiliza agencia alguna para hacer ofertas en representación de TCS.
-TCS promueve la Diversidad, Equidad e Inclusión (DEI), para que todos puedan sentirse seguros, respetados y valorados. Nuestro lema es “Inclusión sin Excepción”
-ROL: Analista Programador Senior Fullstack .NET
-Requisitos:
-Desarrollador full stack Senior
-C#, Vb, Sql, Informix, Oracle y Postgressql, Herramientas git, visual studio, tfs, IIS, Visual Code, Toad, dbeaver.
-Deseabale con experiencia bajo scrum, AWS y Mulesoft
-Beneficios:
-✅ Salario por encima del mercado.
-✅Acceso a cursos en Udemy, LinkedIn Learning y otras plataformas de aprendizaje.
-✅Línea de carrera.
-✅Acceso a EPS.
-✅Reembolso de certificaciones.
-✅Descuentos corporativos, recreativos, educativos y gimnasio.
-✅Programas de crecimiento profesional.
-✅Capacitaciones constantes y más."
-40	Desarrollador de Ruby on Rails	https://pe.linkedin.com/jobs/view/desarrollador-de-ruby-on-rails-at-outcode-software-3999384849?position=10&pageNum=0&refId=LkbRgolQP96xCvGhzf%2FH6A%3D%3D&trackingId=o8VWvgokGjDDdu00%2F6Jktg%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	3 days ago	Outcode Software	"Job Description
+Planilla desde el primer día de trabajo.
+Trabajo Híbrido
+Horario de Oficina.
+Salario acorde al mercado.
+Línea de Carrera"
+35	Líder Técnico FullStack	https://pe.linkedin.com/jobs/view/l%C3%ADder-t%C3%A9cnico-fullstack-at-softtek-4007053136?position=5&pageNum=0&refId=NgXHlDxn62YJLduXWPAmBw%3D%3D&trackingId=69EcQRPuNmYntm8YP0WMoA%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	3 days ago	Softtek	Description not found
+36	Desarrollador Fullstack (react JS, microservices) - inglés avanzado	https://pe.linkedin.com/jobs/view/desarrollador-fullstack-react-js-microservices-ingl%C3%A9s-avanzado-at-tata-consultancy-services-3999728568?position=6&pageNum=0&refId=NgXHlDxn62YJLduXWPAmBw%3D%3D&trackingId=703CrTOOoki7Y1htdw8fhA%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	Tata Consultancy Services	Description not found
+37	Desarrollador Fullstack (Java, Microservices, Angular, JS, Springboot) - Inglés avanzado	https://pe.linkedin.com/jobs/view/desarrollador-fullstack-java-microservices-angular-js-springboot-ingl%C3%A9s-avanzado-at-tata-consultancy-services-3999729836?position=7&pageNum=0&refId=NgXHlDxn62YJLduXWPAmBw%3D%3D&trackingId=LSdeUpE6EahV%2BRfBw%2FYw4A%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	Tata Consultancy Services	Description not found
+38	Desarrollador de Ruby on Rails	https://pe.linkedin.com/jobs/view/desarrollador-de-ruby-on-rails-at-outcode-software-3999384849?position=8&pageNum=0&refId=NgXHlDxn62YJLduXWPAmBw%3D%3D&trackingId=K8NYNjvjlBQZAaGTv8rTHA%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	Outcode Software	"Job Description
 As a Ruby fullstack software engineer, you will be expected to be an active participant in all the delivery stages of web app development. You will be responsible for designing, developing, testing, and debugging responsive web applications for the company. Using Ruby on Rails in Backend, React or Angular or vueJS or JQuery in Frontend.
 Key Responsibilities
 Designing, developing, and testing UI for web applications
@@ -676,7 +676,7 @@ What you'll love about us...
 Working in a fast-growing company.
 International working environment.
 5 working days during the week."
-41	Backend Engineer (Node.js)	https://pe.linkedin.com/jobs/view/backend-engineer-node-js-at-yape-4002939385?position=1&pageNum=0&refId=3xgw14AU0tALm6609N9iew%3D%3D&trackingId=7HtqW1uiT3lGU8T2qy1Sxg%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	2 days ago	Yape	"Somos 15 millones de yaperos y 2.5 millones de empresas que utilizan Yape a diario. Estamos disponibles para todos, lo que nos convierte en una plataforma única y clave del ecosistema digital del Perú.
+39	Backend Engineer (Node.js)	https://pe.linkedin.com/jobs/view/backend-engineer-node-js-at-yape-4002939385?position=1&pageNum=0&refId=mOAEZEFfl6qIARjmLwJuuw%3D%3D&trackingId=4J9Ipa7fcCoEt9NZHgg2hw%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	Yape	"Somos 15 millones de yaperos y 2.5 millones de empresas que utilizan Yape a diario. Estamos disponibles para todos, lo que nos convierte en una plataforma única y clave del ecosistema digital del Perú.
 Esperamos que te involucres en discusiones relacionadas con todos los aspectos del desarrollo de productos y tecnología.
 Nuestro desafío es que estamos creciendo rápidamente y tenemos una amplia cantidad de datos que pueden ser explotados para mejorar la vida de los yaperos y nuestro negocio. Nos motiva construir un país conectado sin barreras, que fomente el crecimiento y desarrollo para todos los peruanos.
 Para seguir brindando la mejor experiencia a nuestros yaperos, necesitamos el mejor talento.
@@ -702,24 +702,9 @@ Kafka
 Capaz de desarrollar códigos que tengan una calidad, seguridad y legibilidad impecables.
 1 a 2 años de experiencia trabajando en equipos ágiles - Deseable
 Conocimiento de prácticas de seguridad con OWASP 10 - Deseable"
-42	Analista Desarrollador/a Backend	https://pe.linkedin.com/jobs/view/analista-desarrollador-a-backend-at-bbva-en-per%C3%BA-3986477083?position=2&pageNum=0&refId=3xgw14AU0tALm6609N9iew%3D%3D&trackingId=mx4B3oIzUTnVbzRBkqaUQg%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	2 weeks ago	BBVA en Perú	"Lo que harás:
--Diseña, desarrolla y propone soluciones óptimas con autonomía en proyectos o productos.
-- Facilita el intercambio de conocimientos / experiencias relevantes
-- Proporciona soporte técnico cualificado y resuelve problemas
-- Realiza tareas de expertise medio
-- Desarrollos de Complejidad alta en diversos ámbitos de contextos homogéneos
-- Comprende necesidades de negocio de carácter general
-- Soluciona problemas complejos cambiando enfoques, conceptos.
-- Tiene iniciativa para identificar y desarrollar nuevas oportunidades sobre las tecnologías y aplicativos existentes dentro de un ámbito específico
-Lo que necesitas:
-• Formación universitaria o técnica / Bachiller en Ing. Sistemas, Informática o carreras afines.
-• Experiencia de 2 años en Desarrollo de Software
-• Sólida experiencia en programación orientada en Java8 y conocimientos en Java 11.
-• Conocimiento de Base de datos (SQL, MySQL y Oracle).
-• Conocimiento en metodologías de programación, de diseño y desarrollo de sistemas de información.
-• Conocimiento en spring framework y Spring Boot.
-• Conocimiento en pruebas unitarias y automatización de procesos (AWS)."
-43	Analista Desarrollador Backend	https://pe.linkedin.com/jobs/view/analista-desarrollador-backend-at-costamar-travel-group-3989695819?position=3&pageNum=0&refId=3xgw14AU0tALm6609N9iew%3D%3D&trackingId=SMVy41%2FNN2uBcnBW%2FzpdTw%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	2 weeks ago	Costamar Travel Group	"COSTAMAR TRAVEL SAC una de las empresas más grandes de Turismo a nivel Mundial, con 44 años de experiencia en el mercado.
+40	Analista Desarrollador/a Backend	https://pe.linkedin.com/jobs/view/analista-desarrollador-a-backend-at-bbva-en-per%C3%BA-3986477083?position=2&pageNum=0&refId=mOAEZEFfl6qIARjmLwJuuw%3D%3D&trackingId=NexwHKMObNZilLOGfFZ04g%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	3 weeks ago	BBVA en Perú	Description not found
+41	Desarrollador Backend	https://pe.linkedin.com/jobs/view/desarrollador-backend-at-m%C3%A9trica-andina-3998200262?position=3&pageNum=0&refId=mOAEZEFfl6qIARjmLwJuuw%3D%3D&trackingId=fZTrBi0nRSgppyMYCDswyA%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	Métrica Andina	Description not found
+42	Analista Desarrollador Backend	https://pe.linkedin.com/jobs/view/analista-desarrollador-backend-at-costamar-travel-group-3989695819?position=4&pageNum=0&refId=mOAEZEFfl6qIARjmLwJuuw%3D%3D&trackingId=CGYrB%2ByGHz6iTXVSXpMUuQ%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	3 weeks ago	Costamar Travel Group	"COSTAMAR TRAVEL SAC una de las empresas más grandes de Turismo a nivel Mundial, con 44 años de experiencia en el mercado.
 Se encuentra en la búsqueda de:ANALISTA DESARROLLADOR BACKEND
 Funciones
 Construir y mantener aplicaciones web escalables
@@ -744,82 +729,104 @@ Sueldo superior al mercado
 Línea de carrera y excelente clima laboral
 Capacitaciones constantes
 En Costamar Travel, según su código de ética, no se discrimina a las personas con discapacidad, ni sexo, ni religión."
-44	Mobile Developer (Android / IOS)	https://pe.linkedin.com/jobs/view/mobile-developer-android-ios-at-kadre-3996824288?position=4&pageNum=0&refId=3xgw14AU0tALm6609N9iew%3D%3D&trackingId=3CIjw2mFDeZSbkCSsNzvOg%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	Kadre	"We are seeking a
-Senior Mobile Developer capable of managing the entire application lifecycle
-, including concept, design, testing, release, and support.
-👨‍❤️‍👨 Client/project An online platform designed to facilitate social connections and meetups for adults. The platform uses a map-based interface to help users find and connect with others nearby who share similar interests and preferences.
-Requisitos
-5+ years of proven work experience as a Mobile developer.
-Experience with Ionic, Angular and Typescript (+3 years).
-Experience using AWS and GitLab.
-Experience wrapping an application using Capacitor.
-Demonstrable portfolio of released applications on the App Store or the Android market.
-Knowledge of native mobile development using Swift and Kotlin (+3 years).
-Demonstrable experience with native hardware sensor API (SDK) integration into a wrapped application.
-📆 Selection Process
-HR interview
-Code challenge
-Integrated English and psychometric test
-Technical interview with a team member
-Interview with the hiring manager
-Beneficios
-💵 USD salary
-🌏 Remote position (LATAM)
-➡ KADRE is partnering with
-SWL (http //software-league.com/)
-an HR company, specialized in IT that delivers efficient tech solutions."
-45	Desarrollador de back-end	https://pe.linkedin.com/jobs/view/desarrollador-de-back-end-at-ntt-data-europe-latam-3989204462?position=5&pageNum=0&refId=3xgw14AU0tALm6609N9iew%3D%3D&trackingId=EtMlLUTTJ6V3uNftu34ALQ%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	2 weeks ago	NTT DATA Europe & Latam	Description not found
-46	Desarrollador de back-end	https://pe.linkedin.com/jobs/view/desarrollador-de-back-end-at-soaint-3988075446?position=6&pageNum=0&refId=3xgw14AU0tALm6609N9iew%3D%3D&trackingId=%2BcXOf5KsHKNweGY6SmvetA%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	2 weeks ago	SOAINT	Description not found
-47	Desarrollador de back-end	https://pe.linkedin.com/jobs/view/desarrollador-de-back-end-at-atlantic-city-casino-sports-3993995769?position=7&pageNum=0&refId=3xgw14AU0tALm6609N9iew%3D%3D&trackingId=wIdKLp3NFBnUUsrCzpj%2FCg%3D%3D&trk=public_jobs_jserp-result_search-card	Miraflores, Peru	1 week ago	Atlantic City Casino & Sports	"¿Qué buscamos?
-En Atlantic City somos una familia que siempre busca superarse para sorprender a nuestro invitado. Aquí los Desarrolladores Back-End se encargan de diseñar la lógica y las soluciones para que todas las acciones solicitadas en una página web sean ejecutadas de manera correcta.
-¿Cómo será tu día a día?
-- Automatizarás tareas de desarrollo de software.
-- Realizarás pruebas de la interfaz de usuario para optimizar el rendimiento
-- Colaborarás con los desarrolladores web front-end para integrar los elementos que se encuentran delante de los usuarios con la lógica del lado del servidor
-- Realizarás un código limpio para desarrollar aplicaciones web funcionales
+43	Desarrollador de back-end	https://pe.linkedin.com/jobs/view/desarrollador-de-back-end-at-ntt-data-europe-latam-3989204462?position=5&pageNum=0&refId=mOAEZEFfl6qIARjmLwJuuw%3D%3D&trackingId=P1EDWfaH4H%2BK3QAmVOMUdg%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	3 weeks ago	NTT DATA Europe & Latam	Description not found
+44	Desarrollador de back-end	https://pe.linkedin.com/jobs/view/desarrollador-de-back-end-at-soaint-3988075446?position=6&pageNum=0&refId=mOAEZEFfl6qIARjmLwJuuw%3D%3D&trackingId=8a3AlvI%2BbUryta%2FwF0zHJA%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	5 days ago	SOAINT	"¿Te apasiona el desarrollo tecnológico?
+🌍💙
+En
+SOAINT
+tenemos más de 15 años dedicados a transformar el mundo a través de la tecnología con soluciones de Analytics, Desarrollo, Automatización y otros y contamos con presencia en España y LATAM. Actualmente buscamos al perfil de
+Desarrollador Backend
+para sumarse a nuestro equipo. Si eres una persona
+analítica
+y con facilidad para la
+resolución de problemas
+, ¡esta es tu oportunidad! 👀🚀
+🌟
+¿Qué harás en este rol?
+✅Desarrollar y mantener APIs RESTful usando Spring Boot.
+✅Implementar autenticación y autorización con Spring Security.
+✅Integrar y consumir servicios externos mediante APIs.
+✅Escribir y ejecutar pruebas unitarias y de integración.
 ¿Qué buscamos en ti?
-- Estudios culminados en tecnologías de la información, ingeniería de sistemas o afines.
-- Experiencia mínima de 4 años en puestos similares.
-- Conocimiento en arquitectura de software, software de control de versiones, conexión a WebServices, APIS, microservicios y arquitectura MVC.
-- Conocimiento de lenguaje de programación de C# .Net, ASP y de Nube (Azure, AWS)
-¿Qué puedes esperar de nosotros?
-- Convenios para descuentos educativos (maestrías, cursos, diplomados, etc.)
-- Capacitación constante en conocimientos técnicos y habilidades blandas
-- Liderazgo cercano y equipos horizontales
-- Feedback constante
-- Línea de carrera
-- Contamos con cobertura de salud: EPS y Vida Ley
-- Tenemos una sala de bienestar equipada con videojuegos, juegos de mesa, zona de estudios y más
-- Contamos con un equipo de orientación y acompañamiento psicológico
-- Comedor subsidiado parcialmente por la empresa
-- Contamos con estacionamiento para autos, motos y bicicletas
-- Tenemos un equipo médico que realiza capacitaciones constantes y seguimiento continuo a todos los colaboradores"
-48	Back End Developer	https://pe.linkedin.com/jobs/view/back-end-developer-at-softtek-4003172693?position=8&pageNum=0&refId=3xgw14AU0tALm6609N9iew%3D%3D&trackingId=7IIGdxmIX7Hi9tvUfPRApw%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	2 days ago	Softtek	"Softtek es un proveedor global de servicios orientados a procesos de TI con más de 30 oficinas en Norteamérica, Latinoamérica, Europa y Asia. Maximizamos el valor del software para el mundo: Creamos, Probamos, Implementamos y damos mantenimiento a sistemas que empoderan organizaciones e individuos. En la actualidad nos encontramos en la búsqueda de un talento para el perfil: Backend Developer
-Requisitos:
-Experiencia de 4+ años desarrollando en la especialidad.
-Bachiller y/o Técnico Ingeniería de Sistemas, Software, Informática o afines.
-Competencia técnica de OOP, patrones de diseño de software
-Competencia técnica en infraestructura On Cloud.
-Experiencia solida en
-Node.js, AWS
-(indispensable)
-Competencia técnica de desarrollo API REST bajo un marco de programación como: SpringBoot, Express.JS, Nest.JS, etc.
-Competencia técnica de Marco de trabajo Ágil.
-Funciones:
-Participar activamente en el análisis y diseño de la aplicación.
-Resolver los errores identificados durante la iteración.
-Escribir infraestructura como código para soportar los servicios desarrollados.
-Realizar revisión de código e integrar cambios en git.
-Ofrecemos:
-Ingreso a planilla con todos los beneficios de ley.
-EPS al 100%
-Modalidad de trabajo: HIBRIDO
-Capacitación constante y línea de carrera.
-Podrás optar por los descuentos corporativos en empresas de entretenimiento, educación, entre otros.
-Contamos con una plataforma exclusiva virtual con más de 3,000 cursos orientados a potencializar tus habilidades técnicas como blandas.
-En Softtek reconocemos que el talento es diverso; respetamos la identidad y condiciones de vida de cada persona y promovemos la equidad de trato y de oportunidades. Para lograr lo anterior, creamos un ambiente incluyente en el cual las personas muestran qué las define y emplean sus diferentes características para lograr mejores resultados.
-Por ello, promovemos la diversidad generacional, origen étnico, nacionalidad y la inclusión de personas con habilidades diferentes y/o discapacidad. En cumplimiento de la Ley N° 29973 y su reglamento.
-Te invitamos a conocer más sobre la #SofttekLife en: https://www.softtek.com/es-ar/haz-tu-carrera-en-softtek
-#Softtek #SofttekLife #TalentoIT"
-49	Backend Engineer (Typescript + Node)	https://pe.linkedin.com/jobs/view/backend-engineer-typescript-%2B-node-at-tekton-labs-3994681230?position=9&pageNum=0&refId=3xgw14AU0tALm6609N9iew%3D%3D&trackingId=U4JSVOriirf4FC1hpOj8MA%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	Tekton Labs	Description not found
-50	Mobile Engineer (Hybrid work for people in Lima)	https://pe.linkedin.com/jobs/view/mobile-engineer-hybrid-work-for-people-in-lima-at-tekton-labs-3789477025?position=10&pageNum=0&refId=3xgw14AU0tALm6609N9iew%3D%3D&trackingId=82RuweKZKqun4dwSUB%2FsRQ%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	2 weeks ago	Tekton Labs	Description not found
+Bachiller en Ingeniería de Sistemas y/o Ingeniería Informática y/o Ingeniería de Computación y Sistemas o afines.
+Experiencia mínima de 3 años en desarrollo de software.
+Java Spring
+Azure
+Arquitectura de microservicios
+Programación reactiva
+Jenkins
+Git
+SQL Server, Oracle
+🚩
+¿Qué te ofrecemos?
+💰 Contrato Indefinido y por planilla 100% desde el primer día.
+✨ Trabajo híbrido (2 días presencial y 3 remotos)
+🚑 Cobertura EPS 100% (Plan Esencial) y Seguro de Vida Ley.
+📚 Oportunidades de desarrollo profesional y crecimiento.
+📎 Plataforma de capacitación online gratuita.
+✨ Mediodía libre por cumpleaños
+🚲 Descuentos y convenios en educación, gimnasio y mucho más.
+🚀 Ser parte de una empresa internacional en el sector de consultoría y servicios TI.
+Tu próxima aventura profesional te aguarda.
+¡Postúlate ahora y sé parte de nuestra historia de éxito!🚀
+En SOAINT no distinguimos por razón de discapacidad, género, orientación, identidad y expresión de género, lugar de origen o generación. Creemos en la igualdad de oportunidades en todos nuestros procesos y buscamos promover la inclusión e inserción laboral.
+Conoce más de cómo se #ViveSOAINT en este link: https://www.linkedin.com/company/soaint/life/vivesoaint/"
+45	Desarrollador de back-end	https://pe.linkedin.com/jobs/view/desarrollador-de-back-end-at-atlantic-city-casino-sports-3993995769?position=7&pageNum=0&refId=mOAEZEFfl6qIARjmLwJuuw%3D%3D&trackingId=FZ85pRxMgVJ%2BUjEnlGz3fA%3D%3D&trk=public_jobs_jserp-result_search-card	Miraflores, Peru	2 weeks ago	Atlantic City Casino & Sports	Description not found
+46	Back End Developer	https://pe.linkedin.com/jobs/view/back-end-developer-at-softtek-4003172693?position=8&pageNum=0&refId=mOAEZEFfl6qIARjmLwJuuw%3D%3D&trackingId=%2B4tLVvoGTYute9jCoddLZw%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	1 week ago	Softtek	Description not found
+47	Desarrollador Backend	https://pe.linkedin.com/jobs/view/desarrollador-backend-at-soaint-4002156974?position=9&pageNum=0&refId=mOAEZEFfl6qIARjmLwJuuw%3D%3D&trackingId=HV8GpbDTzlIPKAnN9CPk7Q%3D%3D&trk=public_jobs_jserp-result_search-card	Lima, Peru	4 days ago	SOAINT	"Te apasiona el desarrollo tecnológico?
+🌍💙
+En
+SOAINT
+tenemos más de 15 años dedicados a transformar el mundo a través de la tecnología con soluciones de Analytics, Desarrollo, Automatización y otros y contamos con presencia en España y LATAM. Actualmente buscamos al perfil de
+Desarrollador Backend
+para sumarse a nuestro equipo. Si eres una persona
+analítica
+y con facilidad para la
+resolución de problemas
+, ¡esta es tu oportunidad! 👀🚀
+🌟
+¿Qué harás en este rol?
+✅Desarrollar y mantener APIs RESTful usando Spring Boot.
+✅Implementación en nube Azure
+✅Gestionar y optimizar bases de datos relacionales y NoSQL.
+✅Implementar autenticación y autorización con Spring Security.
+✅Integrar y consumir servicios externos mediante APIs.
+✅Escribir y ejecutar pruebas unitarias y de integración.
+¿Qué buscamos en ti?
+Bachiller en Ingeniería de Sistemas y/o Ingeniería Informática y/o Ingeniería de Computación y Sistemas o afines.
+Experiencia mínima de 3 años en desarrollo de software.
+Desarrollo Backend con el lenguaje Java con Spring Boot.
+Experiencia en plataformas de nubes: Azure Cloud, Azure DevOps
+Experiencia con Spring Security (OAuth2, JWT)
+Conocimiento en Spring Data, JPA, Retrofit y Swagger.
+Experiencia en Jenkins
+Experiencia en las bases SQL Server y Oracle
+Manejo de APIs
+Experiencia en metodologías ágiles
+🚩
+¿Qué te ofrecemos?
+💰 Contrato Indefinido y por planilla 100% desde el primer día.
+✨ Trabajo híbrido (2 días presencial y 3 remotos)
+🚑 Cobertura EPS 100% (Plan Esencial) y Seguro de Vida Ley.
+📚 Oportunidades de desarrollo profesional y crecimiento.
+📎 Plataforma de capacitación online gratuita.
+✨ Mediodía libre por cumpleaños
+🚲 Descuentos y convenios en educación, gimnasio y mucho más.
+🚀 Ser parte de una empresa internacional en el sector de consultoría y servicios TI.
+Tu próxima aventura profesional te aguarda.
+¡Postúlate ahora y sé parte de nuestra historia de éxito!🚀
+En SOAINT no distinguimos por razón de discapacidad, género, orientación, identidad y expresión de género, lugar de origen o generación. Creemos en la igualdad de oportunidades en todos nuestros procesos y buscamos promover la inclusión e inserción laboral.
+Conoce más de cómo se #ViveSOAINT en este link: https://www.linkedin.com/company/soaint/life/vivesoaint/"
+48	Desarrollador iOS	https://pe.linkedin.com/jobs/view/desarrollador-ios-at-veriinfo-4000383589?position=10&pageNum=0&refId=mOAEZEFfl6qIARjmLwJuuw%3D%3D&trackingId=gdrKtxJEwqWrMVy6dKU2tg%3D%3D&trk=public_jobs_jserp-result_search-card	Lince, Peru	1 week ago	Veriinfo	"En VERIINFO somos parte de una familia, conformada por más de 60 profesionales en el sector TI, gestionando proyectos para las principales empresas del Perú. Te invitamos a formar parte de nuestro equipo, ocupando el cargo de: Desarrollador iOS para integrarse al equipo de trabajo del banco más importante del país.
+🎯 Estamos seleccionando
+Desarrollador iOS - Con 4 años de experiencia profesional en el rol.
+🎯 Requisitos
+Bachiller o titulado en Ingeniería de sistemas, computación y sistemas, ciencias de la computación o afines.
+🎯 Conocimientos
+Lenguaje de programación/plataforma (IOS - Swift, Android - Kotlin)
+Patrones de diseño de aplicaciones (Clean arquitectura, VIPER, MVVM)
+Manejo de bibliotecas comunes (Retrofit, RX Java).
+Herramientas de encriptación de claves y ofuscación de código fuente ( IXGuard - IOS , DESGUARD - Android).
+Marco de trabajo Ágil y Mindset Ágil.
+Deseable experiencia en banca.
+Trabajo híbrido 💻🏠"
