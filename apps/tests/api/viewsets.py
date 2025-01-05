@@ -9,7 +9,7 @@ from apps.typetest.models import TypeTest
 
 from apps.option.models import Option
 from django.db.models import Q
-from apps.tests.api.serializer import TestSerializer
+from apps.tests.api.serializer import TestSerializer,TestGeneralSerializer
 from rest_framework.decorators import action
 class TestViewSet(viewsets.ModelViewSet):
     model = Test
@@ -48,6 +48,22 @@ class TestViewSet(viewsets.ModelViewSet):
             
             "total": self.get_queryset().count(),
             "rows": assitans_serializer.data
+        }
+        return Response(data, status=status.HTTP_200_OK)
+    @action(detail=False, methods=['get'])
+    def getTestsFact(self,request,pk1,pk2):
+        type_test1 = get_object_or_404(TypeTest, pk=pk1)
+        type_test2 = get_object_or_404(TypeTest, pk=pk2)
+        tests = Test.objects.filter(
+            state=True
+        ).exclude(
+            Q(typetest=type_test1) | Q(typetest=type_test2)
+        )
+        self.serializer_class=TestGeneralSerializer
+        inventory_serializer = self.get_serializer(tests, many=True)
+        data = {
+            "total":  tests.count(),
+            "rows": inventory_serializer.data
         }
         return Response(data, status=status.HTTP_200_OK)
     @action(detail=False, methods=['get'])

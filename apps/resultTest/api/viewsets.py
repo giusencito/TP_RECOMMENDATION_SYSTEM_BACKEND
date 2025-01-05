@@ -50,6 +50,7 @@ class ResultTestViewSets(viewsets.ModelViewSet):
         return Response({
             'message': 'No existe la pregunta que desea eliminar'
         }, status=status.HTTP_404_NOT_FOUND)
+
     @action(detail=True, methods=['get'])
     def getResultTestbypostulant(self,request,pk=None):
        

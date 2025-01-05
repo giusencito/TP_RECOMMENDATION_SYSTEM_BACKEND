@@ -6,6 +6,7 @@ from apps.linkedinJobs.models import LinkedinJobs
 from apps.linkedinJobs.api.serializer import LinkedinJobsSerializer,LinkedinJobsHistorySerializer
 from rest_framework.decorators import action
 from django.db.models import Subquery, F, Min,OuterRef
+from django.utils import timezone
 class LinkedinJobsViewSets(viewsets.ModelViewSet):
     model = LinkedinJobs
     serializer_class = LinkedinJobsSerializer
@@ -95,13 +96,48 @@ class LinkedinJobsViewSets(viewsets.ModelViewSet):
         unique_linkedin_jobs = linkedinJobs.filter(id=Subquery(min_result_test_subquery))
 
         linkedinJobs_serializer = self.serializer_class(unique_linkedin_jobs, many=True)
-
-       
         data = {
             "total": unique_linkedin_jobs.count(),
             "rows": linkedinJobs_serializer.data
         }
         return Response(data, status=status.HTTP_200_OK)
+    
+    @action(detail=False, methods=['post'])
+    def postLinkedinJobsByPostulant(self,request):
+        self.serializer_class=LinkedinJobsHistorySerializer
+        data = request.data
+        job_name = data.get('nombre')
+        job_date = data.get('date')
+        postulant = data.get('postulantId')
+        if not postulant:
+            return Response({"error": "postulant_id is required"}, status=status.HTTP_400_BAD_REQUEST)
+        linkedinJobs = LinkedinJobs.objects.filter(
+        state=True, resultTest__postulant_id=postulant
+        )
+        if job_name:
+            linkedinJobs = linkedinJobs.filter(jobName__icontains=job_name)
+        if job_date:
+            linkedinJobs = linkedinJobs.filter(jobDate=job_date)
+        min_result_test_subquery = linkedinJobs.filter(
+          resultTest=OuterRef('resultTest')
+         ).order_by('resultTest', 'id').values('id')[:1]
+        unique_linkedin_jobs = linkedinJobs.filter(id=Subquery(min_result_test_subquery))
+        linkedinJobs_serializer = self.serializer_class(unique_linkedin_jobs, many=True)
+        data = {
+        "total": unique_linkedin_jobs.count(),
+        "rows": linkedinJobs_serializer.data
+        }   
+        return Response(data, status=status.HTTP_200_OK)
+        
+    @action(detail=False, methods=['put'])
+    def patchPostulate(self, request, id):
+        job = LinkedinJobs.objects.get(id=id)
+        job.postulate_date = timezone.now()
+        job.postulated = True
+        job.save()
+        return Response({
+                'message': 'Postulado'
+            })
    
 
 

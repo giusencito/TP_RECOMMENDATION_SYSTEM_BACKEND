@@ -11,7 +11,10 @@ class LinkedinJobsSerializer(serializers.ModelSerializer):
                 'jobCompany': instance.jobCompany,
                 'jobDate': instance.jobDate,
                 'posibilityPercentage':instance.posibilityPercentage,
-                'resultTest': f'{instance.resultTest.id}'
+                'resultTest': f'{instance.resultTest.id}',
+                'postulated': instance.postulated,
+                'postulate_date':f'{instance.postulate_date}'
+
                 
                 
                 }
@@ -54,3 +57,8 @@ class LinkedinJobsHistorySerializer(serializers.ModelSerializer):
        class Meta:
           model = LinkedinJobs
           exclude = ('state','created_date','modified_date','deleted_date')
+
+class UpdatePostulateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = LinkedinJobs
+        fields = ['postulate_date', 'postulated']

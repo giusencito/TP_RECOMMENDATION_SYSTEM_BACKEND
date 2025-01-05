@@ -5,8 +5,8 @@ class SectionSerializer(serializers.ModelSerializer):
     def to_representation(self,instance):
             return {
                 'id': instance.id,
-                'SectioNname': instance.sectionname, 
-                'totalscore': instance.totalscore, 
+                'sectionname': instance.sectionname, 
+                'totalScore': instance.totalscore, 
                 'test': f'{instance.test.testname}'
             }
     def validate_test(self, value):
@@ -19,6 +19,17 @@ class SectionSerializer(serializers.ModelSerializer):
                 "test": "Debe ingresar un test"
             })
         return data
+    class Meta:
+        model = Section
+        exclude = ('state','created_date','modified_date','deleted_date')
+        
+        
+class SectionObtainSerializer(serializers.ModelSerializer):
+    def to_representation(self,instance):
+            return {
+                'SectionId': instance.id,
+                'SectionName': instance.sectionname, 
+            }
     class Meta:
         model = Section
         exclude = ('state','created_date','modified_date','deleted_date')

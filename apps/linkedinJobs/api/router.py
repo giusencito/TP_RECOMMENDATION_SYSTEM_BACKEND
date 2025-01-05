@@ -6,6 +6,7 @@ router.register(r'LinkedinJobsViewSets',LinkedinJobsViewSets,basename='LinkedinJ
 urlpatterns=[
      path('LinkedinJobsViewSets/getLinkedinJobsByResultTestAndPostulant/<int:result_test_id>/<int:postulant_id>/', LinkedinJobsViewSets.as_view({'get': 'getLinkedinJobsByResultTestAndPostulant'}), name='linkedin-jobs-by-result-test-and-postulant'),
     path('LinkedinJobsViewSets/getLinkedinJobsByPostulantsJustOne/<int:postulant_id>/', LinkedinJobsViewSets.as_view({'get': 'getLinkedinJobsByPostulantsJustOne'}), name='linkedin-jobs-by-result-postulant-JUST-ONE'),
+    path('LinkedinJobsViewSets/patchPostulate/<int:id>/', LinkedinJobsViewSets.as_view({'put': 'patchPostulate'}), name='patchPostulate'),
 
 ]
 urlpatterns += router.urls

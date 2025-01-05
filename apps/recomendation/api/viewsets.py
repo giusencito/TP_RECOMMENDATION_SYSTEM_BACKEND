@@ -7,8 +7,8 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import json
 from apps.resultSection.models import ResultSection
-from apps.resultSection.api.serializer import ResultSectionSerializer
-from apps.section.api.serializer import SectionSerializer
+from apps.resultSection.api.serializer import ResultSectionSerializer,ResultSectionObtainSerializer
+from apps.section.api.serializer import SectionSerializer,SectionObtainSerializer
 from rest_framework.decorators import action
 from surprise import Dataset, Reader, SVD
 from surprise.model_selection import train_test_split
@@ -177,29 +177,23 @@ class RecomendationViewset(viewsets.ModelViewSet):
       
       def get_querysetSection(self):
         if self.queryset2 is None:
-            self.queryset2 = SectionSerializer().Meta.model.objects.filter(state=True)
+            self.queryset2 = SectionObtainSerializer().Meta.model.objects.filter(state=True)
         return self.queryset2  
 
       @action(detail=True, methods=['get'])
       def getSectionResults(self,request,pk=None):
-        self.queryset = ResultSectionSerializer().Meta.model.objects.filter(state=True).filter(resultTest_id=pk)
-        ResultTest = self.get_queryset()
-        ResultTest_serializer = ResultSectionSerializer(ResultTest, many=True)
-        section_serializer = SectionSerializer(self.get_querysetSection(), many=True)
-        id_section_list = [{'Id': idx, 'SectionName': section['SectionName']}
-                  for idx, section in enumerate(section_serializer.data)
-                  if any(item['Section'] == section['SectionName'] for item in ResultTest_serializer.data)]
-        section_id_mapping = {section['SectionName']: section['id'] for section in id_section_list}
-        for item in ResultTest_serializer.data:
-            item['Section'] = section_id_mapping.get(item['Section'], '')
-            item['DevelopmentPercentage'] = item['DevelopmentPercentage'] / 100
-        dfratings_sections = pd.DataFrame(ResultTest_serializer.data)
-        dfsections = pd.DataFrame(id_section_list)
-
-        dfratings_sections = dfratings_sections[['ResultTest', 'Section', 'DevelopmentPercentage']]
-        dfsections = dfsections[['Id','SectionName']]
-
-        dfratings_sections.to_csv('csv/ratings_section.csv', index=False)
-        dfsections.to_csv('csv/section.csv', index=False)
-        
-        return Response(status=status.HTTP_200_OK)
+          result_section_query =  ResultSectionObtainSerializer().Meta.model.objects.filter(state=True).filter(resultTest_id=pk)
+          result_section_serializer = ResultSectionObtainSerializer(result_section_query, many=True)
+          section_serializer = SectionObtainSerializer(self.get_querysetSection(), many=True)
+          result_section_ids = {item['SectionId'] for item in result_section_serializer.data}
+          new_sections = []
+          index=1
+          for item in section_serializer.data:
+              if (str(item["SectionId"]) in result_section_ids):
+                  new_sections.append({'SectionId':index,"SectionName":item["SectionName"]})
+                  index=index+1
+          dfratings_sections = pd.DataFrame(result_section_serializer.data)[['ResultTest', 'SectionId', 'DevelopmentPercentage']]
+          dfsections = pd.DataFrame(new_sections)[['SectionId', 'SectionName']]
+          dfratings_sections.to_csv('csv/ratings_section.csv', index=False)
+          dfsections.to_csv('csv/section.csv', index=False)
+          return Response(status=status.HTTP_200_OK)

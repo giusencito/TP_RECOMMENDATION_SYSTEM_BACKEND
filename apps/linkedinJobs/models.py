@@ -11,6 +11,8 @@ class LinkedinJobs(BaseModel):
     jobDate = models.CharField(max_length=100, default=None)
     posibilityPercentage = models.FloatField()
     resultTest=models.ForeignKey(ResultTest, on_delete=models.CASCADE)
+    postulate_date = models.DateTimeField(null=True)
+    postulated = models.BooleanField(default=False)
     class Meta:
               verbose_name = 'LinkedinJob'
               verbose_name_plural = 'LinkedinJobs'
